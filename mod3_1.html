@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 3: Diagnostic Evaluation Engine | NexusSci</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div id="global-utility-bar">
+        <div class="utility-container">
+            <span>NESA Year 11 Chemistry Preliminary Core Diagnostic Platform</span>
+            <div class="utility-controls">
+                <button id="theme-toggle-btn" aria-label="Toggle between dark and light mode">
+                    <span class="mode-text">Toggle Theme</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="portal-layout">
+        <aside id="portal-sidebar" aria-label="Main Navigation">
+            <div class="sidebar-brand">
+                <div class="brand-logo">
+                    <span class="logo-icon">🧮</span>
+                    <span class="brand-name">Nexus<span class="highlight">Sci</span></span>
+                </div>
+                <p class="brand-tagline">NSW Curriculum Mastery</p>
+            </div>
+
+            <nav class="sidebar-nav" aria-label="Primary Directory">
+                <div class="nav-section-label">Core Directory</div>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <span class="nav-icon">🏠</span>
+                            <span class="nav-text">Portal Home</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="nav-section-label">Syllabus Modules</div>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="mod1.html" class="nav-link">
+                            <span class="nav-icon">🧪</span>
+                            <span class="nav-text">Module 1: Properties of Matter</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="mod2.html" class="nav-link">
+                            <span class="nav-icon">📊</span>
+                            <span class="nav-text">Module 2: Introduction to Quantitative Chemistry</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="mod3.html" class="nav-link">
+                            <span class="nav-icon">🔥</span>
+                            <span class="nav-text">Module 3: Reactive Chemistry</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="mod4.html" class="nav-link">
+                            <span class="nav-icon">⚗️</span>
+                            <span class="nav-text">Module 4: Drivers of Reactions</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer-card">
+                <div class="status-indicator-group">
+                    <span class="status-dot online"></span>
+                    <span class="status-label">Evaluation Live</span>
+                </div>
+                <div class="version-tag">v2.4.0-Prelim</div>
+            </div>
+        </aside>
+
+        <main id="main-content" class="portal-main">
+            
+            <header id="dashboard-header">
+                <div class="breadcrumb-trail">
+                    <span>Nexus Core</span> &gt; <span>Module 3 Diagnostic Evaluation Engine</span>
+                </div>
+                <div class="user-avatar-block">
+                    <div class="avatar-initials">EE</div>
+                    <div class="avatar-meta">
+                        <span class="user-name">Assessment Matrix</span>
+                        <span class="user-role">High Precision Mode</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-hero-banner">
+                <div class="hero-left-block">
+                    <span class="badge-accent">Interactive Workstation</span>
+                    <h1>Module 3 Evaluation Engine</h1>
+                    <p class="hero-description">
+                        Test your analytical skills against foundational to selective-school (James Ruse agricultural style) chemistry problems covering reactive patterns, kinematics, redox systems, and chemical thermodynamics.
+                    </p>
+                    <blockquote style="background: rgba(255,255,255,0.05); border-left: 4px solid var(--accent-primary); margin: 15px 0 0 0; padding: 10px 15px; font-size: 13px;">
+                        <strong>CRITICAL CORE RULE: The Least Significant Figures Rule.</strong> In all multi-step calculations, your final numeric values must be rounded to match the lowest number of significant figures provided across the initial question parameters. Use NESA standard values for atomic masses ($\text{H} = 1.008, \text{C} = 12.01, \text{O} = 16.00, \text{N} = 14.01, \text{Na} = 22.99, \text{S} = 32.07, \text{Cl} = 35.45, \text{Cu} = 63.55, \text{Fe} = 55.85, \text{Ca} = 40.08, \text{K} = 39.10$).
+                    </blockquote>
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 15px; margin-bottom: 25px; padding: 10px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid var(--glass-border); font-size: 12px;">
+                <strong>Evaluation Index:</strong>
+                <span class="difficulty-tag diff-easy">Foundational Baseline</span>
+                <span class="difficulty-tag diff-medium">Syllabus Proficient</span>
+                <span class="difficulty-tag diff-hard">Selective / Extension Tier</span>
+            </div>
+
+            <h2 style="margin-top: 40px; border-bottom: 2px solid var(--glass-border); padding-bottom: 10px;">Section 1: Exemplar Board-Style Analysis</h2>
+            
+            <div class="glass-panel" style="margin-bottom: 25px;">
+                <div class="question-meta-row">
+                    <span>EXEMPLAR 1</span>
+                    <span class="difficulty-tag diff-easy">Foundational Baseline</span>
+                </div>
+                <h3>Gravimetric Yield and Solubility Metathesis</h3>
+                <p>A $50.0\text{ mL}$ aliquot of $0.200\text{ mol}\cdot\text{L}^{-1}$ barium chloride ($\text{BaCl}_2$) solution is reacted with an excess of sodium sulfate ($\text{Na}_2\text{SO}_4$) solution. Deduce the macroscopic indicators of this interaction, provide the balanced net ionic expression, and isolate the final dry mass of precipitate generated.</p>
+                
+                <div class="exam-sample-box">
+                    <strong>Exemplar Worked Solution & Response Parameters:</strong>
+                    <p><strong>1. Macroscopic Observations:</strong> Upon introducing the clear, colourless sodium sulfate solution to the clear, colourless barium chloride solution, a fine, opaque white precipitate immediately forms throughout the chemical solution, settling out of the matrix over time.</p>
+                    
+                    <p><strong>2. Molecular and Net Ionic Formulations:</strong></p>
+                    <p>Full Molecular Equation:<br>
+                    $$\text{BaCl}_{2(aq)} + \text{Na}_2\text{SO}_{4(aq)} \rightarrow \text{BaSO}_{4(s)}\downarrow + 2\text{NaCl}_{(aq)}$$</p>
+                    <p>Net Ionic Equation (omitting spectator chloride and sodium ions):<br>
+                    $$\text{Ba}^{2+}_{(aq)} + \text{SO}_{4(aq)}^{2-} \rightarrow \text{BaSO}_{4(s)}$$</p>
+                    
+                    <p><strong>3. Quantitative Gravimetric Sequence:</strong></p>
+                    <ul>
+                        <li>Calculate the chemical amount of the limiting barium ions: 
+                        $$n(\text{Ba}^{2+}) = c \times V = 0.200\text{ mol}\cdot\text{L}^{-1} \times 0.0500\text{ L} = 0.0100\text{ mol}$$</li>
+                        <li>Determine molar mass of the insoluble precipitate lattice ($\text{BaSO}_4$):
+                        $$\text{MM}(\text{BaSO}_4) = 137.3 + 32.07 + (4 \times 16.00) = 233.37\text{ g}\cdot\text{mol}^{-1}$$</li>
+                        <li>Apply the stoichiometric conversion factor ($1:1$ molar ratio):
+                        $$m(\text{BaSO}_4) = n \times \text{MM} = 0.0100\text{ mol} \times 233.37\text{ g}\cdot\text{mol}^{-1} = 2.3337\text{ g}$$</li>
+                        <li>Apply Significant Figure Ceilings: Both values ($50.0\text{ mL}$ and $0.200\text{ M}$) contain three significant figures.</li>
+                    </ul>
+                    <p><strong>Final Solution Mass:</strong> $2.33\text{ g}$</p>
+                </div>
+            </div>
+
+            <div class="glass-panel" style="margin-bottom: 25px;">
+                <div class="question-meta-row">
+                    <span>EXEMPLAR 2</span>
+                    <span class="difficulty-tag diff-medium">Syllabus Proficient</span>
+                </div>
+                <h3>Advanced Thermodynamic Heat Capacity Profiles</h3>
+                <p>A student builds a non-insulated laboratory calorimeter to determine the molar enthalpy of combustion ($\Delta H_c$) of an unknown liquid fuel, methanol ($\text{CH}_3\text{OH}$, $\text{MM} = 32.042\text{ g}\cdot\text{mol}^{-1}$). Burning $1.62\text{ g}$ of the liquid fuel under a flask containing $250.0\text{ g}$ of pristine water causes a temperature shift from $22.1^\circ\text{C}$ to $48.7^\circ\text{C}$. Calculate the raw molar enthalpy change, identify structural errors that explain any divergence from the accepted theoretical value ($-726\text{ kJ}\cdot\text{mol}^{-1}$), and determine the final value using correct significant figures.</p>
+                
+                <div class="exam-sample-box">
+                    <strong>Exemplar Worked Solution & Response Parameters:</strong>
+                    <p><strong>1. Quantitative Thermodynamic Calculations:</strong></p>
+                    <ul>
+                        <li>Isolate system temperature displacement:
+                        $$\Delta T = T_{\text{final}} - T_{\text{initial}} = 48.7^\circ\text{C} - 22.1^\circ\text{C} = 26.6\text{ K}$$</li>
+                        <li>Determine thermal energy absorbed by the water layer ($q = m c \Delta T$):
+                        $$q = 250.0\text{ g} \times 4.184\text{ J}\cdot\text{g}^{-1}\cdot\text{K}^{-1} \times 26.6\text{ K} = 27823.6\text{ J} = 27.8236\text{ kJ}$$</li>
+                        <li>Determine the moles of methanol fuel oxidised:
+                        $$n = \frac{m}{\text{MM}} = \frac{1.62\text{ g}}{32.042\text{ g}\cdot\text{mol}^{-1}} = 0.0505586\text{ mol}$$</li>
+                        <li>Determine molar enthalpy ($\Delta H_c$):
+                        $$\Delta H_c = -\frac{q}{n} = -\frac{27.8236\text{ kJ}}{0.0505586\text{ mol}} = -550.323\text{ kJ}\cdot\text{mol}^{-1}$$</li>
+                        <li>Apply Precision Controls: The values $1.62\text{ g}$ and $26.6\text{ K}$ limit the precision to <strong>3 significant figures</strong>.</li>
+                    </ul>
+                    <p><strong>Calculated Value:</strong> $-550\text{ kJ}\cdot\text{mol}^{-1}$</p>
+                    
+                    <p><strong>2. Critical Validity Analysis:</strong> The experimental value ($-550\text{ kJ}\cdot\text{mol}^{-1}$) is lower than the standard theoretical value ($-726\text{ kJ}\cdot\text{mol}^{-1}$). Significant heat loss occurred to the surrounding atmosphere and the glass beaker itself because the open calorimeter setup lacked insulation, a draft shield, or a lid. This caused the measured $\Delta T$ to be lower than expected, resulting in an underestimated enthalpy calculation.</p>
+                </div>
+            </div>
+
+            <div class="glass-panel" style="margin-bottom: 25px;">
+                <div class="question-meta-row">
+                    <span>EXEMPLAR 3</span>
+                    <span class="difficulty-tag diff-hard">Selective / Extension Tier</span>
+                </div>
+                <h3>Vectorized Galvanic Schematic Mapping from Phase Notation</h3>
+                <p>Interpret the following standard galvanic cell cell notation: 
+                $$\text{Mg}_{(s)} \;\big|\; \text{Mg}^{2+}_{(aq)} \,(1.0\text{ M}) \;\big\|\; \text{Ag}^+_{(aq)} \,(1.0\text{ M}) \;\big|\; \text{Ag}_{(s)}$$
+                Calculate the standard cell EMF ($E^\circ_{\text{cell}}$) using standard NESA data table references ($E^\circ_{\text{Ag}^+|\text{Ag}} = +0.80\text{ V}$, $E^\circ_{\text{Mg}^{2+}|\text{Mg}} = -2.36\text{ V}$). Provide an explicit vector drawing of the cell with all structural metrics labeled.</p>
+                
+                <div class="exam-sample-box">
+                    <strong>Exemplar Cell Potential Calculation:</strong><br>
+                    $$\text{Cathode (Reduction half-cell): } 2\text{Ag}^+_{(aq)} + 2\text{e}^- \rightarrow 2\text{Ag}_{(s)} \quad (E^\circ = +0.80\text{ V})$$
+                    $$\text{Anode (Oxidation half-cell): } \text{Mg}_{(s)} \rightarrow \text{Mg}^{2+}_{(aq)} + 2\text{e}^- \quad (E^\circ = -2.36\text{ V})$$
+                    $$E^\circ_{\text{cell}} = E^\circ_{\text{cathode}} - E^\circ_{\text{anode}} = (+0.80\text{ V}) - (-2.36\text{ V}) = +3.16\text{ V}$$
+                    
+                    <p><strong>Vectorized High-Precision Cell Blueprint:</strong></p>
+                    <svg viewBox="0 0 800 450" width="100%" height="320" style="background:#110b29; border: 1px solid var(--glass-border); border-radius:12px; margin-top:15px;">
+                        <rect x="100" y="150" width="200" height="200" rx="10" fill="rgba(255,255,255,0.05)" stroke="#fff" stroke-width="2"/>
+                        <rect x="100" y="180" width="200" height="170" fill="rgba(182,102,255,0.15)"/>
+                        <text x="200" y="330" fill="#b6afcc" font-size="12" text-anchor="middle">Anolyte: Mg(NO₃)₂ (1.0 M)</text>
+                        
+                        <rect x="500" y="150" width="200" height="200" rx="10" fill="rgba(255,255,255,0.05)" stroke="#fff" stroke-width="2"/>
+                        <rect x="500" y="180" width="200" height="170" fill="rgba(0,255,170,0.1)"/>
+                        <text x="600" y="330" fill="#b6afcc" font-size="12" text-anchor="middle">Catholyte: AgNO₃ (1.0 M)</text>
+                        
+                        <rect x="180" y="100" width="30" height="150" fill="#8b939c" stroke="#5a6268" stroke-width="1"/>
+                        <text x="195" y="90" fill="#fff" font-size="12" font-weight="bold" text-anchor="middle">Mg Anode (-)</text>
+                        <text x="140" y="220" fill="#ff3b30" font-size="11" font-weight="bold">Oxidation occurs</text>
+                        
+                        <rect x="590" y="100" width="30" height="150" fill="#e3e4e5" stroke="#9da1a5" stroke-width="1"/>
+                        <text x="605" y="90" fill="#fff" font-size="12" font-weight="bold" text-anchor="middle">Ag Cathode (+)</text>
+                        <text x="630" y="220" fill="#00ffaa" font-size="11" font-weight="bold">Reduction occurs</text>
+                        
+                        <path d="M 195 100 L 195 50 L 350 50" fill="none" stroke="#fff" stroke-width="2"/>
+                        <path d="M 605 100 L 605 50 L 450 50" fill="none" stroke="#fff" stroke-width="2"/>
+                        <circle cx="400" cy="50" r="30" fill="#221a44" stroke="#b666ff" stroke-width="3"/>
+                        <text x="400" y="55" fill="#00ffaa" font-size="14" font-weight="bold" text-anchor="middle">V: +3.16V</text>
+                        
+                        <path d="M 240 35 L 320 35" fill="none" stroke="#ff3b30" stroke-width="2" marker-end="url(#arrow)"/>
+                        <text x="280" y="25" fill="#ff3b30" font-size="11" font-weight="bold" text-anchor="middle">Electron Flow (e⁻) →</text>
+                        
+                        <path d="M 250 200 L 250 130 L 550 130 L 550 200" fill="none" stroke="#fff" stroke-width="24" stroke-linecap="square"/>
+                        <path d="M 250 200 L 250 130 L 550 130 L 550 200" fill="none" stroke="#443c68" stroke-width="18" stroke-linecap="square"/>
+                        <text x="400" y="125" fill="#fff" font-size="12" font-weight="bold" text-anchor="middle">Salt Bridge: KNO₃ (aq)</text>
+                        
+                        <text x="280" y="165" fill="#ff3b30" font-size="11" font-weight="bold">Anions (NO₃⁻) →</text>
+                        <text x="460" y="165" fill="#00ffaa" font-size="11" font-weight="bold">← Cations (K⁺)</text>
+                        
+                        <text x="130" y="260" fill="#b666ff" font-size="14" font-weight="bold">Mg²⁺</text>
+                        <text x="240" y="280" fill="#6e6685" font-size="12">NO₃⁻</text>
+                        <text x="530" y="260" fill="#00ffaa" font-size="14" font-weight="bold">Ag⁺</text>
+                        <text x="640" y="280" fill="#6e6685" font-size="12">NO₃⁻</text>
+                        
+                        <defs>
+                            <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                <path d="M 0 0 L 10 5 L 0 10 z" fill="#ff3b30"/>
+                            </marker>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="glass-panel" style="margin-bottom: 25px;">
+                <div class="question-meta-row">
+                    <span>EXEMPLAR 4</span>
+                    <span class="difficulty-tag diff-medium">Syllabus Proficient</span>
+                </div>
+                <h3>Indigenous Poison Detoxification Kinetics</h3>
+                <p>Analyse how Aboriginal and Torres Strait Islander Peoples use chemical principles to safely process the highly poisonous seeds of the cycad palm (<em>Cycas media</em>). Detail the key chemical species involved and explain the specific mechanisms that make the seeds safe to eat.</p>
+                
+                <div class="exam-sample-box">
+                    <strong>Exemplar Worked Solution & Response Parameters:</strong>
+                    <p><strong>1. Identification of Toxic Hazard:</strong> Raw cycad seeds contain hazardous levels of the water-soluble neurotoxin and carcinogen known as <strong>cycasin</strong>.</p>
+                    <p><strong>2. Thermodynamic and Dissolution Mechanisms:</strong></p>
+                    <ul>
+                        <li><strong>Thermal Alteration (Roasting):</strong> Roasting the seeds in open pits transfers thermal energy into the material, which breaks down the tough outer hulls and helps denature volatile toxic compounds.</li>
+                        <li><strong>Leaching (Solubility & Diffusion Kinetics):</strong> Slicing the roasted seeds increases their total surface area, maximizing exposure to the solvent. The seeds are then placed in woven grass baskets and submerged in flowing creek waters. Because cycasin is a highly polar molecule, it dissolves readily in water due to favorable ion-dipole and hydrogen-bonding interactions.</li>
+                        <li><strong>Equilibrium Dynamic:</strong> Submerging the seeds in flowing water maintains a steep concentration gradient between the internal seed tissue and the surrounding water. The moving water continuously carries away the dissolved cycasin, preventing the system from reaching equilibrium and driving the dynamic process until the seeds are completely detoxified.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="glass-panel" style="margin-bottom: 25px;">
+                <div class="question-meta-row">
+                    <span>EXEMPLAR 5</span>
+                    <span class="difficulty-tag diff-hard">Selective / Extension Tier</span>
+                </div>
+                <h3>Activation Barriers and Kinetic Catalysis Mechanics</h3>
+                <p>Explain how adding an external manganese dioxide ($\text{MnO}_2$) catalyst alters the decomposition rate of hydrogen peroxide ($2\text{H}_2\text{O}_{2(aq)} \rightarrow 2\text{H}_2\text{O}_{(l)} + \text{O}_{2(g)}$). Use collision theory principles and a Maxwell-Boltzmann energy distribution framework to support your explanation.</p>
+                
+                <div class="exam-sample-box">
+                    <strong>Exemplar Worked Solution & Response Parameters:</strong>
+                    <p><strong>1. Collision Theory Framework:</strong> Uncatalyzed hydrogen peroxide molecules decompose slowly at room temperature because the reaction has a high activation energy ($E_a$), meaning few ambient molecular collisions possess enough energy to overcome the reaction barrier.</p>
+                    <p><strong>2. Catalytic Mechanism:</strong> The solid manganese dioxide ($\text{MnO}_2$) catalyst provides an alternative heterogeneous physical surface for the reaction. This alternative pathway has a significantly lower activation energy ($E_a$). The catalyst participates in the intermediate steps but is completely regenerated at the end of the process.</p>
+                    <p><strong>3. Maxwell-Boltzmann Distribution Dynamics:</strong> Lowering the activation energy from $E_{a,\text{uncatalyzed}}$ to $E_{a,\text{catalyzed}}$ changes the energy requirements for the system. A significantly larger fraction of the reactant particles now possess kinetic energy equal to or greater than the new activation energy threshold ($E_k \ge E_{a,\text{catalyzed}}$). As a result, the frequency of successful molecular collisions per unit of time increases, accelerating the macroscopic reaction rate and causing rapid oxygen gas evolution.</p>
+                </div>
+            </div>
+
+
+            <h2 style="margin-top: 40px; border-bottom: 2px solid var(--glass-border); padding-bottom: 10px;">Section 2: Core Multiple Choice Diagnostic</h2>
+            <form id="diagnostic-mcq-form">
+                
+                <div class="glass-panel" style="margin-bottom: 20px;">
+                    <div class="question-meta-row">
+                        <span>QUESTION 1</span>
+                        <span class="difficulty-tag diff-easy">Foundational</span>
+                    </div>
+                    <p>Which of the following observations provides definitive, macroscopic evidence that a chemical change has occurred rather than a physical adjustment?</p>
+                    <label class="quiz-option-label"><input type="radio" name="mcq1" value="A"> A. Water vapor condensing on a cold glass surface.</label>
+                    <label class="quiz-option-label"><input type="radio" name="mcq1" value="B"> B. Sodium chloride solid dissolving into liquid water to create a clear solution.</label>
+                    <label class="quiz-option-label"><input type="radio" name="mcq1" value="C"> C. Spontaneous effervescence when mixing cold aqueous solutions together.</label>
+                    <label class="quiz-option-label"><input type="radio" name="mcq1" value="D"> D. Solid iodine subliming into a dense purple gas when heated.</label>
+                    <div id="mcq1-feedback" class="feedback-pane"></div>
+                </div>
+
+                <div class="glass-panel" style="margin-bottom: 20px;">
+                    <div class="question-meta-row">
+                        <span>QUESTION 2</span>
+                        <span class="difficulty-tag diff-medium">Proficient</span>
+                    </div>
+                    <p>Two clear solutions, potassium iodide ($\text{KI}_{(aq)}$) and lead(II) nitrate ($\text{Pb(NO}_3)_{2(aq)}$), are mixed together. What is the correct net ionic equation for the precipitation reaction that occurs?</p>
+                    <label class="quiz-option-label"><input type="radio" name="mcq2" value="A"> A. $\text{K}^+_{(aq)} + \text{NO}_{3(aq)}^- \rightarrow \text{KNO}_{3(s)}$</label>
+                    <label class="quiz-option-label"><input type="radio" name="mcq2" value="B"> B. $\text{Pb}^{2+}_{(aq)} + 2\text{I}^-_{(aq)} \rightarrow \text{PbI}_{2(s)}$</label>
+                    <label class="quiz-option-label"><input type="radio" name="mcq2" value="C"> C. $\text{Pb}^{2+}_{(aq)} + \text{I}^-_{(aq)} \rightarrow \text{PbI}_{(s)}$</label>
+                    <label class="quiz-option-label"><input type="radio" name="mcq2" value="D"> D. $\text{KNO}_{3(aq)} \rightarrow \text{K}^+_{(aq)} + \text{NO}_{3(aq)}^-$</label>
+                    <div id="mcq2-feedback" class="feedback-pane"></div>
+                </div>
+
+                <div class="glass-panel" style="margin-bottom: 20px;">
+                    <div class="question-meta-row">
+                        <span>QUESTION 3</span>
+                        <span class="difficulty-tag diff-medium">Proficient</span>
+                    </div>
+                    <p>How does increasing the temperature of a system accelerate the rate of a chemical reaction according to collision theory?</p>
+                    <label class="quiz-option-label"><input type="radio" name="mcq3" value="A"> A. It increases the frequency of collisions and increases the fraction of particles with $E_k \ge E_a$.</label>
+                    <label class="quiz-option-label"><input type="radio" name="mcq3" value="B"> B. It lowers the chemical activation energy barrier for the reaction pathway.</label>
+                    <label class="quiz-option-label"><input type="radio" name="mcq3" value="C"> C. It increases the spatial separation between individual reactant particles.</label>
+                    <label class="quiz-option-label"><input type="radio" name="mcq3" value="D"> D. It fundamentally forces the enthalpy value ($\Delta H$) of the products to drop below the reactants.</label>
+                    <div id="mcq3-feedback" class="feedback-pane"></div>
+                </div>
+
+                <div class="glass-panel" style="margin-bottom: 20px;">
+                    <div class="question-meta-row">
+                        <span>QUESTION 4</span>
+                        <span class="difficulty-tag diff-medium">Proficient</span>
+                    </div>
+                    <p>Consider the following reaction: $\text{Fe}_{2}\text{O}_{3(s)} + 2\text{Al}_{(s)} \rightarrow 2\text{Fe}_{(l)} + \text{Al}_2\text{O}_{3(s)}$. Which statement correctly identifies the species undergoing oxidation and the species acting as the oxidant?</p>
+                    <label class="quiz-option-label"><input type="radio" name="mcq4" value="A"> A. Iron is oxidised, and aluminum is the oxidant.</label>
+                    <label class="quiz-option-label"><input type="radio" name="mcq4" value="B"> B. Aluminum is oxidised, and iron(III) ions are the oxidant.</label>
+                    <label class="quiz-option-label"><input type="radio" name="mcq4" value="C"> C. Aluminum is reduced, and iron(III) ions are the reductant.</label>
+                    <label class="quiz-option-label"><input type="radio" name="mcq4" value="D"> D. Oxygen is oxidised, and aluminum is the reductant.</label>
+                    <div id="mcq4-feedback" class="feedback-pane"></div>
+                </div>
+
+                <div class="glass-panel" style="margin-bottom: 20px;">
+                    <div class="question-meta-row">
+                        <span>QUESTION 5</span>
+                        <span class="difficulty-tag diff-hard">Selective Tier</span>
+                    </div>
+                    <p>A standard galvanic electrochemical cell is built using standard $\text{Zn}^{2+}|\text{Zn}$ ($E^\circ = -0.76\text{ V}$) and $\text{Ag}^+|\text{Ag}$ ($E^\circ = +0.80\text{ V}$) half-cells. What is the calculated standard cell potential ($E^\circ_{\text{cell}}$), and which direction do the electrons flow through the external circuit wire?</p>
+                    <label class="quiz-option-label"><input type="radio" name="mcq5" value="A"> A. $E^\circ_{\text{cell}} = +0.04\text{ V}$, flowing from the silver electrode to the zinc electrode.</label>
+                    <label class="quiz-option-label"><input type="radio" name="mcq5" value="B"> B. $E^\circ_{\text{cell}} = +1.56\text{ V}$, flowing from the silver electrode to the zinc electrode.</label>
+                    <label class="quiz-option-label"><input type="radio" name="mcq5" value="C"> C. $E^\circ_{\text{cell}} = +1.56\text{ V}$, flowing from the zinc electrode to the silver electrode.</label>
+                    <label class="quiz-option-label"><input type="radio" name="mcq5" value="D"> D. $E^\circ_{\text{cell}} = -1.56\text{ V}$, no spontaneous current flows through the circuit.</label>
+                    <div id="mcq5-feedback" class="feedback-pane"></div>
+                </div>
+
+                <div class="glass-panel" style="margin-bottom: 20px;">
+                    <div class="question-meta-row">
+                        <span>QUESTION 6</span>
+                        <span class="difficulty-tag diff-medium">Proficient</span>
+                    </div>
+                    <p>What is the primary function of the salt bridge electrolyte within a standard galvanic electrochemical cell system?</p>
+                    <label class="quiz-option-label"><input type="radio" name="mcq6" value="A"> A. To permit the high-velocity transmission of free valence electrons between half-cells.</label>
+                    <label class="quiz-option-label"><input type="radio" name="mcq6" value="B"> B. To maintain internal electrical neutrality by allowing balancing ions to migrate between half-cells.</label>
+                    <label class="quiz-option-label"><input type="radio" name="mcq6" value="C"> C. To accelerate the oxidation rate occurring at the surface of the positive cathode.</label>
+                    <label class="quiz-option-label"><input type="radio" name="mcq6" value="D"> D. To keep the chemical reactants mixed together so they can reach a stable equilibrium.</label>
+                    <div id="mcq6-feedback" class="feedback-pane"></div>
+                </div>
+
+                <div class="glass-panel" style="margin-bottom: 20px;">
+                    <div class="question-meta-row">
+                        <span>QUESTION 7</span>
+                        <span class="difficulty-tag diff-medium">Proficient</span>
+                    </div>
+                    <p>When an ionic salt dissolves in water, the process can release or absorb energy. If the hydration energy released when forming ion-dipole bonds is smaller than the lattice energy required to separate the ions, what type of enthalpy change occurs?</p>
+                    <label class="quiz-option-label"><input type="radio" name="mcq7" value="A"> A. The overall dissolution process is highly exothermic ($\Delta H &lt; 0$).</label>
+                    <label class="quiz-option-label"><input type="radio" name="mcq7" value="B"> B. The process is endothermic ($\Delta H &gt; 0$), and the water temperature drops.</label>
+                    <label class="quiz-option-label"><input type="radio" name="mcq7" value="C"> C. No chemical interactions occur, resulting in a net enthalpy change of zero.</label>
+                    <label class="quiz-option-label"><input type="radio" name="mcq7" value="D"> D. The system undergoes chemical activation, changing the identity of the solvent molecules.</label>
+                    <div id="mcq7-feedback" class="feedback-pane"></div>
+                </div>
+
+                <div class="glass-panel" style="margin-bottom: 20px;">
+                    <div class="question-meta-row">
+                        <span>QUESTION 8</span>
+                        <span class="difficulty-tag diff-hard">Selective Tier</span>
+                    </div>
+                    <p>Consider the periodic patterns that dictate metal reactivity. Why does reactivity increase down the alkali metal group (Group 1) on the Periodic Table?</p>
+                    <label class="quiz-option-label"><input type="radio" name="mcq8" value="A"> A. Electronegativity increases, causing the nucleus to pull bonding electrons closer.</label>
+                    <label class="quiz-option-label"><input type="radio" name="mcq8" value="B"> B. Atomic radius increases and first ionisation energy decreases, making it easier to lose the valence electron.</label>
+                    <label class="quiz-option-label"><input type="radio" name="mcq8" value="C"> C. The nucleus gains more protons, which increases its electrostatic pull on the outer valence shell.</label>
+                    <label class="quiz-option-label"><input type="radio" name="mcq8" value="D"> D. The core shielding effect decreases, holding the outer valence shell tighter to the nucleus.</label>
+                    <div id="mcq8-feedback" class="feedback-pane"></div>
+                </div>
+
+                <div class="glass-panel" style="margin-bottom: 20px;">
+                    <div class="question-meta-row">
+                        <span>QUESTION 9</span>
+                        <span class="difficulty-tag diff-medium">Proficient</span>
+                    </div>
+                    <p>A student burns a hydrocarbon fuel sample under a water-filled container. If $200.0\text{ g}$ of water absorbs $16.74\text{ kJ}$ of thermal energy, what is the resulting temperature change ($\Delta T$) of the water system?</p>
+                    <label class="quiz-option-label"><input type="radio" name="mcq9" value="A"> A. $2.00\text{ K}$</label>
+                    <label class="quiz-option-label"><input type="radio" name="mcq9" value="B"> B. $20.0\text{ C}$</label>
+                    <label class="quiz-option-label"><input type="radio" name="mcq9" value="C"> C. $0.020\text{ K}$</label>
+                    <label class="quiz-option-label"><input type="radio" name="mcq9" value="D"> D. $4.18\text{ C}$</label>
+                    <div id="mcq9-feedback" class="feedback-pane"></div>
+                </div>
+
+                <div class="glass-panel" style="margin-bottom: 20px;">
+                    <div class="question-meta-row">
+                        <span>QUESTION 10</span>
+                        <span class="difficulty-tag diff-hard">Selective Tier</span>
+                    </div>
+                    <p>An unknown metal strip is immersed in four different solutions. It displaces copper from $\text{CuSO}_{4(aq)}$ and zinc from $\text{Zn(NO}_3)_{2(aq)}$, but shows no reaction in $\text{MgSO}_{4(aq)}$. Where does this metal sit on the activity series relative to $\text{Mg}$, $\text{Zn}$, and $\text{Cu}$?</p>
+                    <label class="quiz-option-label"><input type="radio" name="mcq10" value="A"> A. More reactive than Magnesium but less reactive than Zinc.</label>
+                    <label class="quiz-option-label"><input type="radio" name="mcq10" value="B"> B. Less reactive than Copper but more reactive than Zinc.</label>
+                    <label class="quiz-option-label"><input type="radio" name="mcq10" value="C"> C. More reactive than Zinc but less reactive than Magnesium.</label>
+                    <label class="quiz-option-label"><input type="radio" name="mcq10" value="D"> D. Less reactive than Zinc and less reactive than Copper.</label>
+                    <div id="mcq10-feedback" class="feedback-pane"></div>
+                </div>
+
+                <button type="button" onclick="evaluateMCQEngine()">Submit Diagnostic Multiple Choice Grid</button>
+            </form>
+
+
+            <h2 style="margin-top: 40px; border-bottom: 2px solid var(--glass-border); padding-bottom: 10px;">Section 3: Analytical Short Answer Matrices</h2>
+            <p class="vault-sub">Complete your calculations or written explanations, click submit to reveal the marking criteria and worked solution, and select your self-assessed score from the dropdown menu.</p>
+            
+            <div class="glass-panel" style="margin-bottom: 25px;">
+                <div class="question-meta-row"><span>SAQ 1 (2 Marks)</span><span class="difficulty-tag diff-easy">Foundational Baseline</span></div>
+                <p>Define the Law of Conservation of Mass and explain how it relates to balancing coefficients in chemical equations.</p>
+                <textarea class="saq-textarea" placeholder="Enter your conceptual explanation..."></textarea>
+                <button type="button" onclick="revealSAQ(1)">Submit Response & Verify</button>
+                <div id="saq1-solution" class="marking-criteria-block">
+                    <span class="criteria-badge">Marking Criteria & Exemplar:</span>
+                    <p><strong>1 Mark:</strong> Clearly states that matter cannot be created or destroyed in a closed system, so the total mass of the reactants must equal the total mass of the products.<br>
+                    <strong>1 Mark:</strong> Links this law to atomic structure, explaining that balancing coefficients ensures the exact number of atoms of each element remains identical on both sides of the equation.</p>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label>Self-Assessed Score: </label>
+                    <select><option>0</option><option>1</option><option>2</option></select>
+                </div>
+            </div>
+
+            <div class="glass-panel" style="margin-bottom: 25px;">
+                <div class="question-meta-row"><span>SAQ 2 (3 Marks)</span><span class="difficulty-tag diff-medium">Syllabus Proficient</span></div>
+                <p>Identify the type of decomposition reaction that occurs when solid silver chloride ($\text{AgCl}$) is exposed to sunlight. Write the fully balanced molecular chemical equation, including all state symbols.</p>
+                <textarea class="saq-textarea" placeholder="Enter your response..."></textarea>
+                <button type="button" onclick="revealSAQ(2)">Submit Response & Verify</button>
+                <div id="saq2-solution" class="marking-criteria-block">
+                    <span class="criteria-badge">Marking Criteria & Exemplar:</span>
+                    <p><strong>1 Mark:</strong> Correctly classifies the reaction as <strong>photolytic decomposition (photolysis)</strong>.<br>
+                    <strong>2 Marks:</strong> Provides the fully balanced chemical equation with correct formulas and state symbols:<br>
+                    $$2\text{AgCl}_{(s)} \xrightarrow{h\nu} 2\text{Ag}_{(s)} + \text{Cl}_{2(g)}$$</p>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label>Self-Assessed Score: </label>
+                    <select><option>0</option><option>1</option><option>2</option><option>3</option></select>
+                </div>
+            </div>
+
+            <div class="glass-panel" style="margin-bottom: 25px;">
+                <div class="question-meta-row"><span>SAQ 3 (3 Marks) [Module 2 Integrated]</span><span class="difficulty-tag diff-hard">Selective Tier</span></div>
+                <p>Exactly $12.50\text{ mL}$ of $0.150\text{ mol}\cdot\text{L}^{-1}$ hydrochloric acid ($\text{HCl}_{(aq)}$) completely neutralises $25.00\text{ mL}$ of an unknown sodium hydroxide solution ($\text{NaOH}_{(aq)}$). Calculate the molar concentration of the base solution. <em>(Enter your numerical answer below)</em></p>
+                <input type="text" class="saq-textarea" style="min-height:38px;" placeholder="e.g. 0.0750">
+                <button type="button" onclick="revealSAQ(3)">Submit Response & Verify</button>
+                <div id="saq3-solution" class="marking-criteria-block">
+                    <span class="criteria-badge">Marking Criteria & Exemplar:</span>
+                    <p>Reaction ratio is $1:1$: $\text{HCl} + \text{NaOH} \rightarrow \text{NaCl} + \text{H}_2\text{O}$<br>
+                    $$n(\text{HCl}) = c \times V = 0.150\text{ mol}\cdot\text{L}^{-1} \times 0.01250\text{ L} = 0.001875\text{ mol}$$<br>
+                    $$n(\text{NaOH}) = 0.001875\text{ mol}$$<br>
+                    $$c(\text{NaOH}) = \frac{n}{V} = \frac{0.001875\text{ mol}}{0.02500\text{ L}} = 0.0750\text{ mol}\cdot\text{L}^{-1}$$<br>
+                    <strong>Final Rounded Value (3 significant figures):</strong> $0.0750\text{ mol}\cdot\text{L}^{-1}$</p>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label>Self-Assessed Score: </label>
+                    <select><option>0</option><option>1</option><option>2</option><option>3</option></select>
+                </div>
+            </div>
+
+            <div class="glass-panel" style="margin-bottom: 25px;">
+                <div class="question-meta-row"><span>SAQ 4 (3 Marks)</span><span class="difficulty-tag diff-medium">Syllabus Proficient</span></div>
+                <p>Explain how a heterogeneous catalyst changes the rate of a reaction. Refer to activation energy and include a labeled energy profile diagram description in your response.</p>
+                <textarea class="saq-textarea" placeholder="Type response here..."></textarea>
+                <button type="button" onclick="revealSAQ(4)">Submit Response & Verify</button>
+                <div id="saq4-solution" class="marking-criteria-block">
+                    <span class="criteria-badge">Marking Criteria & Exemplar:</span>
+                    <p><strong>1 Mark:</strong> Explains that a catalyst provides an alternative reaction pathway with a <strong>lower activation energy ($E_a$)</strong>.<br>
+                    <strong>1 Mark:</strong> States that the catalyst is not consumed during the reaction and remains chemically unchanged.<br>
+                    <strong>1 Mark:</strong> Mentions that on an energy profile diagram, a catalyst lowers the peak of the activation energy curve while leaving the initial reactant and final product energy levels unchanged.</p>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label>Self-Assessed Score: </label>
+                    <select><option>0</option><option>1</option><option>2</option><option>3</option></select>
+                </div>
+            </div>
+
+            <div class="glass-panel" style="margin-bottom: 25px;">
+                <div class="question-meta-row"><span>SAQ 5 (4 Marks)</span><span class="difficulty-tag diff-hard">Selective Tier</span></div>
+                <p>A piece of copper metal wire is placed into a solution of silver nitrate ($\text{AgNO}_{3(aq)}$). Describe the macroscopic observations, identify the species being oxidised and reduced, and write the balanced net ionic equation for the reaction.</p>
+                <textarea class="saq-textarea" placeholder="Type response here..."></textarea>
+                <button type="button" onclick="revealSAQ(5)">Submit Response & Verify</button>
+                <div id="saq5-solution" class="marking-criteria-block">
+                    <span class="criteria-badge">Marking Criteria & Exemplar:</span>
+                    <p><strong>Observations (1 Mark):</strong> The clear, colourless solution gradually turns a distinct blue color due to the formation of aqueous copper(II) ions, and shiny metallic silver crystals precipitate on the surface of the copper wire.<br>
+                    <strong>Redox Identities (2 Marks):</strong> Copper metal ($\text{Cu}$) loses electrons and is <strong>oxidised</strong>. Silver ions ($\text{Ag}^+$) gain electrons and are <strong>reduced</strong>.<br>
+                    <strong>Net Ionic Equation (1 Mark):</strong><br>
+                    $$\text{Cu}_{(s)} + 2\text{Ag}^+_{(aq)} \rightarrow \text{Cu}^{2+}_{(aq)} + 2\text{Ag}_{(s)}$$</p>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label>Self-Assessed Score: </label>
+                    <select><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select>
+                </div>
+            </div>
+
+            <div class="glass-panel" style="margin-bottom: 25px;">
+                <div class="question-meta-row"><span>SAQ 6 (5 Marks)</span><span class="difficulty-tag diff-hard">Selective Tier</span></div>
+                <p>A galvanic cell is represented by the following phase notation: $\text{Zn}_{(s)}|\text{Zn}^{2+}_{(aq)} \,(1.0\text{ M}) \;||\; \text{Cu}^{2+}_{(aq)} \,(1.0\text{ M})|\text{Cu}_{(s)}$. Visualize and interpret this cell. Upon submission, analyze the exemplar cell diagram provided to verify your understanding of electrodes, ion migration, and electron flow paths.</p>
+                <button type="button" onclick="revealSAQ(6)">Generate Vectorized Schematic Resolution</button>
+                <div id="saq6-solution" class="marking-criteria-block">
+                    <span class="criteria-badge">Vector Graphic Feedback Engine:</span>
+                    <p>The standard potential for this cell is calculated as $E^\circ_{\text{cell}} = E^\circ_{\text{cathode}} - E^\circ_{\text{anode}} = 0.34\text{ V} - (-0.76\text{ V}) = +1.10\text{ V}$. Below is the fully labeled schematic diagram:</p>
+                    <svg viewBox="0 0 800 400" width="100%" height="280" style="background:#110b29; border:1px solid var(--glass-border); border-radius:12px;">
+                        <rect x="80" y="120" width="180" height="200" rx="8" fill="rgba(255,255,255,0.03)" stroke="#fff" stroke-width="1.5"/>
+                        <rect x="80" y="150" width="180" height="170" fill="rgba(182,102,255,0.1)"/>
+                        <rect x="540" y="120" width="180" height="200" rx="8" fill="rgba(255,255,255,0.03)" stroke="#fff" stroke-width="1.5"/>
+                        <rect x="540" y="150" width="180" height="170" fill="rgba(0,255,170,0.08)"/>
+                        <rect x="150" y="80" width="25" height="160" fill="#a0a5aa" stroke="#666"/>
+                        <text x="162" y="70" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">Zn Anode (-)</text>
+                        <rect x="620" y="80" width="25" height="160" fill="#d97443" stroke="#b85626"/>
+                        <text x="632" y="70" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">Cu Cathode (+)</text>
+                        <path d="M 162 80 L 162 40 L 360 40" fill="none" stroke="#fff" stroke-width="2"/>
+                        <path d="M 632 80 L 632 40 L 440 40" fill="none" stroke="#fff" stroke-width="2"/>
+                        <circle cx="400" cy="40" r="25" fill="#140f26" stroke="#b666ff" stroke-width="2"/>
+                        <text x="400" y="45" fill="#00ffaa" font-size="11" font-weight="bold" text-anchor="middle">+1.10V</text>
+                        <path d="M 210 25 L 300 25" fill="none" stroke="#ff3b30" stroke-width="1.5" marker-end="url(#arrow)"/>
+                        <text x="255" y="18" fill="#ff3b30" font-size="10" font-weight="bold" text-anchor="middle">e⁻ Flow →</text>
+                        <path d="M 220 180 L 220 110 L 580 110 L 580 180" fill="none" stroke="#443c68" stroke-width="14" stroke-linecap="square"/>
+                        <text x="400" y="105" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">Salt Bridge: KNO₃</text>
+                        <text x="130" y="240" fill="#b666ff" font-size="12" font-weight="bold">Zn²⁺</text>
+                        <text x="590" y="240" fill="#00ffaa" font-size="12" font-weight="bold">Cu²⁺</text>
+                    </svg>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label>Self-Assessed Score: </label>
+                    <select><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select>
+                </div>
+            </div>
+
+            <div class="glass-panel" style="margin-bottom: 25px;">
+                <div class="question-meta-row"><span>SAQ 7 (3 Marks)</span><span class="difficulty-tag diff-medium">Syllabus Proficient</span></div>
+                <p>Explain how the surface area of solid calcium carbonate ($\text{CaCO}_3$) affects its rate of reaction when reacted with a dilute solution of hydrochloric acid ($\text{HCl}$). Use collision theory principles to support your answer.</p>
+                <textarea class="saq-textarea" placeholder="Type response here..."></textarea>
+                <button type="button" onclick="revealSAQ(7)">Submit Response & Verify</button>
+                <div id="saq7-solution" class="marking-criteria-block">
+                    <span class="criteria-badge">Marking Criteria & Exemplar:</span>
+                    <p><strong>1 Mark:</strong> States that crushing a solid reactant into a fine powder significantly increases its <strong>total exposed surface area</strong>.<br>
+                    <strong>1 Mark:</strong> Explains that increasing the surface area allows more reactant particles to come into contact simultaneously, increasing the <strong>frequency of collisions</strong> between particles.<br>
+                    <strong>1 Mark:</strong> Concludes that this increases the frequency of successful collisions per unit of time, accelerating the overall reaction rate and causing rapid carbon dioxide effervescence.</p>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label>Self-Assessed Score: </label>
+                    <select><option>0</option><option>1</option><option>2</option><option>3</option></select>
+                </div>
+            </div>
+
+            <div class="glass-panel" style="margin-bottom: 25px;">
+                <div class="question-meta-row"><span>SAQ 8 (4 Marks) [Module 2 Integrated]</span><span class="difficulty-tag diff-hard">Selective Tier</span></div>
+                <p>A $4.00\text{ g}$ sample of pure solid calcium carbonate ($\text{CaCO}_3$, $\text{MM} = 100.09\text{ g}\cdot\text{mol}^{-1}$) is completely decomposed by heating ($\text{CaCO}_{3(s)} \xrightarrow{\Delta} \text{CaO}_{(s)} + \text{CO}_{2(g)}$). Calculate the total volume of carbon dioxide gas ($\text{CO}_2$) produced at Standard Temperature and Pressure (STP), where the molar volume of an ideal gas is $22.71\text{ L}\cdot\text{mol}^{-1}$. <em>(Enter your numerical answer below)</em></p>
+                <input type="text" class="saq-textarea" style="min-height:38px;" placeholder="e.g. 0.908">
+                <button type="button" onclick="revealSAQ(8)">Submit Response & Verify</button>
+                <div id="saq8-solution" class="marking-criteria-block">
+                    <span class="criteria-badge">Marking Criteria & Exemplar:</span>
+                    <p>Reaction stoichiometry is $1:1$:<br>
+                    $$n(\text{CaCO}_3) = \frac{m}{\text{MM}} = \frac{4.00\text{ g}}{100.09\text{ g}\cdot\text{mol}^{-1}} = 0.039964\text{ mol}$$<br>
+                    $$n(\text{CO}_2) = 0.039964\text{ mol}$$<br>
+                    $$V(\text{CO}_2) = n \times 22.71\text{ L}\cdot\text{mol}^{-1} = 0.039964 \times 22.71 = 0.90758\text{ L}$$<br>
+                    <strong>Final Rounded Value (3 significant figures):</strong> $0.908\text{ L}$</p>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label>Self-Assessed Score: </label>
+                    <select><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select>
+                </div>
+            </div>
+
+            <div class="glass-panel" style="margin-bottom: 25px;">
+                <div class="question-meta-row"><span>SAQ 9 (2 Marks)</span><span class="difficulty-tag diff-easy">Foundational Baseline</span></div>
+                <p>State two distinct macroscopic observations that indicate a chemical reaction is taking place when a piece of reactive zinc strip is placed into an aqueous solution of copper(II) sulfate.</p>
+                <textarea class="saq-textarea" placeholder="Type response here..."></textarea>
+                <button type="button" onclick="revealSAQ(9)">Submit Response & Verify</button>
+                <div id="saq9-solution" class="marking-criteria-block">
+                    <span class="criteria-badge">Marking Criteria & Exemplar:</span>
+                    <p><strong>1 Mark:</strong> Mentions that the intense blue color of the copper(II) sulfate solution gradually fades or turns clear as copper ions are displaced.<br>
+                    <strong>1 Mark:</strong> Notes that a dark reddish-brown solid deposit of metallic copper forms on the surface of the dissolving zinc strip.</p>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label>Self-Assessed Score: </label>
+                    <select><option>0</option><option>1</option><option>2</option></select>
+                </div>
+            </div>
+
+            <div class="glass-panel" style="margin-bottom: 25px;">
+                <div class="question-meta-row"><span>SAQ 10 (3 Marks)</span><span class="difficulty-tag diff-medium">Syllabus Proficient</span></div>
+                <p>Define the term 'activation energy' ($E_a$). Explain its significance within collision theory and its role in determining whether a collision results in a chemical reaction.</p>
+                <textarea class="saq-textarea" placeholder="Type response here..."></textarea>
+                <button type="button" onclick="revealSAQ(10)">Submit Response & Verify</button>
+                <div id="saq10-solution" class="marking-criteria-block">
+                    <span class="criteria-badge">Marking Criteria & Exemplar:</span>
+                    <p><strong>1 Mark:</strong> Defines activation energy as the minimum amount of kinetic energy colliding particles must possess to break existing chemical bonds and initiate a reaction.<br>
+                    <strong>1 Mark:</strong> Explains that if the kinetic energy of colliding particles is lower than the activation energy ($E_k &lt; E_a$), the particles will bounce apart without reacting.<br>
+                    <strong>1 Mark:</strong> Links activation energy to reaction rate, noting that higher activation energy barriers result in fewer successful collisions per unit of time under ambient conditions.</p>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label>Self-Assessed Score: </label>
+                    <select><option>0</option><option>1</option><option>2</option><option>3</option></select>
+                </div>
+            </div>
+
+            <div class="glass-panel" style="margin-bottom: 25px;">
+                <div class="question-meta-row"><span>SAQ 11 (3 Marks)</span><span class="difficulty-tag diff-medium">Syllabus Proficient</span></div>
+                <p>Write out the balanced half-equations for both oxidation and reduction, as well as the net ionic equation, for the reaction between solid magnesium ribbon and a dilute solution of hydrochloric acid.</p>
+                <textarea class="saq-textarea" placeholder="Type response here..."></textarea>
+                <button type="button" onclick="revealSAQ(11)">Submit Response & Verify</button>
+                <div id="saq11-solution" class="marking-criteria-block">
+                    <span class="criteria-badge">Marking Criteria & Exemplar:</span>
+                    <p><strong>Oxidation Half-Equation (1 Mark):</strong> $\text{Mg}_{(s)} \rightarrow \text{Mg}^{2+}_{(aq)} + 2\text{e}^-$<br>
+                    <strong>Reduction Half-Equation (1 Mark):</strong> $2\text{H}^+_{(aq)} + 2\text{e}^- \rightarrow \text{H}_{2(g)}$<br>
+                    <strong>Net Ionic Equation (1 Mark):</strong> $\text{Mg}_{(s)} + 2\text{H}^+_{(aq)} \rightarrow \text{Mg}^{2+}_{(aq)} + \text{H}_{2(g)}$</p>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label>Self-Assessed Score: </label>
+                    <select><option>0</option><option>1</option><option>2</option><option>3</option></select>
+                </div>
+            </div>
+
+            <div class="glass-panel" style="margin-bottom: 25px;">
+                <div class="question-meta-row"><span>SAQ 12 (4 Marks) [Module 2 Integrated]</span><span class="difficulty-tag diff-hard">Selective Tier</span></div>
+                <p>A chemist mixes $50.0\text{ mL}$ of $0.100\text{ mol}\cdot\text{L}^{-1}$ silver nitrate ($\text{AgNO}_3$) with $50.0\text{ mL}$ of $0.0500\text{ mol}\cdot\text{L}^{-1}$ sodium chloride ($\text{NaCl}$). Calculate the mass of solid silver chloride precipitate ($\text{AgCl}$) formed, using correct NESA atomic masses. <em>(Enter your numerical answer below)</em></p>
+                <input type="text" class="saq-textarea" style="min-height:38px;" placeholder="e.g. 0.358">
+                <button type="button" onclick="revealSAQ(12)">Submit Response & Verify</button>
+                <div id="saq12-solution" class="marking-criteria-block">
+                    <span class="criteria-badge">Marking Criteria & Exemplar:</span>
+                    <p>$$n(\text{AgNO}_3) = 0.100 \times 0.0500 = 0.00500\text{ mol}$$<br>
+                    $$n(\text{NaCl}) = 0.0500 \times 0.0500 = 0.00250\text{ mol}$$<br>
+                    Since the reaction ratio is $1:1$, $\text{NaCl}$ is the limiting reagent.<br>
+                    $$n(\text{AgCl}) = 0.00250\text{ mol}$$<br>
+                    $$\text{MM}(\text{AgCl}) = 107.9 + 35.45 = 143.35\text{ g}\cdot\text{mol}^{-1}$$<br>
+                    $$m(\text{AgCl}) = 0.00250 \times 143.35 = 0.358375\text{ g}$$<br>
+                    <strong>Final Rounded Value (3 significant figures):</strong> $0.358\text{ g}$</p>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label>Self-Assessed Score: </label>
+                    <select><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select>
+                </div>
+            </div>
+
+            <div class="glass-panel" style="margin-bottom: 25px;">
+                <div class="question-meta-row"><span>SAQ 13 (2 Marks)</span><span class="difficulty-tag diff-easy">Foundational Baseline</span></div>
+                <p>Define the terms 'oxidation' and 'reduction' in terms of oxidation numbers and electron transfer.</p>
+                <textarea class="saq-textarea" placeholder="Type response here..."></textarea>
+                <button type="button" onclick="revealSAQ(13)">Submit Response & Verify</button>
+                <div id="saq13-solution" class="marking-criteria-block">
+                    <span class="criteria-badge">Marking Criteria & Exemplar:</span>
+                    <p><strong>Oxidation (1 Mark):</strong> The loss of electrons, which results in an <strong>increase in oxidation number</strong>.<br>
+                    <strong>Reduction (1 Mark):</strong> The gain of electrons, which results in a <strong>decrease in oxidation number</strong>.</p>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label>Self-Assessed Score: </label>
+                    <select><option>0</option><option>1</option><option>2</option></select>
+                </div>
+            </div>
+
+            <div class="glass-panel" style="margin-bottom: 25px;">
+                <div class="question-meta-row"><span>SAQ 14 (3 Marks)</span><span class="difficulty-tag diff-medium">Syllabus Proficient</span></div>
+                <p>Explain the difference between an exothermic and an endothermic chemical reaction. Refer to bond breaking, bond making, and net enthalpy changes ($\Delta H$) in your answer.</p>
+                <textarea class="saq-textarea" placeholder="Type response here..."></textarea>
+                <button type="button" onclick="revealSAQ(14)">Submit Response & Verify</button>
+                <div id="saq14-solution" class="marking-criteria-block">
+                    <span class="criteria-badge">Marking Criteria & Exemplar:</span>
+                    <p><strong>1 Mark:</strong> Explains that bond breaking absorbs energy from the surroundings (endothermic), while bond making releases energy (exothermic).<br>
+                    <strong>1 Mark:</strong> Defines an <strong>exothermic reaction</strong> as one where more energy is released during bond making than is absorbed during bond breaking, resulting in a negative enthalpy change ($\Delta H &lt; 0$).<br>
+                    <strong>1 Mark:</strong> Defines an <strong>endothermic reaction</strong> as one where more energy is absorbed during bond breaking than is released during bond making, resulting in a positive enthalpy change ($\Delta H &gt; 0$).</p>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label>Self-Assessed Score: </label>
+                    <select><option>0</option><option>1</option><option>2</option><option>3</option></select>
+                </div>
+            </div>
+
+            <div class="glass-panel" style="margin-bottom: 25px;">
+                <div class="question-meta-row"><span>SAQ 15 (5 Marks)</span><span class="difficulty-tag diff-hard">Selective Tier</span></div>
+                <p>A galvanic cell is constructed from standard half-cells based on the following notation: $\text{Fe}_{(s)}|\text{Fe}^{2+}_{(aq)}\;||\;\text{Ag}^+_{(aq)}|\text{Ag}_{(s)}$. Generate the full schematic visualization of this cell, showing all standard structural components.</p>
+                <button type="button" onclick="revealSAQ(15)">Generate Vectorized Schematic Resolution</button>
+                <div id="saq15-solution" class="marking-criteria-block">
+                    <span class="criteria-badge">Vector Graphic Feedback Engine:</span>
+                    <p>The standard potential for this cell is calculated as $E^\circ_{\text{cell}} = +0.80\text{ V} - (-0.44\text{ V}) = +1.24\text{ V}$. Below is the fully labeled schematic diagram:</p>
+                    <svg viewBox="0 0 800 400" width="100%" height="280" style="background:#110b29; border:1px solid var(--glass-border); border-radius:12px;">
+                        <rect x="80" y="120" width="180" height="200" rx="8" fill="rgba(255,255,255,0.03)" stroke="#fff" stroke-width="1.5"/>
+                        <rect x="80" y="150" width="180" height="170" fill="rgba(230,100,100,0.1)"/>
+                        <rect x="540" y="120" width="180" height="200" rx="8" fill="rgba(255,255,255,0.03)" stroke="#fff" stroke-width="1.5"/>
+                        <rect x="540" y="150" width="180" height="170" fill="rgba(255,255,255,0.1)"/>
+                        <rect x="150" y="80" width="25" height="160" fill="#70757a" stroke="#444"/>
+                        <text x="162" y="70" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">Fe Anode (-)</text>
+                        <rect x="620" y="80" width="25" height="160" fill="#e0e5eb" stroke="#a0a5aa"/>
+                        <text x="632" y="70" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">Ag Cathode (+)</text>
+                        <path d="M 162 80 L 162 40 L 360 40" fill="none" stroke="#fff" stroke-width="2"/>
+                        <path d="M 632 80 L 632 40 L 440 40" fill="none" stroke="#fff" stroke-width="2"/>
+                        <circle cx="400" cy="40" r="25" fill="#140f26" stroke="#b666ff" stroke-width="2"/>
+                        <text x="400" y="45" fill="#00ffaa" font-size="11" font-weight="bold" text-anchor="middle">+1.24V</text>
+                        <path d="M 210 25 L 300 25" fill="none" stroke="#ff3b30" stroke-width="1.5" marker-end="url(#arrow)"/>
+                        <text x="255" y="18" fill="#ff3b30" font-size="10" font-weight="bold" text-anchor="middle">e⁻ Flow →</text>
+                        <path d="M 220 180 L 220 110 L 580 110 L 580 180" fill="none" stroke="#443c68" stroke-width="14" stroke-linecap="square"/>
+                        <text x="400" y="105" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">Salt Bridge: KNO₃</text>
+                        <text x="130" y="240" fill="#ff4444" font-size="12" font-weight="bold">Fe²⁺</text>
+                        <text x="590" y="240" fill="#ffffff" font-size="12" font-weight="bold">Ag⁺</text>
+                    </svg>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label>Self-Assessed Score: </label>
+                    <select><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select>
+                </div>
+            </div>
+
+            <div class="glass-panel" style="margin-bottom: 25px;">
+                <div class="question-meta-row"><span>SAQ 16 (3 Marks)</span><span class="difficulty-tag diff-medium">Syllabus Proficient</span></div>
+                <p>Explain how increasing the concentration of an aqueous reactant speeds up the rate of a chemical reaction, according to collision theory principles.</p>
+                <textarea class="saq-textarea" placeholder="Type response here..."></textarea>
+                <button type="button" onclick="revealSAQ(16)">Submit Response & Verify</button>
+                <div id="saq16-solution" class="marking-criteria-block">
+                    <span class="criteria-badge">Marking Criteria & Exemplar:</span>
+                    <p><strong>1 Mark:</strong> Explains that increasing the concentration increases the total number of reactant particles per unit volume.<br>
+                    <strong>1 Mark:</strong> States that forcing the particles closer together increases the overall <strong>frequency of collisions</strong>.<br>
+                    <strong>1 Mark:</strong> Concludes that this directly raises the frequency of successful collisions per unit of time, accelerating the reaction rate.</p>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label>Self-Assessed Score: </label>
+                    <select><option>0</option><option>1</option><option>2</option><option>3</option></select>
+                </div>
+            </div>
+
+            <div class="glass-panel" style="margin-bottom: 25px;">
+                <div class="question-meta-row"><span>SAQ 17 (4 Marks) [Module 2 Integrated]</span><span class="difficulty-tag diff-hard">Selective Tier</span></div>
+                <p>Calculate the total amount of thermal energy (in kilojoules) required to raise the temperature of $500.0\text{ g}$ of pure liquid water by exactly $35.0^\circ\text{C}$. Use the NESA standard value for the specific heat capacity of water ($4.184\text{ J}\cdot\text{g}^{-1}\cdot\text{K}^{-1}$). <em>(Enter your numerical answer below)</em></p>
+                <input type="text" class="saq-textarea" style="min-height:38px;" placeholder="e.g. 73.2">
+                <button type="button" onclick="revealSAQ(17)">Submit Response & Verify</button>
+                <div id="saq17-solution" class="marking-criteria-block">
+                    <span class="criteria-badge">Marking Criteria & Exemplar:</span>
+                    <p>Using the specific heat capacity formula ($q = m c \Delta T$):<br>
+                    $$q = 500.0\text{ g} \times 4.184\text{ J}\cdot\text{g}^{-1}\cdot\text{K}^{-1} \times 35.0\text{ K}$$<br>
+                    $$q = 73220\text{ J} = 73.22\text{ kJ}$$<br>
+                    The value $35.0^\circ\text{C}$ limits the calculation to 3 significant figures.<br>
+                    <strong>Final Rounded Value:</strong> $73.2\text{ kJ}$</p>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label>Self-Assessed Score: </label>
+                    <select><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select>
+                </div>
+            </div>
+
+            <div class="glass-panel" style="margin-bottom: 25px;">
+                <div class="question-meta-row"><span>SAQ 18 (2 Marks)</span><span class="difficulty-tag diff-easy">Foundational Baseline</span></div>
+                <p>Write out the fully balanced molecular equation, including all state symbols, for the complete combustion of liquid ethanol ($\text{C}_2\text{H}_5\text{OH}$) in an excess oxygen environment.</p>
+                <textarea class="saq-textarea" placeholder="Type response here..."></textarea>
+                <button type="button" onclick="revealSAQ(18)">Submit Response & Verify</button>
+                <div id="saq18-solution" class="marking-criteria-block">
+                    <span class="criteria-badge">Marking Criteria & Exemplar:</span>
+                    <p><strong>2 Marks:</strong> Provides the fully balanced chemical equation with correct formulas and state symbols:<br>
+                    $$\text{C}_2\text{H}_5\text{OH}_{(l)} + 3\text{O}_{2(g)} \rightarrow 2\text{CO}_{2(g)} + 3\text{H}_2\text{O}_{(g)}$$</p>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label>Self-Assessed Score: </label>
+                    <select><option>0</option><option>1</option><option>2</option></select>
+                </div>
+            </div>
+
+            <div class="glass-panel" style="margin-bottom: 25px;">
+                <div class="question-meta-row"><span>SAQ 19 (3 Marks)</span><span class="difficulty-tag diff-medium">Syllabus Proficient</span></div>
+                <p>State the oxidation number of sulfur in the following three chemical species: solid elemental sulfur ($\text{S}_8$), sulfur dioxide gas ($\text{CO}_2$ group equivalent $\text{SO}_2$), and the sulfate polyatomic ion ($\text{SO}_4^{2-}$).</p>
+                <textarea class="saq-textarea" placeholder="Type response here..."></textarea>
+                <button type="button" onclick="revealSAQ(19)">Submit Response & Verify</button>
+                <div id="saq19-solution" class="marking-criteria-block">
+                    <span class="criteria-badge">Marking Criteria & Exemplar:</span>
+                    <p><strong>1 Mark:</strong> $\text{S}_8 = 0$ (Uncombined elemental forms always have an oxidation state of zero).<br>
+                    <strong>1 Mark:</strong> $\text{SO}_2 = +4$ (Since each oxygen is $-2$, $x + 2(-2) = 0 \rightarrow x = +4$).<br>
+                    <strong>1 Mark:</strong> $\text{SO}_4^{2-} = +6$ (Since the overall charge of the polyatomic ion is $-2$, $x + 4(-2) = -2 \rightarrow x = +6$).</p>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label>Self-Assessed Score: </label>
+                    <select><option>0</option><option>1</option><option>2</option><option>3</option></select>
+                </div>
+            </div>
+
+            <div class="glass-panel" style="margin-bottom: 25px;">
+                <div class="question-meta-row"><span>SAQ 20 (3 Marks)</span><span class="difficulty-tag diff-hard">Selective Tier</span></div>
+                <p>Predict whether a spontaneous redox reaction will occur if a clean piece of lead metal ribbon is placed into an aqueous solution of zinc sulfate ($\text{ZnSO}_{4(aq)}$). Justify your prediction using standard reduction potentials ($E^\circ_{\text{Pb}^{2+}|\text{Pb}} = -0.13\text{ V}$, $E^\circ_{\text{Zn}^{2+}|\text{Zn}} = -0.76\text{ V}$).</p>
+                <textarea class="saq-textarea" placeholder="Type response here..."></textarea>
+                <button type="button" onclick="revealSAQ(20)">Submit Response & Verify</button>
+                <div id="saq2-solution" class="marking-criteria-block" id="saq20-solution">
+                    <span class="criteria-badge">Marking Criteria & Exemplar:</span>
+                    <p><strong>1 Mark:</strong> Predicts that <strong>no spontaneous reaction will occur</strong>.<br>
+                    <strong>1 Mark:</strong> Explains that zinc has a lower reduction potential than lead ($-0.76\text{ V} &lt; -0.13\text{ V}$), meaning zinc is the more reactive metal and holds onto its ionic form more strongly than lead.<br>
+                    <strong>1 Mark:</strong> Shows that calculating the hypothetical cell potential yields a negative value ($E^\circ = -0.13 - (-0.76) = -0.63\text{ V}$), confirming the forward reaction is non-spontaneous.</p>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label>Self-Assessed Score: </label>
+                    <select><option>0</option><option>1</option><option>2</option><option>3</option></select>
+                </div>
+            </div>
+
+
+            <footer id="portal-global-footer">
+                <p>&copy; 2026 NexusSci Academic Frameworks. Year 11 Chemistry Evaluation Workspace.</p>
+            </footer>
+
+        </main>
+    </div>
+
+    <script>
+        // Multiple Choice Key Matrix
+        const mcqAnswers = {
+            mcq1: { ans: 'C', exp: 'Correct. Spontaneous effervescence indicates a new gas is being generated, which is definitive macroscopic evidence of a chemical change.' },
+            mcq2: { ans: 'B', exp: 'Correct. Lead(II) ions react with iodide ions to form an insoluble yellow lead(II) iodide precipitate ($\\text{PbI}_2$), while potassium and nitrate ions remain in solution as spectators.' },
+            mcq3: { ans: 'A', exp: 'Correct. Raising the temperature causes particles to move faster, which slightly increases the frequency of collisions, but significantly increases the fraction of particles that possess enough kinetic energy to overcome the activation energy barrier ($E_k \\ge E_a$).' },
+            mcq4: { ans: 'B', exp: 'Correct. Aluminum metal loses electrons and is oxidised (its oxidation number increases from $0$ to $+3$). Iron(III) ions gain those electrons, acting as the oxidising agent (oxidant).' },
+            mcq5: { ans: 'C', exp: 'Correct. The cell potential is calculated as $E^\\circ_{\\text{cell}} = +0.80 - (-0.76) = +1.56\\text{ V}$. Electrons travel from the more reactive zinc anode (where oxidation occurs) to the silver cathode through the external circuit.' },
+            mcq6: { ans: 'B', exp: 'Correct. The salt bridge contains inert ions that migrate into the half-cells to balance the electrical charge, maintaining neutrality and allowing the reaction to continue.' },
+            mcq7: { ans: 'B', exp: 'Correct. When the energy required to break the ionic lattice is greater than the hydration energy released, the overall process absorbs heat from the surroundings, making it endothermic.' },
+            mcq8: { ans: 'B', exp: 'Correct. Moving down Group 1 increases the atomic radius and electron shielding, which lowers the first ionisation energy. This makes it easier for the atom to lose its valence electron, increasing its reactivity.' },
+            mcq9: { ans: 'B', exp: 'Correct. Rearranging the specific heat capacity formula gives $\\Delta T = \\frac{q}{m \\times c} = \\frac{16740\\text{ J}}{200.0\\text{ g} \\times 4.184} = 20.0\\text{ K}$, which corresponds to a temperature change of $20.0^\\circ\\text{C}$.' },
+            mcq10: { ans: 'C', exp: 'Correct. Because the unknown metal displaces copper and zinc, it must be more reactive than both of those metals. However, because it cannot displace magnesium, it is less reactive than magnesium.' }
+        };
+
+        function evaluateMCQEngine() {
+            for (let key in mcqAnswers) {
+                const options = document.getElementsByName(key);
+                let selectedValue = '';
+                for (let opt of options) {
+                    if (opt.checked) {
+                        selectedValue = opt.value;
+                        break;
+                    }
+                }
+                const feedbackBlock = document.getElementById(`${key}-feedback`);
+                if (!feedbackBlock) continue;
+                
+                feedbackBlock.style.display = 'block';
+                if (selectedValue === mcqAnswers[key].ans) {
+                    feedbackBlock.className = 'feedback-pane feedback-correct';
+                    feedbackBlock.innerHTML = `<strong>Correct Option!</strong> ${mcqAnswers[key].exp}`;
+                } else {
+                    feedbackBlock.className = 'feedback-pane feedback-incorrect';
+                    feedbackBlock.innerHTML = `<strong>Incorrect or Unanswered.</strong> The correct choice is ${mcqAnswers[key].ans}. ${mcqAnswers[key].exp}`;
+                }
+            }
+        }
+
+        function revealSAQ(id) {
+            // Find the evaluation block located directly after the triggering text area container element
+            const targetBlock = document.getElementById(`saq${id}-solution`) || event.target.nextElementSibling;
+            if (targetBlock) {
+                targetBlock.style.display = 'block';
+            }
+        }
+
+        // Theme Toggle Scripting Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggleBtn = document.getElementById('theme-toggle-btn');
+            const cachedTheme = localStorage.getItem('nexus-color-theme') || 'dark-mode';
+            document.body.classList.add(cachedTheme);
+            
+            themeToggleBtn.addEventListener('click', () => {
+                if (document.body.classList.contains('dark-mode')) {
+                    document.body.classList.replace('dark-mode', 'light-mode');
+                    localStorage.setItem('nexus-color-theme', 'light-mode');
+                } else {
+                    document.body.classList.replace('light-mode', 'dark-mode');
+                    localStorage.setItem('nexus-color-theme', 'dark-mode');
+                }
+            });
+        });
+
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>

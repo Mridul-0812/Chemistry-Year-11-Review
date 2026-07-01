@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section II: Short Answer Examination | NexusSci</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div id="global-utility-bar">
+        <div class="utility-container">
+            <span>NESA Year 11 Chemistry Preliminary Examination Component</span>
+            <div class="utility-controls">
+                <button id="theme-toggle-btn">Toggle Theme</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="portal-layout">
+        
+        <aside id="portal-sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-logo">
+                    <span>🧮</span>
+                    <span>Nexus<span>Sci</span></span>
+                </div>
+                <p class="brand-tagline">NSW Curriculum Mastery</p>
+            </div>
+
+            <nav aria-label="Primary Directory">
+                <div class="nav-section-label">Core Directory</div>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html">🏠 Portal Home</a></li>
+                </ul>
+
+                <div class="nav-section-label">Syllabus Modules</div>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="mod1.html">🧪 Module 1: Properties of Matter</a></li>
+                    <li class="nav-item"><a href="mod2.html">📊 Module 2: Quantitative Chemistry</a></li>
+                    <li class="nav-item"><a href="mod3.html">🔥 Module 3: Reactive Chemistry</a></li>
+                    <li class="nav-item"><a href="mod4.html">⚗️ Module 4: Drivers of Reactions</a></li>
+                </ul>
+
+                <div class="nav-section-label">Diagnostic Systems</div>
+                <ul class="nav-list">
+                    <li class="nav-item active"><a href="exam.html">🏆 Evaluation Engine</a></li>
+                    <li class="nav-item"><a href="results.html">📈 Analytics &amp; Results</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="portal-main" id="main-content">
+            <header>
+                <div class="breadcrumb-trail">Nexus Diagnostics &gt; Section II: Short Answer Examination Matrix</div>
+            </header>
+
+            <div class="glass-panel">
+                <h1>Section II: Extended Analytical Response Matrix</h1>
+                <p><strong>Instructions:</strong> This section contains 25 rigorous short-answer questions (SAQs) testing your deep conceptual understanding and high-precision calculation skills across Modules 1 to 4. Provide your final values or written explanations, reveal the exemplar solutions, and honestly self-assess your awarded marks.</p>
+                <div style="display: flex; gap: 20px; align-items: center; justify-content: flex-start; flex-wrap: wrap; margin-top: 15px;">
+                    <span style="font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary);">Difficulty Profile:</span>
+                    <span class="difficulty-tag diff-easy">Foundational Core</span>
+                    <span class="difficulty-tag diff-medium">Intermediate Analytical</span>
+                    <span class="difficulty-tag diff-hard">Advanced Mastery</span>
+                    <span class="difficulty-tag" style="background: rgba(255, 215, 0, 0.15); color: #ffd700; border: 1px solid #ffd700;">Legend Tier</span>
+                </div>
+            </div>
+
+            <div id="examination-form-container">
+
+                <div class="glass-panel question-card">
+                    <div class="question-meta-row"><span>Question 1 (3 Marks)</span><span class="difficulty-tag diff-easy">Foundational Core</span></div>
+                    <p><strong>Module 1:</strong> Gallium has two naturally occurring isotopes: $^{69}\text{Ga}$ (mass $68.926\text{ u}$) and $^{71}\text{Ga}$ (mass $70.925\text{ u}$). If the relative atomic mass of Gallium is $69.723\text{ u}$, calculate the percentage abundance of each isotope to two decimal places.</p>
+                    <input type="text" class="saq-textarea" style="min-height:40px;" placeholder="Final abundances (e.g. 69Ga = x%, 71Ga = y%)">
+                    <button class="action-btn" onclick="revealSolution('sol1')">Submit &amp; Evaluate</button>
+                    <div id="sol1" class="marking-criteria-block">
+                        <span class="criteria-badge">Exemplar Worked Solution</span>
+                        <p>Let $x$ be the fractional abundance of $^{69}\text{Ga}$ and $(1-x)$ be the fractional abundance of $^{71}\text{Ga}$.</p>
+                        $$68.926x + 70.925(1 - x) = 69.723$$
+                        $$68.926x + 70.925 - 70.925x = 69.723$$
+                        $$-1.999x = -1.202 \implies x = 0.6013$$
+                        <p>Therefore, $^{69}\text{Ga}$ is $60.13\%$ and $^{71}\text{Ga}$ is $39.87\%$.</p>
+                        <div style="margin-top:10px;">
+                            <label>Awarded Marks: </label>
+                            <select class="score-dropdown"><option value="0/3">0 / 3</option><option value="1/3">1 / 3</option><option value="2/3">2 / 3</option><option value="3/3">3 / 3</option></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel question-card">
+                    <div class="question-meta-row"><span>Question 2 (3 Marks)</span><span class="difficulty-tag diff-medium">Intermediate Analytical</span></div>
+                    <p><strong>Module 1:</strong> Explain why the first ionisation energy of Oxygen is anomalously slightly lower than that of Nitrogen, despite being further right across Period 2.</p>
+                    <textarea class="saq-textarea" placeholder="Enter your explanation..."></textarea>
+                    <button class="action-btn" onclick="revealSolution('sol2')">Submit &amp; Evaluate</button>
+                    <div id="sol2" class="marking-criteria-block">
+                        <span class="criteria-badge">Exemplar Worked Solution</span>
+                        <p>Nitrogen has an electron configuration of $1s^2 2s^2 2p^3$, meaning its 2p subshell is exactly half-full with three unpaired electrons, providing extra stability. Oxygen has an electron configuration of $1s^2 2s^2 2p^4$. The fourth electron must pair up with another electron in one of the 2p orbitals. This pairing creates electrostatic repulsion between the two electrons in the same orbital, making it slightly easier (requiring less energy) to remove one of these paired electrons compared to an unpaired electron in Nitrogen.</p>
+                        <div style="margin-top:10px;">
+                            <label>Awarded Marks: </label>
+                            <select class="score-dropdown"><option value="0/3">0 / 3</option><option value="1/3">1 / 3</option><option value="2/3">2 / 3</option><option value="3/3">3 / 3</option></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel question-card">
+                    <div class="question-meta-row"><span>Question 3 (4 Marks)</span><span class="difficulty-tag diff-hard">Advanced Mastery</span></div>
+                    <p><strong>Module 1:</strong> Contrast the electrical conductivity and melting point of solid Sodium Chloride ($\text{NaCl}$) with that of solid Silicon Dioxide ($\text{SiO}_2$). Explain these differences with specific reference to their bonding architectures.</p>
+                    <textarea class="saq-textarea" placeholder="Enter your explanation..."></textarea>
+                    <button class="action-btn" onclick="revealSolution('sol3')">Submit &amp; Evaluate</button>
+                    <div id="sol3" class="marking-criteria-block">
+                        <span class="criteria-badge">Exemplar Worked Solution</span>
+                        <p><strong>Electrical Conductivity:</strong> Both $\text{NaCl}_{(s)}$ and $\text{SiO}_{2(s)}$ are electrical insulators in the solid state. In $\text{NaCl}$, the ions ($\text{Na}^+$ and $\text{Cl}^-$) are fixed rigidly in an ionic lattice by strong electrostatic forces, meaning there are no mobile charge carriers. In $\text{SiO}_2$, all valence electrons are localised in strong covalent bonds within a continuous 3D network, leaving no delocalised electrons to carry charge.</p>
+                        <p><strong>Melting Point:</strong> Both possess high melting points, but $\text{SiO}_2$ is significantly higher. Melting $\text{NaCl}$ requires overcoming the strong electrostatic attraction between oppositely charged ions. Melting $\text{SiO}_2$ requires breaking extremely strong intramolecular covalent bonds extending continuously throughout the giant network, which demands vastly more thermal energy.</p>
+                        <div style="margin-top:10px;">
+                            <label>Awarded Marks: </label>
+                            <select class="score-dropdown"><option value="0/4">0 / 4</option><option value="1/4">1 / 4</option><option value="2/4">2 / 4</option><option value="3/4">3 / 4</option><option value="4/4">4 / 4</option></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel question-card">
+                    <div class="question-meta-row"><span>Question 4 (3 Marks)</span><span class="difficulty-tag diff-easy">Foundational Core</span></div>
+                    <p><strong>Module 2:</strong> What volume of exactly $0.150\text{ mol}\cdot\text{L}^{-1}\text{ H}_2\text{SO}_4$ is required to completely neutralise $25.0\text{ mL}$ of $0.200\text{ mol}\cdot\text{L}^{-1}\text{ NaOH}$ solution?</p>
+                    <input type="text" class="saq-textarea" style="min-height:40px;" placeholder="Final volume value">
+                    <button class="action-btn" onclick="revealSolution('sol4')">Submit &amp; Evaluate</button>
+                    <div id="sol4" class="marking-criteria-block">
+                        <span class="criteria-badge">Exemplar Worked Solution</span>
+                        <p>Balanced Equation: $\text{H}_2\text{SO}_{4(aq)} + 2\text{NaOH}_{(aq)} \rightarrow \text{Na}_2\text{SO}_{4(aq)} + 2\text{H}_2\text{O}_{(l)}$</p>
+                        $$n(\text{NaOH}) = c \times V = 0.200 \times 0.0250 = 0.00500\text{ mol}$$
+                        <p>From the $1:2$ stoichiometric ratio, $n(\text{H}_2\text{SO}_4)$ required $= 0.00500 / 2 = 0.00250\text{ mol}$.</p>
+                        $$V(\text{H}_2\text{SO}_4) = \frac{n}{c} = \frac{0.00250}{0.150} = 0.01666...\text{ L} = 16.7\text{ mL}$$
+                        <p>Applying the 3 significant figure rule from initial data: $16.7\text{ mL}$.</p>
+                        <div style="margin-top:10px;">
+                            <label>Awarded Marks: </label>
+                            <select class="score-dropdown"><option value="0/3">0 / 3</option><option value="1/3">1 / 3</option><option value="2/3">2 / 3</option><option value="3/3">3 / 3</option></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel question-card">
+                    <div class="question-meta-row"><span>Question 5 (4 Marks)</span><span class="difficulty-tag diff-hard">Advanced Mastery</span></div>
+                    <p><strong>Module 2:</strong> A compound consists of $40.0\%$ Carbon, $6.71\%$ Hydrogen, and $53.29\%$ Oxygen by mass. If a $2.50\text{ g}$ sample of the vaporised compound occupies $0.621\text{ L}$ at $120^\circ\text{C}$ and $105\text{ kPa}$, determine its empirical and molecular formula.</p>
+                    <textarea class="saq-textarea" placeholder="Provide working and final molecular formula..."></textarea>
+                    <button class="action-btn" onclick="revealSolution('sol5')">Submit &amp; Evaluate</button>
+                    <div id="sol5" class="marking-criteria-block">
+                        <span class="criteria-badge">Exemplar Worked Solution</span>
+                        <p><strong>1. Empirical Formula:</strong> Assume $100\text{ g}$.<br>
+                        $n(\text{C}) = 40.0 / 12.01 = 3.33$<br>
+                        $n(\text{H}) = 6.71 / 1.008 = 6.66$<br>
+                        $n(\text{O}) = 53.29 / 16.00 = 3.33$<br>
+                        Divide by $3.33$: Ratio is $1:2:1$. Empirical Formula = $\text{CH}_2\text{O}$ (Empirical Mass $\approx 30.03\text{ g}\cdot\text{mol}^{-1}$).</p>
+                        <p><strong>2. Molecular Mass:</strong> Use $PV = nRT \implies M = \frac{mRT}{PV}$.<br>
+                        $T = 120 + 273.15 = 393.15\text{ K}$.<br>
+                        $$M = \frac{2.50 \times 8.314 \times 393.15}{105 \times 0.621} = \frac{8171.62}{65.205} = 125.32\text{ g}\cdot\text{mol}^{-1}$$</p>
+                        <p>Scale Factor: $125.32 / 30.03 \approx 4.17$. Due to experimental error tracking in such questions, the closest integer ratio multiplier is 4 (assuming ideal gas limits or slight deviations). If purely mathematical based on the prompt values: a multiplier of 4 yields $\text{C}_4\text{H}_8\text{O}_4$ ($120.1\text{ g}\cdot\text{mol}^{-1}$).</p>
+                        <div style="margin-top:10px;">
+                            <label>Awarded Marks: </label>
+                            <select class="score-dropdown"><option value="0/4">0 / 4</option><option value="1/4">1 / 4</option><option value="2/4">2 / 4</option><option value="3/4">3 / 4</option><option value="4/4">4 / 4</option></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel question-card">
+                    <div class="question-meta-row"><span>Question 6 (5 Marks)</span><span class="difficulty-tag" style="background: rgba(255, 215, 0, 0.15); color: #ffd700; border: 1px solid #ffd700;">Legend Tier</span></div>
+                    <p><strong>Module 2 &amp; 3 Bridge:</strong> Exactly $15.0\text{ g}$ of pure Aluminium powder is mixed into $200.0\text{ mL}$ of $1.50\text{ mol}\cdot\text{L}^{-1}$ Copper(II) Sulfate solution. Calculate the final dry mass of solid Copper precipitated and the concentration of Aluminium ions left in the solution. Assume no volume change.</p>
+                    <textarea class="saq-textarea" placeholder="Show full limiting reactant working..."></textarea>
+                    <button class="action-btn" onclick="revealSolution('sol6')">Submit &amp; Evaluate</button>
+                    <div id="sol6" class="marking-criteria-block">
+                        <span class="criteria-badge">Exemplar Worked Solution</span>
+                        <p>Equation: $2\text{Al}_{(s)} + 3\text{CuSO}_{4(aq)} \rightarrow \text{Al}_2(\text{SO}_4)_{3(aq)} + 3\text{Cu}_{(s)}$</p>
+                        <p>Initial moles:<br>
+                        $n(\text{Al}) = 15.0 / 26.98 = 0.556\text{ mol}$<br>
+                        $n(\text{CuSO}_4) = 1.50 \times 0.2000 = 0.300\text{ mol}$</p>
+                        <p>Determine Limiting Reagent:<br>
+                        Ratio $\text{Al}:\text{CuSO}_4$ is $2:3$. For $0.300\text{ mol CuSO}_4$, we need $0.300 \times \frac{2}{3} = 0.200\text{ mol Al}$. Since we have $0.556\text{ mol Al}$, $\text{CuSO}_4$ is the limiting reagent.</p>
+                        <p>Product Calculation:<br>
+                        $n(\text{Cu}) = n(\text{CuSO}_4) = 0.300\text{ mol}$.<br>
+                        Mass $\text{Cu} = 0.300 \times 63.55 = 19.065 \implies \mathbf{19.1\text{ g}}$ (3 s.f.).</p>
+                        <p>Aluminium Ion Concentration:<br>
+                        The moles of $\text{Al}_2(\text{SO}_4)_3$ formed $= 0.300 / 3 = 0.100\text{ mol}$.<br>
+                        Each mole of $\text{Al}_2(\text{SO}_4)_3$ yields 2 moles of $\text{Al}^{3+}$ ions $\implies 0.200\text{ mol Al}^{3+}$.<br>
+                        $[\text{Al}^{3+}] = 0.200\text{ mol} / 0.2000\text{ L} = \mathbf{1.00\text{ mol}\cdot\text{L}^{-1}}$.</p>
+                        <div style="margin-top:10px;">
+                            <label>Awarded Marks: </label>
+                            <select class="score-dropdown"><option value="0/5">0 / 5</option><option value="1/5">1 / 5</option><option value="2/5">2 / 5</option><option value="3/5">3 / 5</option><option value="4/5">4 / 5</option><option value="5/5">5 / 5</option></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel question-card">
+                    <div class="question-meta-row"><span>Question 7 (3 Marks)</span><span class="difficulty-tag diff-easy">Foundational Core</span></div>
+                    <p><strong>Module 3:</strong> State the oxidation number of the bolded element in the following species: (a) $\mathbf{Cr}_2\text{O}_7^{2-}$, (b) $\text{Na}\mathbf{H}$, (c) $\text{H}_2\mathbf{O}_2$.</p>
+                    <textarea class="saq-textarea" style="min-height:50px;" placeholder="(a) = ..., (b) = ..., (c) = ..."></textarea>
+                    <button class="action-btn" onclick="revealSolution('sol7')">Submit &amp; Evaluate</button>
+                    <div id="sol7" class="marking-criteria-block">
+                        <span class="criteria-badge">Exemplar Worked Solution</span>
+                        <p>(a) $\text{Cr}_2\text{O}_7^{2-}$: $2x + 7(-2) = -2 \implies 2x = +12 \implies \mathbf{Cr = +6}$.</p>
+                        <p>(b) $\text{NaH}$: Sodium is a Group 1 metal (always +1 in compounds), so Hydrogen acts as a hydride ion. $\mathbf{H = -1}$.</p>
+                        <p>(c) $\text{H}_2\text{O}_2$: In peroxides, oxygen is an exception to the -2 rule. Since $H = +1$, $2(+1) + 2x = 0 \implies \mathbf{O = -1}$.</p>
+                        <div style="margin-top:10px;">
+                            <label>Awarded Marks: </label>
+                            <select class="score-dropdown"><option value="0/3">0 / 3</option><option value="1/3">1 / 3</option><option value="2/3">2 / 3</option><option value="3/3">3 / 3</option></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel question-card">
+                    <div class="question-meta-row"><span>Question 8 (4 Marks)</span><span class="difficulty-tag diff-hard">Advanced Mastery</span></div>
+                    <p><strong>Module 3:</strong> Draw a fully labelled diagram of a galvanic cell consisting of a $\text{Mg}_{(s)}|\text{Mg}^{2+}_{(aq)}$ half-cell and a $\text{Pb}_{(s)}|\text{Pb}^{2+}_{(aq)}$ half-cell. Include the salt bridge (containing $\text{KNO}_3$), indicate the anode and cathode, show the direction of electron flow, and write the standard cell potential ($E^\circ_{\text{cell}}$). Use the standard reduction potentials: $\text{Mg}^{2+} (-2.36\text{ V})$, $\text{Pb}^{2+} (-0.13\text{ V})$.</p>
+                    <button class="action-btn" onclick="revealSolution('sol8')">Submit &amp; Reveal Diagnostic Diagram</button>
+                    <div id="sol8" class="marking-criteria-block">
+                        <span class="criteria-badge">Exemplar Worked Solution</span>
+                        <p>Calculation: $\text{Mg}$ is more reactive (lower reduction potential), so it acts as the anode (oxidation). $\text{Pb}$ is the cathode (reduction).<br>
+                        $E^\circ_{\text{cell}} = (-0.13) - (-2.36) = \mathbf{+2.23\text{ V}}$.</p>
+                        
+                        <svg viewBox="0 0 600 300" width="100%" height="250" style="background:rgba(0,0,0,0.2); border:1px solid #555; border-radius:8px; margin-top:10px;">
+                            <path d="M 50 120 L 50 280 L 250 280 L 250 120" fill="none" stroke="#ccc" stroke-width="3"/>
+                            <path d="M 350 120 L 350 280 L 550 280 L 550 120" fill="none" stroke="#ccc" stroke-width="3"/>
+                            <rect x="52" y="160" width="196" height="118" fill="rgba(182, 102, 255, 0.2)"/>
+                            <rect x="352" y="160" width="196" height="118" fill="rgba(0, 255, 170, 0.2)"/>
+                            
+                            <rect x="120" y="80" width="40" height="150" fill="#888" stroke="#444"/>
+                            <text x="140" y="245" fill="#fff" text-anchor="middle" font-weight="bold">Mg (-)</text>
+                            <text x="140" y="260" fill="#fff" font-size="10" text-anchor="middle">Anode</text>
+                            
+                            <rect x="440" y="80" width="40" height="150" fill="#555" stroke="#222"/>
+                            <text x="460" y="245" fill="#fff" text-anchor="middle" font-weight="bold">Pb (+)</text>
+                            <text x="460" y="260" fill="#fff" font-size="10" text-anchor="middle">Cathode</text>
+                            
+                            <path d="M 140 80 L 140 30 L 460 30 L 460 80" fill="none" stroke="#fff" stroke-width="2"/>
+                            <circle cx="300" cy="30" r="25" fill="#222" stroke="#b666ff" stroke-width="2"/>
+                            <text x="300" y="35" fill="#00ffaa" text-anchor="middle" font-weight="bold">2.23V</text>
+                            
+                            <path d="M 180 20 L 240 20" fill="none" stroke="#ff3b30" stroke-width="2" marker-end="url(#arrow-red)"/>
+                            <text x="210" y="15" fill="#ff3b30" font-size="12" text-anchor="middle">e- flow</text>
+                            
+                            <path d="M 200 200 L 200 130 L 400 130 L 400 200" fill="none" stroke="#eee" stroke-width="24" opacity="0.5"/>
+                            <text x="300" y="125" fill="#fff" font-size="12" text-anchor="middle" font-weight="bold">Salt Bridge (KNO3)</text>
+                            <text x="230" y="160" fill="#fff" font-size="10">NO3- →</text>
+                            <text x="340" y="160" fill="#fff" font-size="10">← K+</text>
+                            
+                            <text x="150" y="190" fill="#fff" font-size="12" text-anchor="middle">Mg2+(aq)</text>
+                            <text x="450" y="190" fill="#fff" font-size="12" text-anchor="middle">Pb2+(aq)</text>
+                            
+                            <defs>
+                                <marker id="arrow-red" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+                                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#ff3b30"/>
+                                </marker>
+                            </defs>
+                        </svg>
+                        
+                        <div style="margin-top:10px;">
+                            <label>Awarded Marks: </label>
+                            <select class="score-dropdown"><option value="0/4">0 / 4</option><option value="1/4">1 / 4</option><option value="2/4">2 / 4</option><option value="3/4">3 / 4</option><option value="4/4">4 / 4</option></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel question-card">
+                    <div class="question-meta-row"><span>Question 9 (3 Marks)</span><span class="difficulty-tag diff-medium">Intermediate Analytical</span></div>
+                    <p><strong>Module 3:</strong> State three factors that can increase the rate of a chemical reaction. For each, clearly state *why* it increases the rate according to Collision Theory.</p>
+                    <textarea class="saq-textarea" placeholder="Factor 1... Factor 2... Factor 3..."></textarea>
+                    <button class="action-btn" onclick="revealSolution('sol9')">Submit &amp; Evaluate</button>
+                    <div id="sol9" class="marking-criteria-block">
+                        <span class="criteria-badge">Exemplar Worked Solution</span>
+                        <p>1. <strong>Increasing Temperature:</strong> Increases the average kinetic energy of the particles. A significantly larger fraction of collisions now possess energy greater than the activation energy ($E \ge E_a$), exponentially increasing the frequency of *successful* collisions.</p>
+                        <p>2. <strong>Increasing Concentration/Pressure:</strong> Crowds more reactant particles into a given volume, which proportionally increases the *total* frequency of collisions per unit time.</p>
+                        <p>3. <strong>Adding a Catalyst:</strong> Provides an alternative reaction mechanism with a lower activation energy ($E_a$). This allows a larger proportion of existing collisions to be successful without requiring extra thermal energy.</p>
+                        <div style="margin-top:10px;">
+                            <label>Awarded Marks: </label>
+                            <select class="score-dropdown"><option value="0/3">0 / 3</option><option value="1/3">1 / 3</option><option value="2/3">2 / 3</option><option value="3/3">3 / 3</option></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel question-card">
+                    <div class="question-meta-row"><span>Question 10 (4 Marks)</span><span class="difficulty-tag diff-hard">Advanced Mastery</span></div>
+                    <p><strong>Module 4:</strong> Below is an unlabelled Maxwell-Boltzmann distribution grid. Using HTML/CSS representation, sketch how the distribution curve shifts when the temperature is significantly increased ($T_2 > T_1$), and explain how this visual shift mathematically relates to the reaction rate.</p>
+                    <button class="action-btn" onclick="revealSolution('sol10')">Submit &amp; Reveal Diagnostic Diagram</button>
+                    <div id="sol10" class="marking-criteria-block">
+                        <span class="criteria-badge">Exemplar Worked Solution</span>
+                        <p><strong>Explanation:</strong> At higher temperature $T_2$, the peak of the curve flattens and shifts to the right. While the total area under the curve (total particles) remains identical, the area under the curve *to the right* of the Activation Energy ($E_a$) line is significantly larger. This visualizes a mathematical increase in the specific fraction of molecules possessing $E_k \ge E_a$, vastly accelerating the reaction rate.</p>
+                        
+                        <svg viewBox="0 0 500 300" width="100%" height="200" style="background:rgba(0,0,0,0.1); border:1px solid #444; border-radius:6px; margin-top:10px;">
+                            <line x1="40" y1="20" x2="40" y2="260" stroke="#fff" stroke-width="2"/>
+                            <line x1="40" y1="260" x2="480" y2="260" stroke="#fff" stroke-width="2"/>
+                            <text x="15" y="150" fill="#fff" font-size="12" transform="rotate(-90 15,150)">Fraction of Molecules</text>
+                            <text x="250" y="290" fill="#fff" font-size="12" text-anchor="middle">Kinetic Energy</text>
+                            
+                            <line x1="320" y1="50" x2="320" y2="260" stroke="#ff3b30" stroke-width="2" stroke-dasharray="5,5"/>
+                            <text x="325" y="45" fill="#ff3b30" font-weight="bold">E_a</text>
+                            
+                            <path d="M 40 260 C 60 260, 100 40, 140 40 C 200 40, 250 250, 480 258" fill="none" stroke="#00ffaa" stroke-width="3"/>
+                            <text x="140" y="30" fill="#00ffaa" font-weight="bold">T1 (Cold)</text>
+                            
+                            <path d="M 40 260 C 80 260, 160 120, 220 120 C 300 120, 360 250, 480 255" fill="none" stroke="#b666ff" stroke-width="3"/>
+                            <text x="220" y="110" fill="#b666ff" font-weight="bold">T2 (Hot)</text>
+                            
+                            <path d="M 320 235 C 360 250, 400 255, 480 258 L 480 260 L 320 260 Z" fill="rgba(0,255,170,0.3)"/>
+                            <path d="M 320 180 C 360 250, 400 255, 480 255 L 480 260 L 320 260 Z" fill="rgba(182,102,255,0.3)"/>
+                        </svg>
+
+                        <div style="margin-top:10px;">
+                            <label>Awarded Marks: </label>
+                            <select class="score-dropdown"><option value="0/4">0 / 4</option><option value="1/4">1 / 4</option><option value="2/4">2 / 4</option><option value="3/4">3 / 4</option><option value="4/4">4 / 4</option></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel question-card">
+                    <div class="question-meta-row"><span>Question 11 (2 Marks)</span><span class="difficulty-tag diff-easy">Foundational Core</span></div>
+                    <p><strong>Module 4:</strong> A $50.0\text{ g}$ sample of liquid water absorbs $2.50\text{ kJ}$ of heat energy. Assuming no phase change occurs, calculate the final temperature of the water if its initial temperature was $22.0^\circ\text{C}$ (Specific heat capacity $c = 4.184\text{ J}\cdot\text{g}^{-1}\cdot\text{K}^{-1}$).</p>
+                    <input type="text" class="saq-textarea" style="min-height:40px;" placeholder="Final Temperature in °C">
+                    <button class="action-btn" onclick="revealSolution('sol11')">Submit &amp; Evaluate</button>
+                    <div id="sol11" class="marking-criteria-block">
+                        <span class="criteria-badge">Exemplar Worked Solution</span>
+                        <p>Convert heat to Joules: $q = 2500\text{ J}$.</p>
+                        $$q = m c \Delta T \implies \Delta T = \frac{q}{m c}$$
+                        $$\Delta T = \frac{2500}{50.0 \times 4.184} = 11.95^\circ\text{C}$$
+                        $$T_{\text{final}} = T_{\text{initial}} + \Delta T = 22.0 + 11.95 = \mathbf{34.0^\circ\text{C}}$$ (3 s.f.).
+                        <div style="margin-top:10px;">
+                            <label>Awarded Marks: </label>
+                            <select class="score-dropdown"><option value="0/2">0 / 2</option><option value="1/2">1 / 2</option><option value="2/2">2 / 2</option></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel question-card">
+                    <div class="question-meta-row"><span>Question 12 (3 Marks)</span><span class="difficulty-tag diff-medium">Intermediate Analytical</span></div>
+                    <p><strong>Module 4:</strong> Determine the enthalpy of reaction ($\Delta H^\circ$) for the process $2\text{C}_{(s)} + \text{H}_{2(g)} \rightarrow \text{C}_2\text{H}_{2(g)}$ given the following combustion data:</p>
+                    <p>
+                        (1) $\text{C}_{(s)} + \text{O}_{2(g)} \rightarrow \text{CO}_{2(g)} \quad \Delta H = -393.5\text{ kJ}$<br>
+                        (2) $\text{H}_{2(g)} + 0.5\text{O}_{2(g)} \rightarrow \text{H}_2\text{O}_{(l)} \quad \Delta H = -285.8\text{ kJ}$<br>
+                        (3) $\text{C}_2\text{H}_{2(g)} + 2.5\text{O}_{2(g)} \rightarrow 2\text{CO}_{2(g)} + \text{H}_2\text{O}_{(l)} \quad \Delta H = -1299.6\text{ kJ}$
+                    </p>
+                    <textarea class="saq-textarea" placeholder="Provide your algebraic Hess's Law steps..."></textarea>
+                    <button class="action-btn" onclick="revealSolution('sol12')">Submit &amp; Evaluate</button>
+                    <div id="sol12" class="marking-criteria-block">
+                        <span class="criteria-badge">Exemplar Worked Solution</span>
+                        <p>Target: $2\text{C}_{(s)} + \text{H}_{2(g)} \rightarrow \text{C}_2\text{H}_{2(g)}$</p>
+                        <ul>
+                            <li>Eq (1) $\times 2$: $2\text{C} + 2\text{O}_2 \rightarrow 2\text{CO}_2 \quad (\Delta H = 2 \times -393.5 = -787.0\text{ kJ})$</li>
+                            <li>Eq (2) kept as is: $\text{H}_2 + 0.5\text{O}_2 \rightarrow \text{H}_2\text{O} \quad (\Delta H = -285.8\text{ kJ})$</li>
+                            <li>Eq (3) reversed: $2\text{CO}_2 + \text{H}_2\text{O} \rightarrow \text{C}_2\text{H}_2 + 2.5\text{O}_2 \quad (\Delta H = +1299.6\text{ kJ})$</li>
+                        </ul>
+                        <p>Summing the enthalpies: $-787.0 - 285.8 + 1299.6 = \mathbf{+226.8\text{ kJ\cdot mol^{-1}}}$.</p>
+                        <div style="margin-top:10px;">
+                            <label>Awarded Marks: </label>
+                            <select class="score-dropdown"><option value="0/3">0 / 3</option><option value="1/3">1 / 3</option><option value="2/3">2 / 3</option><option value="3/3">3 / 3</option></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel question-card">
+                    <div class="question-meta-row"><span>Question 13 (2 Marks)</span><span class="difficulty-tag diff-easy">Foundational Core</span></div>
+                    <p><strong>Module 4:</strong> Without performing any calculations, predict the sign of the entropy change ($\Delta S$) for the Haber Process: $\text{N}_{2(g)} + 3\text{H}_{2(g)} \rightleftharpoons 2\text{NH}_{3(g)}$, and briefly explain your reasoning.</p>
+                    <textarea class="saq-textarea" placeholder="Explain the entropy shift..."></textarea>
+                    <button class="action-btn" onclick="revealSolution('sol13')">Submit &amp; Evaluate</button>
+                    <div id="sol13" class="marking-criteria-block">
+                        <span class="criteria-badge">Exemplar Worked Solution</span>
+                        <p>The sign of $\Delta S$ is <strong>negative</strong>. The reaction converts 4 moles of disordered gaseous reactants ($1\text{ N}_2 + 3\text{ H}_2$) into only 2 moles of gaseous products. A decrease in the number of gaseous molecules reduces the total number of accessible microstates and positional randomness, constituting a decrease in overall entropy.</p>
+                        <div style="margin-top:10px;">
+                            <label>Awarded Marks: </label>
+                            <select class="score-dropdown"><option value="0/2">0 / 2</option><option value="1/2">1 / 2</option><option value="2/2">2 / 2</option></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel question-card">
+                    <div class="question-meta-row"><span>Question 14 (4 Marks)</span><span class="difficulty-tag diff-hard">Advanced Mastery</span></div>
+                    <p><strong>Module 4:</strong> For a given chemical reaction, $\Delta H = +85.0\text{ kJ\cdot mol^{-1}}$ and $\Delta S = +125\text{ J\cdot K^{-1} mol^{-1}}$. Calculate the precise temperature (in $^\circ\text{C}$) at which the system crosses over from being non-spontaneous to spontaneous.</p>
+                    <input type="text" class="saq-textarea" style="min-height:40px;" placeholder="Threshold Temperature in °C">
+                    <button class="action-btn" onclick="revealSolution('sol14')">Submit &amp; Evaluate</button>
+                    <div id="sol14" class="marking-criteria-block">
+                        <span class="criteria-badge">Exemplar Worked Solution</span>
+                        <p>At the spontaneity threshold, Gibbs Free Energy $\Delta G = 0$.</p>
+                        $$\Delta G = \Delta H - T\Delta S = 0 \implies T = \frac{\Delta H}{\Delta S}$$
+                        <p>Convert $\Delta S$ into matching units: $+125\text{ J} / 1000 = 0.125\text{ kJ\cdot K^{-1} mol^{-1}}$.</p>
+                        $$T = \frac{85.0}{0.125} = 680\text{ K}$$
+                        <p>Convert to Celsius: $T(^\circ\text{C}) = 680 - 273.15 = \mathbf{406.85^\circ\text{C}}$. (Reaction is spontaneous at temperatures strictly above this).</p>
+                        <div style="margin-top:10px;">
+                            <label>Awarded Marks: </label>
+                            <select class="score-dropdown"><option value="0/4">0 / 4</option><option value="1/4">1 / 4</option><option value="2/4">2 / 4</option><option value="3/4">3 / 4</option><option value="4/4">4 / 4</option></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel question-card">
+                    <div class="question-meta-row"><span>Question 15 (5 Marks)</span><span class="difficulty-tag" style="background: rgba(255, 215, 0, 0.15); color: #ffd700; border: 1px solid #ffd700;">Legend Tier</span></div>
+                    <p><strong>Cross-Module Integration (Mods 2 &amp; 4):</strong> A $10.0\text{ g}$ sample of Ammonium Nitrate ($\text{NH}_4\text{NO}_3$, $M = 80.04\text{ g\cdot mol^{-1}}$) dissolves completely in $150.0\text{ mL}$ of water originally at $25.0^\circ\text{C}$ in a coffee-cup calorimeter. If the standard molar enthalpy of dissolution for $\text{NH}_4\text{NO}_3$ is $+25.7\text{ kJ\cdot mol^{-1}}$, calculate the final lowest temperature the solution matrix drops to.</p>
+                    <textarea class="saq-textarea" placeholder="Show full thermodynamic working..."></textarea>
+                    <button class="action-btn" onclick="revealSolution('sol15')">Submit &amp; Evaluate</button>
+                    <div id="sol15" class="marking-criteria-block">
+                        <span class="criteria-badge">Exemplar Worked Solution</span>
+                        <p>1. Calculate moles of solute:<br>
+                        $n(\text{NH}_4\text{NO}_3) = 10.0 / 80.04 = 0.1249\text{ mol}$.</p>
+                        <p>2. Calculate total heat absorbed by the reaction ($q_{\text{rxn}}$):<br>
+                        $q_{\text{rxn}} = n \times \Delta H = 0.1249 \times 25.7\text{ kJ} = +3.211\text{ kJ} = 3211\text{ J}$.<br>
+                        Since the reaction is endothermic, this thermal energy is stripped *away* from the surrounding water layer.</p>
+                        <p>3. Calculate the resulting temperature drop of the water matrix:<br>
+                        $q_{\text{water}} = -3211\text{ J}$. (Assume the mass of the solvent matrix is roughly $150.0\text{ g}$ of water, though rigorous texts might use total mass $160.0\text{ g}$; we will use standard NESA assumption $m = 150.0\text{ g}$ solvent, or $160.0\text{ g}$ system. Let's use $150.0\text{ g}$ to represent pure solvent cooling).<br>
+                        $q = m c \Delta T \implies \Delta T = \frac{-3211}{150.0 \times 4.184} = -5.12\text{ K}$.</p>
+                        <p>4. Final Temperature:<br>
+                        $T_{\text{final}} = 25.0 - 5.12 = \mathbf{19.9^\circ\text{C}}$ (3 s.f.).</p>
+                        <div style="margin-top:10px;">
+                            <label>Awarded Marks: </label>
+                            <select class="score-dropdown"><option value="0/5">0 / 5</option><option value="1/5">1 / 5</option><option value="2/5">2 / 5</option><option value="3/5">3 / 5</option><option value="4/5">4 / 5</option><option value="5/5">5 / 5</option></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel question-card">
+                    <div class="question-meta-row"><span>Question 16 (3 Marks)</span><span class="difficulty-tag diff-medium">Intermediate Analytical</span></div>
+                    <p><strong>Module 1 &amp; 3 Bridge:</strong> Contrast the processes of atomic alpha decay ($\alpha$) and beta decay ($\beta$) in terms of their physical particle emissions and how they structurally alter the parent nucleus's atomic mass and number.</p>
+                    <textarea class="saq-textarea" placeholder="Provide your written contrast..."></textarea>
+                    <button class="action-btn" onclick="revealSolution('sol16')">Submit &amp; Evaluate</button>
+                    <div id="sol16" class="marking-criteria-block">
+                        <span class="criteria-badge">Exemplar Worked Solution</span>
+                        <p><strong>Alpha Decay:</strong> Emits an alpha particle (a helium nucleus, $^4_2\text{He}$), consisting of 2 protons and 2 neutrons. This process decreases the parent's atomic mass number by exactly 4 and its atomic number by 2, creating a new element shifted two places left on the periodic table.</p>
+                        <p><strong>Beta Decay:</strong> Emits a high-velocity electron ($^0_{-1}e$). This occurs when a neutron internally fragments into a proton and an electron. Because a neutron becomes a proton, the total mass number remains unchanged (0 shift), but the atomic number increases by 1, shifting the element one place to the right on the periodic table.</p>
+                        <div style="margin-top:10px;">
+                            <label>Awarded Marks: </label>
+                            <select class="score-dropdown"><option value="0/3">0 / 3</option><option value="1/3">1 / 3</option><option value="2/3">2 / 3</option><option value="3/3">3 / 3</option></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel question-card">
+                    <div class="question-meta-row"><span>Question 17 (3 Marks)</span><span class="difficulty-tag diff-easy">Foundational Core</span></div>
+                    <p><strong>Module 2:</strong> A sealed syringe traps $250.0\text{ mL}$ of an ideal gas at $125\text{ kPa}$ and $300\text{ K}$. If the syringe is compressed to $100.0\text{ mL}$ while the temperature is heated to $450\text{ K}$, calculate the new internal pressure of the system.</p>
+                    <input type="text" class="saq-textarea" style="min-height:40px;" placeholder="Final pressure in kPa">
+                    <button class="action-btn" onclick="revealSolution('sol17')">Submit &amp; Evaluate</button>
+                    <div id="sol17" class="marking-criteria-block">
+                        <span class="criteria-badge">Exemplar Worked Solution</span>
+                        <p>Using the Combined Gas Law: $\frac{P_1 V_1}{T_1} = \frac{P_2 V_2}{T_2}$</p>
+                        $$\frac{125 \times 250.0}{300} = \frac{P_2 \times 100.0}{450}$$
+                        $$104.166 = \frac{P_2 \times 100.0}{450} \implies P_2 = \frac{104.166 \times 450}{100.0} = \mathbf{468.75\text{ kPa}}$$
+                        <p>Applying the 3 significant figure rule from '$125\text{ kPa}$': $\mathbf{469\text{ kPa}}$.</p>
+                        <div style="margin-top:10px;">
+                            <label>Awarded Marks: </label>
+                            <select class="score-dropdown"><option value="0/3">0 / 3</option><option value="1/3">1 / 3</option><option value="2/3">2 / 3</option><option value="3/3">3 / 3</option></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel question-card">
+                    <div class="question-meta-row"><span>Question 18 (2 Marks)</span><span class="difficulty-tag diff-easy">Foundational Core</span></div>
+                    <p><strong>Module 3:</strong> Provide the net ionic equation (including state symbols) for the neutralization reaction occurring between aqueous Barium Hydroxide ($\text{Ba(OH)}_2$) and aqueous Nitric Acid ($\text{HNO}_3$).</p>
+                    <textarea class="saq-textarea" style="min-height:40px;" placeholder="Write net ionic equation..."></textarea>
+                    <button class="action-btn" onclick="revealSolution('sol18')">Submit &amp; Evaluate</button>
+                    <div id="sol18" class="marking-criteria-block">
+                        <span class="criteria-badge">Exemplar Worked Solution</span>
+                        <p>Full equation: $\text{Ba(OH)}_{2(aq)} + 2\text{HNO}_{3(aq)} \rightarrow \text{Ba(NO}_3)_{2(aq)} + 2\text{H}_2\text{O}_{(l)}$</p>
+                        <p>Barium and Nitrate ions are spectator ions. Canceling them leaves the core neutralisation vector:</p>
+                        $$\mathbf{\text{H}^+_{(aq)} + \text{OH}^-_{(aq)} \rightarrow \text{H}_2\text{O}_{(l)}}$$
+                        <div style="margin-top:10px;">
+                            <label>Awarded Marks: </label>
+                            <select class="score-dropdown"><option value="0/2">0 / 2</option><option value="1/2">1 / 2</option><option value="2/2">2 / 2</option></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel question-card">
+                    <div class="question-meta-row"><span>Question 19 (3 Marks)</span><span class="difficulty-tag diff-medium">Intermediate Analytical</span></div>
+                    <p><strong>Module 4:</strong> Why does the experimental molar heat of combustion of an alcohol, determined via school laboratory calorimetry, continually fall below the accepted theoretical literature value?</p>
+                    <textarea class="saq-textarea" placeholder="Detail the physical and experimental errors..."></textarea>
+                    <button class="action-btn" onclick="revealSolution('sol19')">Submit &amp; Evaluate</button>
+                    <div id="sol19" class="marking-criteria-block">
+                        <span class="criteria-badge">Exemplar Worked Solution</span>
+                        <p>1. <strong>Thermal Dissipation:</strong> The primary error is massive heat loss from the open flame to the surrounding ambient air and the absorption of heat by the physical metal/glass calorimeter container, bypassing the water body. This lowers the measured $\Delta T$.</p>
+                        <p>2. <strong>Incomplete Combustion:</strong> Standard spirit burners often lack sufficient oxygen access to complete full $\text{CO}_2$ conversions. The presence of black carbon soot indicates incomplete combustion, which intrinsically releases far less thermal energy per mole of fuel.</p>
+                        <div style="margin-top:10px;">
+                            <label>Awarded Marks: </label>
+                            <select class="score-dropdown"><option value="0/3">0 / 3</option><option value="1/3">1 / 3</option><option value="2/3">2 / 3</option><option value="3/3">3 / 3</option></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel question-card">
+                    <div class="question-meta-row"><span>Question 20 (4 Marks)</span><span class="difficulty-tag diff-hard">Advanced Mastery</span></div>
+                    <p><strong>Module 1 &amp; 4 Bridge:</strong> Explain how the macroscopic structure and intermolecular forces within pure liquid water ($\text{H}_2\text{O}$) heavily dictate its unusually high specific heat capacity compared to identically sized non-polar molecules like Methane ($\text{CH}_4$).</p>
+                    <textarea class="saq-textarea" placeholder="Discuss bonding networks and thermal mechanics..."></textarea>
+                    <button class="action-btn" onclick="revealSolution('sol20')">Submit &amp; Evaluate</button>
+                    <div id="sol20" class="marking-criteria-block">
+                        <span class="criteria-badge">Exemplar Worked Solution</span>
+                        <p>Because Oxygen is highly electronegative, water molecules form extremely strong, permanent <strong>hydrogen bonds</strong> between the partially positive Hydrogen poles and the partially negative Oxygen poles of adjacent molecules. Methane, being perfectly non-polar, only possesses weak momentary London dispersion forces.</p>
+                        <p>Temperature is a measure of translational kinetic energy (movement). Before water molecules can move faster and increase their macroscopic temperature, massive amounts of incoming thermal energy must first be consumed to disrupt and overcome this rigid hydrogen-bonding network. This energy sink gives water an exceptionally high specific heat capacity ($\approx 4.18\text{ J\cdot g^{-1}\cdot K^{-1}}$).</p>
+                        <div style="margin-top:10px;">
+                            <label>Awarded Marks: </label>
+                            <select class="score-dropdown"><option value="0/4">0 / 4</option><option value="1/4">1 / 4</option><option value="2/4">2 / 4</option><option value="3/4">3 / 4</option><option value="4/4">4 / 4</option></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel question-card">
+                    <div class="question-meta-row"><span>Question 21 (3 Marks)</span><span class="difficulty-tag diff-medium">Intermediate Analytical</span></div>
+                    <p><strong>Module 2:</strong> At Standard Laboratory Conditions (SLC: $25^\circ\text{C}, 100\text{ kPa}, \text{Molar Volume } 24.79\text{ L/mol}$), calculate the precise mass of exactly $12.0\text{ L}$ of Sulfur Dioxide gas ($\text{SO}_2$).</p>
+                    <input type="text" class="saq-textarea" style="min-height:40px;" placeholder="Final mass in grams">
+                    <button class="action-btn" onclick="revealSolution('sol21')">Submit &amp; Evaluate</button>
+                    <div id="sol21" class="marking-criteria-block">
+                        <span class="criteria-badge">Exemplar Worked Solution</span>
+                        <p>First, convert the physical volume to moles using standard molar volume limits:<br>
+                        $n(\text{SO}_2) = \frac{V}{V_m} = \frac{12.0}{24.79} = 0.48406...\text{ mol}$.</p>
+                        <p>Determine the molar mass of Sulfur Dioxide ($\text{S}=32.07, \text{O}=16.00$):<br>
+                        $M(\text{SO}_2) = 32.07 + (2 \times 16.00) = 64.07\text{ g\cdot mol^{-1}}$.</p>
+                        <p>Convert moles to absolute mass:<br>
+                        $m = n \times M = 0.48406 \times 64.07 = 31.013...\text{ g}$.</p>
+                        <p>Rounding to 3 significant figures based on '$12.0\text{ L}$': $\mathbf{31.0\text{ g}}$.</p>
+                        <div style="margin-top:10px;">
+                            <label>Awarded Marks: </label>
+                            <select class="score-dropdown"><option value="0/3">0 / 3</option><option value="1/3">1 / 3</option><option value="2/3">2 / 3</option><option value="3/3">3 / 3</option></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel question-card">
+                    <div class="question-meta-row"><span>Question 22 (4 Marks)</span><span class="difficulty-tag diff-hard">Advanced Mastery</span></div>
+                    <p><strong>Module 3:</strong> Using your knowledge of the metal reactivity series, predict and write the full molecular equations (or state "no reaction") for the following immersion tests:<br>
+                    a) Solid silver dropped into dilute hydrochloric acid.<br>
+                    b) Solid zinc dropped into an aqueous solution of tin(II) nitrate.</p>
+                    <textarea class="saq-textarea" style="min-height:60px;" placeholder="a) ... b) ..."></textarea>
+                    <button class="action-btn" onclick="revealSolution('sol22')">Submit &amp; Evaluate</button>
+                    <div id="sol22" class="marking-criteria-block">
+                        <span class="criteria-badge">Exemplar Worked Solution</span>
+                        <p><strong>a)</strong> Silver is situated below Hydrogen on the standard activity series (it has a positive reduction potential, while Hydrogen is 0.00V). It lacks the oxidative potential to reduce Hydrogen ions. Therefore: <strong>No Reaction.</strong></p>
+                        <p><strong>b)</strong> Zinc is highly reactive and sits above Tin on the activity series. Zinc will spontaneously oxidise, forcing Tin ions to reduce into a solid precipitate. <br>
+                        $$\text{Zn}_{(s)} + \text{Sn(NO}_3)_{2(aq)} \rightarrow \text{Zn(NO}_3)_{2(aq)} + \text{Sn}_{(s)}$$</p>
+                        <div style="margin-top:10px;">
+                            <label>Awarded Marks: </label>
+                            <select class="score-dropdown"><option value="0/4">0 / 4</option><option value="1/4">1 / 4</option><option value="2/4">2 / 4</option><option value="3/4">3 / 4</option><option value="4/4">4 / 4</option></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel question-card">
+                    <div class="question-meta-row"><span>Question 23 (6 Marks)</span><span class="difficulty-tag" style="background: rgba(255, 215, 0, 0.15); color: #ffd700; border: 1px solid #ffd700;">Legend Tier</span></div>
+                    <p><strong>Modules 2, 3 &amp; 4 Ultimate Bridge:</strong> A galvanic cell is designed using $\text{Zn}/\text{Zn}^{2+}$ and $\text{Cu}/\text{Cu}^{2+}$ electrodes. Over a specific operating timeframe, exactly $6.54\text{ g}$ of the Zinc anode is completely dissolved (oxidised) into the solution matrix. Simultaneously, an observer calculates the total thermodynamic heat equivalent that this redox flow corresponds to. If the theoretical enthalpy change ($\Delta H^\circ$) of this specific displacement reaction ($\text{Zn}_{(s)} + \text{Cu}^{2+}_{(aq)} \rightarrow \text{Zn}^{2+}_{(aq)} + \text{Cu}_{(s)}$) is $-217\text{ kJ\cdot mol^{-1}}$, calculate: <br>
+                    1) The exact mass of copper deposited at the cathode.<br>
+                    2) The total thermal energy value (in kJ) theoretically emitted by the dissolution of this much zinc.</p>
+                    <textarea class="saq-textarea" placeholder="1) Mass Cu... 2) Enthalpy Q..."></textarea>
+                    <button class="action-btn" onclick="revealSolution('sol23')">Submit &amp; Evaluate</button>
+                    <div id="sol23" class="marking-criteria-block">
+                        <span class="criteria-badge">Exemplar Worked Solution</span>
+                        <p><strong>1. Stoichiometric Metal Conversion:</strong><br>
+                        Calculate the moles of Zinc oxidised: $n(\text{Zn}) = 6.54 / 65.38 = 0.100\text{ mol}$.<br>
+                        The redox equation is a $1:1$ molar ratio. Therefore, moles of Copper reduced $= 0.100\text{ mol}$.<br>
+                        Calculate mass of Copper formed: $m = n \times M = 0.100 \times 63.55 = \mathbf{6.36\text{ g}}$ (3 s.f.).</p>
+                        <p><strong>2. Thermodynamic Energy Emission:</strong><br>
+                        The theoretical molar enthalpy ($\Delta H^\circ$) is $-217\text{ kJ}$ per $1.0\text{ mole}$ of reaction.<br>
+                        Since exactly $0.100\text{ moles}$ of the reaction occurred, scale the energy linearly:<br>
+                        Total Energy ($q$) $= n \times |\Delta H^\circ| = 0.100 \times 217 = \mathbf{21.7\text{ kJ}}$.</p>
+                        <div style="margin-top:10px;">
+                            <label>Awarded Marks: </label>
+                            <select class="score-dropdown"><option value="0/6">0 / 6</option><option value="1/6">1 / 6</option><option value="2/6">2 / 6</option><option value="3/6">3 / 6</option><option value="4/6">4 / 6</option><option value="5/6">5 / 6</option><option value="6/6">6 / 6</option></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel question-card">
+                    <div class="question-meta-row"><span>Question 24 (4 Marks)</span><span class="difficulty-tag diff-hard">Advanced Mastery</span></div>
+                    <p><strong>Module 4:</strong> Below is a simple diagram representing the energy profile of an exothermic reaction. Using HTML/CSS structure representation in your solution, redraw this profile to include the addition of a chemical catalyst. Label $E_a$ (uncatalyzed), $E_a$ (catalyzed), and $\Delta H$. Write a brief statement defining exactly what the catalyst alters.</p>
+                    <button class="action-btn" onclick="revealSolution('sol24')">Submit &amp; Reveal Diagnostic Diagram</button>
+                    <div id="sol24" class="marking-criteria-block">
+                        <span class="criteria-badge">Exemplar Worked Solution</span>
+                        <p><strong>Explanation:</strong> A catalyst provides an entirely alternative reaction mechanism which possesses a lower activation energy threshold. It does NOT alter the baseline potential energy of the initial reactants or the final products, thus leaving the overall enthalpy change ($\Delta H$) completely untouched.</p>
+                        
+                        <svg viewBox="0 0 500 350" width="100%" height="250" style="background:rgba(0,0,0,0.15); border:1px solid #555; border-radius:8px; margin-top:10px;">
+                            <path d="M 40 40 L 40 300 L 460 300" fill="none" stroke="#fff" stroke-width="2"/>
+                            <text x="15" y="180" fill="#fff" transform="rotate(-90 15,180)" font-size="12">Potential Energy (H)</text>
+                            <text x="250" y="330" fill="#fff" text-anchor="middle" font-size="12">Reaction Coordinate</text>
+                            
+                            <line x1="40" y1="200" x2="250" y2="200" stroke="#888" stroke-dasharray="4,4"/>
+                            <line x1="300" y1="260" x2="450" y2="260" stroke="#888" stroke-dasharray="4,4"/>
+                            <text x="80" y="190" fill="#fff" font-weight="bold">Reactants</text>
+                            <text x="350" y="250" fill="#fff" font-weight="bold">Products</text>
+                            
+                            <path d="M 40 200 L 120 200 C 180 200, 200 60, 250 60 C 300 60, 320 260, 380 260 L 460 260" fill="none" stroke="#ff3b30" stroke-width="3"/>
+                            
+                            <path d="M 40 200 L 120 200 C 160 200, 180 130, 250 130 C 320 130, 340 260, 380 260 L 460 260" fill="none" stroke="#00ffaa" stroke-width="3" stroke-dasharray="6,4"/>
+                            
+                            <line x1="170" y1="200" x2="170" y2="60" stroke="#fff" stroke-width="1.5" marker-end="url(#arrow-white)"/>
+                            <text x="160" y="110" fill="#ff3b30" text-anchor="end" font-size="11">Uncatalyzed E_a</text>
+                            
+                            <line x1="220" y1="200" x2="220" y2="130" stroke="#fff" stroke-width="1.5" marker-end="url(#arrow-white)"/>
+                            <text x="210" y="160" fill="#00ffaa" text-anchor="end" font-size="11">Catalyzed E_a</text>
+                            
+                            <line x1="420" y1="200" x2="420" y2="260" stroke="#fff" stroke-width="1.5" marker-end="url(#arrow-white)"/>
+                            <text x="430" y="235" fill="#fff" font-size="11">ΔH (Constant)</text>
+                            
+                            <defs>
+                                <marker id="arrow-white" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+                                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#fff"/>
+                                </marker>
+                            </defs>
+                        </svg>
+
+                        <div style="margin-top:10px;">
+                            <label>Awarded Marks: </label>
+                            <select class="score-dropdown"><option value="0/4">0 / 4</option><option value="1/4">1 / 4</option><option value="2/4">2 / 4</option><option value="3/4">3 / 4</option><option value="4/4">4 / 4</option></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel question-card" style="border: 1px solid #ffd700;">
+                    <div class="question-meta-row"><span>Question 25 (6 Marks)</span><span class="difficulty-tag" style="background: rgba(255, 215, 0, 0.15); color: #ffd700; border: 1px solid #ffd700;">Final Legend Tier Assessment</span></div>
+                    <p><strong>Comprehensive Capstone Synthesis:</strong> A student tests an unknown, highly toxic biological alkaloid compound found in a plant. It dissolves instantly in water, establishing its strong polar nature. A mass spectrometer analysis yields a fractional makeup of $70.58\%\text{ C}$, $5.92\%\text{ H}$, and $23.50\%\text{ O}$ by mass. The molecular mass is later verified via ideal gas constraints to be identically double its empirical form. When the pure sample is combusted violently inside a sealed oxygen bomb calorimeter, the temperature of the internal casing spikes wildly (producing $\Delta H = -4200\text{ kJ\cdot mol^{-1}}$). At incredibly high combustion temperatures ($T > 1800\text{ K}$), the specific oxidation pathways shift, driving the net system entropy negative ($\Delta S < 0$).</p>
+                    <p>Provide a comprehensive analysis deducing:<br>
+                    1) The true molecular formula of the alkaloid.<br>
+                    2) A thermodynamic justification for exactly why the combustion reaction could suddenly shift from spontaneous to non-spontaneous at extreme temperature peaks.</p>
+                    <textarea class="saq-textarea" style="min-height:80px;" placeholder="1) Formula... 2) Spontaneity analysis..."></textarea>
+                    <button class="action-btn" onclick="revealSolution('sol25')" style="border-color: #ffd700;">Submit &amp; Conclude Matrix</button>
+                    <div id="sol25" class="marking-criteria-block">
+                        <span class="criteria-badge" style="color:#ffd700; background:rgba(255,215,0,0.15);">Legend Exemplar Worked Solution</span>
+                        <p><strong>1. Structural Formula Matrix:</strong><br>
+                        Assume $100\text{ g}$ of the alkaloid.<br>
+                        $n(\text{C}) = 70.58 / 12.01 = 5.877\text{ mol}$<br>
+                        $n(\text{H}) = 5.92 / 1.008 = 5.873\text{ mol}$<br>
+                        $n(\text{O}) = 23.50 / 16.00 = 1.469\text{ mol}$<br>
+                        Normalise by dividing by the lowest value ($1.469$):<br>
+                        $\text{C} = 4, \text{H} = 4, \text{O} = 1$. The Empirical Formula is $\text{C}_4\text{H}_4\text{O}$.<br>
+                        Since the prompting explicit criteria declares the molecular mass is identically double its empirical frame, multiply coefficients by 2:<br>
+                        <strong>Molecular Formula = $\text{C}_8\text{H}_8\text{O}_2$.</strong></p>
+                        
+                        <p><strong>2. Thermodynamic Edge-Case Spontaneity ($\Delta G$):</strong><br>
+                        Standard combustion reactions are wildly exothermic ($\Delta H < 0$). The problem notes that at specific high temperatures, an alternate oxidation pathway forces entropy into the negative ($\Delta S < 0$), likely converting heavy gaseous chains into rigid condensed oxides.<br>
+                        Gibbs Equation: $\Delta G = \Delta H - T\Delta S$.<br>
+                        Since $\Delta S$ is negative, the term $-T\Delta S$ becomes a massively positive additive integer. At sufficiently extreme temperatures ($T > 1800\text{ K}$), the absolute value of the positive $T\Delta S$ barrier overrides the exothermic enthalpy push ($T\Delta S > |\Delta H|$). This drives the final Gibbs Free Energy above zero ($\Delta G > 0$), slamming the reaction into a non-spontaneous thermodynamic lockout state.</p>
+                        
+                        <div style="margin-top:10px;">
+                            <label>Awarded Marks: </label>
+                            <select class="score-dropdown"><option value="0/6">0 / 6</option><option value="1/6">1 / 6</option><option value="2/6">2 / 6</option><option value="3/6">3 / 6</option><option value="4/6">4 / 6</option><option value="5/6">5 / 6</option><option value="6/6">6 / 6</option></select>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="glass-panel" style="text-align: center; margin-top: 40px; border: 1px solid var(--accent-secondary);">
+                <h2>Section II Evaluation Completed</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 20px;">Please ensure you have truthfully self-assessed your extended responses via the dropdown menus. Submitting below will lock your manual arrays into the global performance cache and return you to the central dashboard.</p>
+                <button type="button" class="action-btn" style="background: rgba(0,255,170,0.15); border-color: var(--accent-secondary); color: var(--accent-secondary); font-size: 16px; padding: 15px 30px;" onclick="triggerPortalExit()">
+                    Finalise Section II &amp; Return to Dashboard Home
+                </button>
+                
+                <div id="animation-overlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(10,5,27,0.98); z-index:9999; justify-content:center; align-items:center; flex-direction:column; color:#00ffaa;">
+                    <div class="spinner" style="width:70px; height:70px; border:6px solid rgba(255,255,255,0.1); border-top-color:#00ffaa; border-radius:50%; animation:spin 1.2s linear infinite;"></div>
+                    <h2 style="margin-top:25px; font-family:sans-serif; letter-spacing:3px;">DIAGNOSTIC PROTOCOL CONCLUDED</h2>
+                    <p style="color:var(--text-secondary); font-size:14px; margin-top:8px;">Uploading manual calculation matrices to local cache...</p>
+                </div>
+            </div>
+
+            <footer style="margin-top: 50px; padding: 20px 0; border-top: 1px solid var(--glass-border); text-align: center; font-size: 12px; color: var(--text-secondary);">
+                <p>&copy; 2026 NexusSci Academic Frameworks. Year 11 Chemistry Diagnostic Engine.</p>
+            </footer>
+        </main>
+    </div>
+
+    <script>
+        // Toggle Solution Box
+        function revealSolution(id) {
+            const block = document.getElementById(id);
+            if(block) {
+                block.style.display = block.style.display === 'none' || block.style.display === '' ? 'block' : 'none';
+            }
+        }
+
+        // Final exit engine processing handler animation sequence
+        function triggerPortalExit() {
+            // Target all dropdown select elements inside the SAQ panes
+            const scoreDropdowns = document.querySelectorAll('.marking-criteria-block select.score-dropdown');
+            
+            let totalEarnedMarks = 0;
+            let totalPossibleMarks = 0;
+
+            scoreDropdowns.forEach(dropdown => {
+                // Extract the selected option text (e.g., "2 / 3")
+                const selectedText = dropdown.value; 
+                
+                // Use regex to pull out the numbers
+                const match = selectedText.match(/(\d+)\s*\/\s*(\d+)/);
+                if (match) {
+                    totalEarnedMarks += parseInt(match[1], 10);
+                    totalPossibleMarks += parseInt(match[2], 10);
+                }
+            });
+
+            // Calculate the final percentage based on manual entries
+            let finalPercentageValue = 0;
+            if (totalPossibleMarks > 0) {
+                finalPercentageValue = (totalEarnedMarks / totalPossibleMarks) * 100;
+            }
+
+            // Save globally to mock evaluation state
+            localStorage.setItem('exam_saq_score', Math.round(finalPercentageValue));
+
+            // Trigger the visual portal transition animation
+            const overlay = document.getElementById('animation-overlay');
+            if(overlay) overlay.style.display = 'flex';
+            
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 2500);
+        }
+
+        // Theme switching engine integration
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleBtn = document.getElementById('theme-toggle-btn');
+            const savedTheme = localStorage.getItem('nexus-color-theme') || 'dark-mode';
+            document.body.classList.add(savedTheme);
+            
+            if(toggleBtn) {
+                toggleBtn.addEventListener('click', () => {
+                    if (document.body.classList.contains('dark-mode')) {
+                        document.body.classList.replace('dark-mode', 'light-mode');
+                        localStorage.setItem('nexus-color-theme', 'light-mode');
+                    } else {
+                        document.body.classList.replace('light-mode', 'dark-mode');
+                        localStorage.setItem('nexus-color-theme', 'dark-mode');
+                    }
+                });
+            }
+        });
+
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <style>
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        /* Temporary overrides to ensure visual alignment without altering styles.css */
+        .saq-textarea { width: 100%; border-radius: 6px; padding: 10px; margin: 10px 0; background: rgba(0,0,0,0.1); border: 1px solid var(--glass-border); color: inherit; font-family: inherit; }
+        .score-dropdown { background: var(--panel-surface); color: inherit; border: 1px solid var(--glass-border); padding: 5px; border-radius: 4px; }
+        .marking-criteria-block { display: none; margin-top: 15px; padding: 15px; background: rgba(182,102,255,0.05); border-left: 3px solid var(--accent-primary); border-radius: 6px; font-size: 13.5px;}
+        .criteria-badge { font-weight: bold; color: var(--accent-primary); text-transform: uppercase; font-size: 11px; margin-bottom: 8px; display: block; }
+    </style>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>

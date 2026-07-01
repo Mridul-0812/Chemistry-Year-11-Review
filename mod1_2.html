@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1: Practice Evaluation Workstation | NexusSci</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Targeted Interactive Workstation Additions */
+        .quiz-option-label {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--glass-border);
+            padding: 14px 20px;
+            border-radius: 12px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+        .quiz-option-label:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: var(--text-secondary);
+        }
+        .quiz-option-label input[type="radio"] {
+            accent-color: var(--accent-primary);
+            transform: scale(1.15);
+        }
+        .feedback-pane {
+            margin-top: 15px;
+            padding: 16px;
+            border-radius: 12px;
+            display: none;
+            font-size: 13.5px;
+            line-height: 1.6;
+        }
+        .feedback-correct {
+            background: rgba(0, 255, 170, 0.08);
+            border-left: 4px solid #00ffaa;
+            color: #00ffaa;
+        }
+        .feedback-incorrect {
+            background: rgba(255, 59, 48, 0.08);
+            border-left: 4px solid #ff3b30;
+            color: #ff3b30;
+        }
+        .saq-textarea {
+            width: 100%;
+            height: 130px;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 15px;
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 14px;
+            line-height: 1.5;
+            resize: vertical;
+            outline: none;
+            margin-bottom: 12px;
+        }
+        .saq-textarea:focus {
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+        .marking-criteria-block {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px dashed var(--glass-border);
+            padding: 20px;
+            border-radius: 14px;
+            margin-top: 15px;
+            display: none;
+        }
+        .criteria-badge {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            background: rgba(182, 102, 255, 0.15);
+            color: var(--accent-primary);
+            padding: 4px 10px;
+            border-radius: 6px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .score-adjust-select {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--glass-border);
+            color: var(--text-primary);
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-weight: 600;
+            outline: none;
+            cursor: pointer;
+        }
+        .exam-sample-box {
+            background: rgba(138, 43, 226, 0.04);
+            border-left: 3px solid var(--accent-primary);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+        .question-meta-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+        .difficulty-tag {
+            padding: 3px 9px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+        .diff-easy { background: rgba(0, 255, 170, 0.1); color: #00ffaa; }
+        .diff-medium { background: rgba(255, 159, 10, 0.1); color: #ff9f0a; }
+        .diff-hard { background: rgba(255, 59, 48, 0.1); color: #ff3b30; }
+    </style>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div id="global-utility-bar">
+        <div class="utility-container">
+            <span>NESA Year 11 Chemistry Preliminary Assessment Module Engine</span>
+            <div class="utility-controls">
+                <button id="theme-toggle-btn" aria-label="Toggle between dark and light mode">
+                    <span class="mode-text">Toggle Theme</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="portal-layout">
+        <aside id="portal-sidebar" aria-label="Main Navigation">
+            <div class="sidebar-brand">
+                <div class="brand-logo">
+                    <span class="logo-icon">⚛️</span>
+                    <span class="brand-name">Nexus<span class="highlight">Sci</span></span>
+                </div>
+                <p class="brand-tagline">NSW Curriculum Mastery</p>
+            </div>
+
+            <nav class="sidebar-nav" aria-label="Primary Directory">
+                <div class="nav-section-label">Core Directory</div>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <span class="nav-icon">🏠</span>
+                            <span class="nav-text">Portal Home</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="nav-section-label">Chemistry Syllabus Modules</div>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="mod1.html" class="nav-link">
+                            <span class="nav-icon">🧪</span>
+                            <span class="nav-text">Module 1: Properties</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="mod2.html" class="nav-link">
+                            <span class="nav-icon">📊</span>
+                            <span class="nav-text">Module 2: Quantitative</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="mod3.html" class="nav-link">
+                            <span class="nav-icon">💥</span>
+                            <span class="nav-text">Module 3: Reactive</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="mod4.html" class="nav-link">
+                            <span class="nav-icon">🔥</span>
+                            <span class="nav-text">Module 4: Drivers</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="nav-section-label">Evaluation Engine</div>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="results.html" class="nav-link">
+                            <span class="nav-icon">🏆</span>
+                            <span class="nav-text">Analytics & Results</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer-card">
+                <div class="status-indicator-group">
+                    <span class="status-dot online"></span>
+                    <span class="status-label">Exam Simulator: Active</span>
+                </div>
+                <div class="version-tag">v2.4.0-Prelim</div>
+            </div>
+        </aside>
+
+        <main id="main-content" class="portal-main">
+            
+            <header id="dashboard-header">
+                <div class="breadcrumb-trail">
+                    <span>Nexus Core</span> &gt; <span>Module 1 Evaluation Suite</span>
+                </div>
+                <div class="user-avatar-block">
+                    <div class="avatar-initials">EX</div>
+                    <div class="avatar-meta">
+                        <span class="user-name">Testing Mode</span>
+                        <span class="user-role">Interactive Practice Console</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-hero-banner">
+                <div class="hero-left-block">
+                    <span class="badge-accent">Outcome Diagnostic Matrix</span>
+                    <h1>Properties & Structure of Matter Evaluation</h1>
+                    <p class="hero-description">
+                        Test your analytical skills across NESA curriculum parameters. Complete the worked exam examples, the interactive multiple-choice matrix, and the automatically processed short-answer prompts below.
+                    </p>
+                </div>
+            </div>
+
+            <section class="glass-panel" style="margin-bottom: 40px;">
+                <h2>Part A: High-Fidelity Worked Exam Examples</h2>
+                <p class="vault-sub">Analyse model structures and marking breakdowns to calibrate your response writing technique.</p>
+                <hr style="border: 0.5px solid var(--glass-border); margin: 20px 0;">
+
+                <div style="margin-bottom: 35px; background: rgba(0,0,0,0.1); padding: 25px; border-radius: 16px;">
+                    <div class="question-meta-row">
+                        <span>EXAMPLE FOCUS: GRAVIMETRIC DEVIATION AUDITS</span>
+                        <span class="difficulty-tag diff-medium">Medium Level</span>
+                    </div>
+                    <h4>Worked Example 1</h4>
+                    <p>A student performs a gravimetric analysis to determine the percentage composition of sand in a heterogeneous mixture of sand and salt. During the final filtration stage, the student fails to dry the isolated sand residue completely before measuring its final mass weight. Justify how this procedural error impacts the validity of the calculated salt percentage composition.</p>
+                    
+                    <div class="exam-sample-box" style="font-style: normal; margin-top: 20px; background: rgba(255,255,255,0.01);">
+                        <strong>Syllabus Model Solution Breakdown:</strong>
+                        <p style="margin-top: 10px;">Incomplete drying leaves excess residual water weight trapped within the sand component sample. This falsely inflates the measured mass of the sand residue. Because the total sample mass remains fixed, subtracting this inflated sand value means the calculated mass of the soluble salt becomes artificially low. Consequently, the final calculated percentage composition of salt is falsely reduced, undermining the validity of the analytical data matrix.</p>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 35px; background: rgba(0,0,0,0.1); padding: 25px; border-radius: 16px;">
+                    <div class="question-meta-row">
+                        <span>EXAMPLE FOCUS: ISOTOPIC AVERAGE BALANCING</span>
+                        <span class="difficulty-tag diff-easy">Easy Level</span>
+                    </div>
+                    <h4>Worked Example 2</h4>
+                    <p>An element has two naturally occurring isotopes. Isotope A has a stable nucleon mass of $10.01 \text{ amu}$ with a relative abundance frequency of $19.9\%$. Isotope B has a mass value of $11.01 \text{ amu}$ with an abundance frequency of $80.1\%$. Calculate the relative atomic mass ($I_{\text{RAM}}$) of this element and identify it using the periodic table.</p>
+                    
+                    <div class="exam-sample-box" style="font-style: normal; margin-top: 20px; background: rgba(255,255,255,0.01);">
+                        <strong>Syllabus Model Solution Breakdown:</strong>
+                        <p>Apply the relative atomic mass equation across the isotopic composition targets:</p>
+                        <p>$$I_{\text{RAM}} = \left( \frac{19.9 \times 10.01}{100} \right) + \left( \frac{80.1 \times 11.01}{100} \right)$$</p>
+                        <p>$$I_{\text{RAM}} = 1.9920 + 8.8190 = 10.811 \text{ amu}$$</p>
+                        <p>Checking the calculated value against the NSW NESA reference sheet data confirms that the element is <strong>Boron ($\text{B}$)</strong>, which has an atomic tracking value of $Z = 5$.</p>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 35px; background: rgba(0,0,0,0.1); padding: 25px; border-radius: 16px;">
+                    <div class="question-meta-row">
+                        <span>EXAMPLE FOCUS: NUCLEAR EQUATION DISPLACEMENTS</span>
+                        <span class="difficulty-tag diff-hard">Challenging Level</span>
+                    </div>
+                    <h4>Worked Example 3</h4>
+                    <p>An unstable Uranium nucleus (${}_{92}^{235}\text{U}$) undergoes a consecutive decay series consisting of one alpha ($\alpha$) emission followed rapidly by two separate beta ($\beta^-$) emissions. State the final balanced nuclear isotope symbol configuration produced at the end of this reaction sequence.</p>
+                    
+                    <div class="exam-sample-box" style="font-style: normal; margin-top: 20px; background: rgba(255,255,255,0.01);">
+                        <strong>Syllabus Model Solution Breakdown:</strong>
+                        <p>Step 1: Track the initial alpha decay process. Alpha particles are helium cores (${}_2^4\text{He}$), which drop the mass number by 4 and the atomic identifier by 2:</p>
+                        <p>$${}_{92}^{235}\text{U} \rightarrow {}_{90}^{231}\text{Th} + {}_2^4\text{He}$$</p>
+                        <p>Step 2: Process the two subsequent beta decays sequentially. Each beta particle emitted (${}_{-1}^0\text{e}$) converts a nuclear neutron into a proton, raising the atomic number by 1 per emission while the total mass remains constant:</p>
+                        <p>$$\text{First Beta Event: } {}_{90}^{231}\text{Th} \rightarrow {}_{91}^{231}\text{Pa} + {}_{-1}^0\text{e}$$</p>
+                        <p>$$\text{Second Beta Event: } {}_{91}^{231}\text{Pa} \rightarrow {}_{92}^{231}\text{U} + {}_{-1}^0\text{e}$$</p>
+                        <p>The resulting stable nuclear structure configuration maps back to <strong>Uranium-231 (${}_{92}^{231}\text{U}$)</strong>.</p>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 35px; background: rgba(0,0,0,0.1); padding: 25px; border-radius: 16px;">
+                    <div class="question-meta-row">
+                        <span>EXAMPLE FOCUS: QUANTUM ENERGY ANOMALIES</span>
+                        <span class="difficulty-tag diff-medium">Medium Level</span>
+                    </div>
+                    <h4>Worked Example 4</h4>
+                    <p>Explain why Chromium ($Z = 24$) demonstrates an anomalous ground-state valence electron configuration within the $3d$ and $4s$ subshells compared to the standard predictions of the Aufbau principle.</p>
+                    
+                    <div class="exam-sample-box" style="font-style: normal; margin-top: 20px; background: rgba(255,255,255,0.01);">
+                        <strong>Syllabus Model Solution Breakdown:</strong>
+                        <p>Standard filling order rules would predict a ground-state configuration layout of $[\text{Ar}] 4s^2 3d^4$ for Chromium. However, spectral experimental metrics verify that the actual configuration is $[\text{Ar}] 4s^1 3d^5$. This happens because an electron is promoted from the $4s$ orbital into the $3d$ subshell to form a half-filled subshell arrangement. This symmetrical layout reduces electron-electron repulsion and yields a more energetically stable configuration than the predicted structure.</p>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 10px; background: rgba(0,0,0,0.1); padding: 25px; border-radius: 16px;">
+                    <div class="question-meta-row">
+                        <span>EXAMPLE FOCUS: THERMODYNAMIC BONDING DISTINCTIONS</span>
+                        <span class="difficulty-tag diff-hard">Challenging Level</span>
+                    </div>
+                    <h4>Worked Example 5</h4>
+                    <p>Contrast the processes of boiling liquid water versus splitting water molecules apart via electrical electrolysis using thermodynamic energy parameters and structural bond realignments.</p>
+                    
+                    <div class="exam-sample-box" style="font-style: normal; margin-top: 20px; background: rgba(255,255,255,0.01);">
+                        <strong>Syllabus Model Solution Breakdown:</strong>
+                        <p><strong>Boiling:</strong> A physical phase transition where liquid water turns to gas ($\text{H}_2\text{O}_{(l)} \rightarrow \text{H}_2\text{O}_{(g)}$). This process requires a relatively low thermal energy input ($\sim 41 \text{ kJ/mol}$) to break weak intermolecular hydrogen bonds, while the internal covalent chemical structures remain intact.</p>
+                        <p><strong>Electrolysis:</strong> A chemical decomposition reaction ($2\text{H}_2\text{O}_{(l)} \rightarrow 2\text{H}_{2(g)} + \text{O}_{2(g)}$). This process requires a high energy input to break the strong internal covalent intramolecular bonds ($\sim 463 \text{ kJ/mol}$), breaking the water molecules apart to form entirely new elemental gases.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="glass-panel" style="margin-bottom: 40px;">
+                <h2>Part B: Interactive Multiple-Choice Diagnostic Console</h2>
+                <p class="vault-sub">Select your answers and submit each question below to run instantaneous automated grading routines.</p>
+                <hr style="border: 0.5px solid var(--glass-border); margin: 20px 0;">
+
+                <div class="mcq-node-block" id="mcq-block-1" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px dashed var(--glass-border);">
+                    <div class="question-meta-row">
+                        <span>QUESTION 01: NOMENCLATURE SYNTAX</span>
+                        <span class="difficulty-tag diff-easy">Easy Level</span>
+                    </div>
+                    <p><strong>Q1. What is the correct systematic formula for Iron(III) Sulfate based on IUPAC guidelines?</strong></p>
+                    <div style="margin-top: 15px;">
+                        <label class="quiz-option-label"><input type="radio" name="mcq-1" value="A"> A) $\text{FeSO}_4$</label>
+                        <label class="quiz-option-label"><input type="radio" name="mcq-1" value="B"> B) $\text{Fe}_3\text{SO}_4$</label>
+                        <label class="quiz-option-label"><input type="radio" name="mcq-1" value="C"> C) $\text{Fe}_2(\text{SO}_4)_3</label>
+                        <label class="quiz-option-label"><input type="radio" name="mcq-1" value="D"> D) $\text{Fe}_3(\text{SO}_4)_2$</label>
+                    </div>
+                    <button type="button" onclick="evaluateMCQ(1, 'C', 'Iron(III) carries a $+3$ ion charge, whereas the polyatomic sulfate group ($\text{SO}_4^{2-}$) carries a $-2$ charge. Balancing the overall ionic layout to a net zero charge profile requires two Iron cations for every three Sulfate anions, yielding $\text{Fe}_2(\text{SO}_4)_3$.')" style="margin-top: 10px;">Submit Response 01</button>
+                    <div class="feedback-pane" id="feedback-mcq-1"></div>
+                </div>
+
+                <div class="mcq-node-block" id="mcq-block-2" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px dashed var(--glass-border);">
+                    <div class="question-meta-row">
+                        <span>QUESTION 02: GRAVIMETRIC SEPARATIONS</span>
+                        <span class="difficulty-tag diff-medium">Medium Level</span>
+                    </div>
+                    <p><strong>Q2. A solid sample contains barium sulfate precipitate suspended within a soluble nitrate liquid phase solution. Which combination of physical separation techniques isolates the solid barium sulfate from the mixture?</strong></p>
+                    <div style="margin-top: 15px;">
+                        <label class="quiz-option-label"><input type="radio" name="mcq-2" value="A"> A) Fractional distillation followed by simple evaporation</label>
+                        <label class="quiz-option-label"><input type="radio" name="mcq-2" value="B"> B) Gravity filtration followed by washing and drying the residue</label>
+                        <label class="quiz-option-label"><input type="radio" name="mcq-2" value="C"> C) Using a separating funnel to draw off the layers</label>
+                        <label class="quiz-option-label"><input type="radio" name="mcq-2" value="D"> D) Centrifugation combined with simple solvent sublimation</label>
+                    </div>
+                    <button type="button" onclick="evaluateMCQ(2, 'B', 'Barium sulfate acts as an insoluble precipitate matrix. Gravity filtration traps the solid particles as residue on the filter paper, separating them from the liquid filtrate. Washing removes any lingering dissolved nitrate ions, and drying isolates the pure solid sample.')" style="margin-top: 10px;">Submit Response 02</button>
+                    <div class="feedback-pane" id="feedback-mcq-2"></div>
+                </div>
+
+                <div class="mcq-node-block" id="mcq-block-3" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px dashed var(--glass-border);">
+                    <div class="question-meta-row">
+                        <span>QUESTION 03: STABILITY RATIOS</span>
+                        <span class="difficulty-tag diff-medium">Medium Level</span>
+                    </div>
+                    <p><strong>Q3. Which structural nuclear factor primary causes an atom to become an unstable radioisotope?</strong></p>
+                    <div style="margin-top: 15px;">
+                        <label class="quiz-option-label"><input type="radio" name="mcq-3" value="A"> A) Large differences between electronegativity tracking bounds</label>
+                        <label class="quiz-option-label"><input type="radio" name="mcq-3" value="B"> B) The outermost valence energy ring filling past octet limits</label>
+                        <label class="quiz-option-label"><input type="radio" name="mcq-3" value="C"> C) An unstable neutron-to-proton ($n:p$) ratio inside the core nucleus</label>
+                        <label class="quiz-option-label"><input type="radio" name="mcq-3" value="D"> D) Low numbers of delocalised metallic valence electrons</label>
+                    </div>
+                    <button type="button" onclick="evaluateMCQ(3, 'C', 'Nuclear stability is dictated by the ratio of neutrons to protons ($n:p$). When this ratio shifts outside the stable zone of stability, the cohesive strong nuclear force can no longer overcome proton electrostatic repulsions, causing the nucleus to decay.')" style="margin-top: 10px;">Submit Response 03</button>
+                    <div class="feedback-pane" id="feedback-mcq-3"></div>
+                </div>
+
+                <div class="mcq-node-block" id="mcq-block-4" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px dashed var(--glass-border);">
+                    <div class="question-meta-row">
+                        <span>QUESTION 04: SPECTRUM BOUNDARIES</span>
+                        <span class="difficulty-tag diff-medium">Medium Level</span>
+                    </div>
+                    <p><strong>Q4. According to Bohr's atomic model, what event produces the sharp, discrete lines observed in hydrogen emission spectra?</strong></p>
+                    <div style="margin-top: 15px;">
+                        <label class="quiz-option-label"><input type="radio" name="mcq-4" value="A"> A) Continuous acceleration of electrons around fixed paths</label>
+                        <label class="quiz-option-label"><input type="radio" name="mcq-4" value="B"> B) High-energy photons being absorbed as electrons move to higher shells</label>
+                        <label class="quiz-option-label"><input type="radio" name="mcq-4" value="C"> C) Electrons releasing quantized electromagnetic energy as they drop to lower energy levels</label>
+                        <label class="quiz-option-label"><input type="radio" name="mcq-4" value="D"> D) The complete loss of an electron from an orbital shell to form a cation</label>
+                    </div>
+                    <button type="button" onclick="evaluateMCQ(4, 'C', 'When excited electrons fall back down into lower, more stable energy shells, they emit the excess energy as a single photon. The energy of this photon matches the exact difference between the two shells ($E = h\nu$), producing a distinct emission line.')" style="margin-top: 10px;">Submit Response 04</button>
+                    <div class="feedback-pane" id="feedback-mcq-4"></div>
+                </div>
+
+                <div class="mcq-node-block" id="mcq-block-5" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px dashed var(--glass-border);">
+                    <div class="question-meta-row">
+                        <span>QUESTION 05: QUANTUM SUB-LEVELS</span>
+                        <span class="difficulty-tag diff-hard">Challenging Level</span>
+                    </div>
+                    <p><strong>Q5. What is the correct full grounding ground-state electron configuration syntax for a Sulfide ion ($\text{S}^{2-}$, $Z = 16$)?</strong></p>
+                    <div style="margin-top: 15px;">
+                        <label class="quiz-option-label"><input type="radio" name="mcq-5" value="A"> A) $1s^2 2s^2 2p^6 3s^2 3p^4$</label>
+                        <label class="quiz-option-label"><input type="radio" name="mcq-5" value="B"> B) $1s^2 2s^2 2p^6 3s^2 3p^6$</label>
+                        <label class="quiz-option-label"><input type="radio" name="mcq-5" value="C"> C) $1s^2 2s^2 2p^6 3s^2 3p^6 4s^2$</label>
+                        <label class="quiz-option-label"><input type="radio" name="mcq-5" value="D"> D) $1s^2 2s^2 2p^6 3s^1 3p^5$</label>
+                    </div>
+                    <button type="button" onclick="evaluateMCQ(5, 'B', 'A neutral sulfur atom has 16 electrons ($1s^2 2s^2 2p^6 3s^2 3p^4$). Gaining two additional electrons to form a stable sulfide anion ($\text{S}^{2-}$) fills its outer valence shell, yielding a total of 18 electrons with the stable arrangement $1s^2 2s^2 2p^6 3s^2 3p^6$.')" style="margin-top: 10px;">Submit Response 05</button>
+                    <div class="feedback-pane" id="feedback-mcq-5"></div>
+                </div>
+
+                <div class="mcq-node-block" id="mcq-block-6" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px dashed var(--glass-border);">
+                    <div class="question-meta-row">
+                        <span>QUESTION 06: RADIUS VARIATIONS</span>
+                        <span class="difficulty-tag diff-medium">Medium Level</span>
+                    </div>
+                    <p><strong>Q6. Moving from left to right across Period 3 of the Periodic Table, how and why do atomic radii change?</strong></p>
+                    <div style="margin-top: 15px;">
+                        <label class="quiz-option-label"><input type="radio" name="mcq-6" value="A"> A) Radii increase because additional electronic shells are added</label>
+                        <label class="quiz-option-label"><input type="radio" name="mcq-6" value="B"> B) Radii remain constant because all elements occupy identical core groups</label>
+                        <label class="quiz-option-label"><input type="radio" name="mcq-6" value="C"> C) Radii decrease because the increasing nuclear proton charge pulls the same valence shell closer</label>
+                        <label class="quiz-option-label"><input type="radio" name="mcq-6" value="D"> D) Radii increase due to structural increases in internal electron-shielding forces</label>
+                    </div>
+                    <button type="button" onclick="evaluateMCQ(6, 'C', 'Across a period, each element adds a proton to the nucleus while electrons enter the same valence energy shell. This increases the effective nuclear charge ($Z_{\text{eff}}$) without adding extra shielding, pulling the electron cloud inward and reducing the atomic radius.')" style="margin-top: 10px;">Submit Response 06</button>
+                    <div class="feedback-pane" id="feedback-mcq-6"></div>
+                </div>
+
+                <div class="mcq-node-block" id="mcq-block-7" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px dashed var(--glass-border);">
+                    <div class="question-meta-row">
+                        <span>QUESTION 07: IONISATION PROFILES</span>
+                        <span class="difficulty-tag diff-hard">Challenging Level</span>
+                    </div>
+                    <p><strong>Q7. Why does Nitrogen ($Z = 7$) exhibit a higher first ionisation energy than Oxygen ($Z = 8$), despite Oxygen having a greater core nuclear proton charge?</strong></p>
+                    <div style="margin-top: 15px;">
+                        <label class="quiz-option-label"><input type="radio" name="mcq-7" value="A"> A) Nitrogen possesses a completely full outer valence shell</label>
+                        <label class="quiz-option-label"><input type="radio" name="mcq-7" value="B"> B) Nitrogen has a stable, half-filled $2p$ subshell ($2p^3$). Oxygen contains a paired electron configuration ($2p^4$) that creates electron-electron repulsion, making it easier to remove.</label>
+                        <label class="quiz-option-label"><input type="radio" name="mcq-7" value="C"> C) Oxygen experiences significantly stronger valence shell electron shielding</label>
+                        <label class="quiz-option-label"><input type="radio" name="mcq-7" value="D"> D) Nitrogen contains fewer total inner electron shells than Oxygen</label>
+                    </div>
+                    <button type="button" onclick="evaluateMCQ(7, 'B', 'Nitrogen has three electrons singly occupying its three $2p$ orbitals ($2p^3$), creating a stable, half-filled configuration. In contrast, Oxygen has four electrons in its $2p$ subshell ($2p^4$). This introduces electron-electron pairing repulsion in one orbital, making that electron slightly easier to remove despite Oxygen\'s higher nuclear charge.')" style="margin-top: 10px;">Submit Response 07</button>
+                    <div class="feedback-pane" id="feedback-mcq-7"></div>
+                </div>
+
+                <div class="mcq-node-block" id="mcq-block-8" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px dashed var(--glass-border);">
+                    <div class="question-meta-row">
+                        <span>QUESTION 08: ELECTRONEGATIVITY GRADIENTS</span>
+                        <span class="difficulty-tag diff-easy">Easy Level</span>
+                    </div>
+                    <p><strong>Q8. Which structural element combination possesses the highest overall electronegativity rating across standard NESA datasets?</strong></p>
+                    <div style="margin-top: 15px;">
+                        <label class="quiz-option-label"><input type="radio" name="mcq-8" value="A"> A) Cesium ($\text{Cs}$)</label>
+                        <label class="quiz-option-label"><input type="radio" name="mcq-8" value="B"> B) Fluorine ($\text{F}$)</label>
+                        <label class="quiz-option-label"><input type="radio" name="mcq-8" value="C"> C) Helium ($\text{He}$)</label>
+                        <label class="quiz-option-label"><input type="radio" name="mcq-8" value="D"> D) Carbon ($\text{C}$)</label>
+                    </div>
+                    <button type="button" onclick="evaluateMCQ(8, 'B', 'Fluorine occupies the top right of the reactive periodic table. Its small atomic radius and high effective nuclear charge give it the strongest electrostatic pull on shared bonding electrons, resulting in the highest electronegativity rating (~4.0 on the Pauling scale).')" style="margin-top: 10px;">Submit Response 08</button>
+                    <div class="feedback-pane" id="feedback-mcq-8"></div>
+                </div>
+
+                <div class="mcq-node-block" id="mcq-block-9" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px dashed var(--glass-border);">
+                    <div class="question-meta-row">
+                        <span>QUESTION 09: MOLECULAR STRUCTURES</span>
+                        <span class="difficulty-tag diff-hard">Challenging Level</span>
+                    </div>
+                    <p><strong>Q9. According to VSEPR theory guidelines, what are the formal 3D molecular geometries and approximate bond angles of Nitrogen Trifluoride ($\text{NF}_3$)?</strong></p>
+                    <div style="margin-top: 15px;">
+                        <label class="quiz-option-label"><input type="radio" name="mcq-9" value="A"> A) Trigonal Planar geometry with precise $120^\circ$ angles</label>
+                        <label class="quiz-option-label"><input type="radio" name="mcq-9" value="B"> B) Tetrahedral structure displaying precise $109.5^\circ$ angles</label>
+                        <label class="quiz-option-label"><input type="radio" name="mcq-9" value="C"> C) Trigonal Pyramidal geometry with angles compressed to roughly $107^\circ$ by a lone pair</label>
+                        <label class="quiz-option-label"><input type="radio" name="mcq-9" value="D"> D) Linear geometry with a precise $180^\circ$ structural layout</label>
+                    </div>
+                    <button type="button" onclick="evaluateMCQ(9, 'C', 'The central nitrogen atom has four electron domains: three bonding pairs connected to fluorine atoms and one unbonded lone pair. This creates a tetrahedral electron domain layout, but the lone pair exerts strong repulsion that compresses the bonding angles to roughly $107^\circ$, forming a trigonal pyramidal molecular geometry.')" style="margin-top: 10px;">Submit Response 09</button>
+                    <div class="feedback-pane" id="feedback-mcq-9"></div>
+                </div>
+
+                <div class="mcq-node-block" id="mcq-block-10" style="margin-bottom: 10px;">
+                    <div class="question-meta-row">
+                        <span>QUESTION 10: METALLIC STRUCTURES</span>
+                        <span class="difficulty-tag diff-medium">Medium Level</span>
+                    </div>
+                    <p><strong>Q10. What electrical and structural property allows solid metals to be highly ductile?</strong></p>
+                    <div style="margin-top: 15px;">
+                        <label class="quiz-option-label"><input type="radio" name="mcq-10" value="A"> A) Rigidity from directional covalent network bonds</label>
+                        <label class="quiz-option-label"><input type="radio" name="mcq-10" value="B"> B) Alternating arrays of positive and negative structural ions</label>
+                        <label class="quiz-option-label"><input type="radio" name="mcq-10" value="C"> C) Non-directional metallic bonding, where layers of metal cations can slide past each other smoothly while remaining bound by a mobile "sea" of delocalised electrons</label>
+                        <label class="quiz-option-label"><input type="radio" name="mcq-10" value="D"> D) Low boiling points caused by weak internal dispersion forces</label>
+                    </div>
+                    <button type="button" onclick="evaluateMCQ(10, 'C', 'Metallic bonding is non-directional. When a mechanical force is applied, layers of metal cations can slide past each other without shattering because the mobile sea of delocalised electrons shifts along with them, maintaining the cohesive structural bond.')" style="margin-top: 10px;">Submit Response 10</button>
+                    <div class="feedback-pane" id="feedback-mcq-10"></div>
+                </div>
+            </section>
+
+            <section class="glass-panel" style="margin-bottom: 40px;">
+                <h2>Part C: Extended Short-Answer Assessment Matrix</h2>
+                <p class="vault-sub">Draft your responses inside the boxes. Submit your answer to view the grading keywords, a sample solution, and adjust your score.</p>
+                <hr style="border: 0.5px solid var(--glass-border); margin: 20px 0;">
+
+                <div class="saq-node-item" id="saq-node-1" style="margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px dashed var(--glass-border);">
+                    <div class="question-meta-row">
+                        <span>QUESTION 01: MACRO PROPERTIES MATRIX (ALLOCATION: 3 MARKS)</span>
+                        <span class="difficulty-tag diff-easy">Easy Level</span>
+                    </div>
+                    <p><strong>Q1. Explain how a pure substance differs fundamentally from a heterogeneous mixture using macroscopic properties and chemical composition parameters.</strong></p>
+                    <textarea class="saq-textarea" id="saq-input-1" placeholder="Type your formal academic response here..."></textarea>
+                    <button type="button" onclick="processSAQ(1, ['pure', 'composition', 'constant', 'boiling', 'mixture', 'heterogeneous', 'properties'])">Submit and Evaluate Response 01</button>
+                    
+                    <div class="marking-criteria-block" id="criteria-saq-1">
+                        <div class="criteria-badge">Automated Diagnostic Grading Engine Output</div>
+                        <p class="keyword-match-results"></p>
+                        <div class="exam-sample-box">
+                            <strong>Syllabus Sample Complete Answer:</strong>
+                            <p>A pure substance consists of a single chemical species with a uniform, fixed chemical composition. It exhibits distinct, constant physical properties, such as precise melting and boiling points, regardless of sample size. In contrast, a heterogeneous mixture has a non-uniform composition made of multiple physical phases. Its macroscopic properties are variable and depend directly on the relative amounts and identities of its individual components.</p>
+                        </div>
+                        <div style="margin-top: 15px; display: flex; align-items: center; gap: 15px;">
+                            <label><strong>Calibrate Verified Score:</strong></label>
+                            <select class="score-adjust-select">
+                                <option value="0">0 Marks (Unsatisfactory)</option>
+                                <option value="1">1 Mark (Basic Description)</option>
+                                <option value="2">2 Marks (Sound Distinction)</option>
+                                <option value="3" selected>3 Marks (Comprehensive Analysis)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="saq-node-item" id="saq-node-2" style="margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px dashed var(--glass-border);">
+                    <div class="question-meta-row">
+                        <span>QUESTION 02: GRAVIMETRIC SAMPLING AUDITS (ALLOCATION: 4 MARKS)</span>
+                        <span class="difficulty-tag diff-medium">Medium Level</span>
+                    </div>
+                    <p><strong>Q2. Outline the essential laboratory procedures required to ensure reliability and accuracy when executing a gravimetric analysis of a soil sample to isolate insoluble components.</strong></p>
+                    <textarea class="saq-textarea" id="saq-input-2" placeholder="Type your formal academic response here..."></textarea>
+                    <button type="button" onclick="processSAQ(2, ['reliability', 'replicate', 'mass', 'dry', 'constant', 'wash', 'filter'])">Submit and Evaluate Response 02</button>
+                    
+                    <div class="marking-criteria-block" id="criteria-saq-2">
+                        <div class="criteria-badge">Automated Diagnostic Grading Engine Output</div>
+                        <p class="keyword-match-results"></p>
+                        <div class="exam-sample-box">
+                            <strong>Syllabus Sample Complete Answer:</strong>
+                            <p>To ensure accuracy, the soil sample must be crushed and dried to a constant weight to remove all variable moisture content. The filtration system must be washed thoroughly with distilled water to remove all soluble tracking ions from the solid residue. To ensure reliability, the entire gravimetric analysis must be repeated across multiple identical sample trials, and the resulting percentage composition values checked for consistency.</p>
+                        </div>
+                        <div style="margin-top: 15px; display: flex; align-items: center; gap: 15px;">
+                            <label><strong>Calibrate Verified Score:</strong></label>
+                            <select class="score-adjust-select">
+                                <option value="0">0 Marks</option>
+                                <option value="1">1 Mark</option>
+                                <option value="2">2 Marks</option>
+                                <option value="3">3 Marks</option>
+                                <option value="4" selected>4 Marks</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="saq-node-item" id="saq-node-3" style="margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px dashed var(--glass-border);">
+                    <div class="question-meta-row">
+                        <span>QUESTION 03: RADIONUCLIDE DECAY MECHANICS (ALLOCATION: 3 MARKS)</span>
+                        <span class="difficulty-tag diff-hard">Challenging Level</span>
+                    </div>
+                    <p><strong>Q3. Cobalt-60 (${}_{27}^{60}\text{Co}$) is a synthetic radioisotope utilized widely inside cancer radiotherapy environments. Model its nuclear disintegration process via a balanced equation as it emits a beta ($\beta^-$) particle and gamma ($\gamma$) radiation radiation.</strong></p>
+                    <textarea class="saq-textarea" id="saq-input-3" placeholder="Type your formal academic response here..."></textarea>
+                    <button type="button" onclick="processSAQ(3, ['co', 'ni', 'beta', '60', '28', 'gamma'])">Submit and Evaluate Response 03</button>
+                    
+                    <div class="marking-criteria-block" id="criteria-saq-3">
+                        <div class="criteria-badge">Automated Diagnostic Grading Engine Output</div>
+                        <p class="keyword-match-results"></p>
+                        <div class="exam-sample-box">
+                            <strong>Syllabus Sample Complete Answer:</strong>
+                            <p>The balanced nuclear equation is written as follows:</p>
+                            <p>$${}_{27}^{60}\text{Co} \rightarrow {}_{28}^{60}\text{Ni} + {}_{-1}^{0}\text{e} + {}_0^0\gamma$$</p>
+                            <p>During this beta decay event, a neutron inside the unstable Cobalt nucleus transforms into a proton. This raises the atomic number by 1 to form Nickel ($Z = 28$), while releasing a high-energy electron and gamma ray energy.</p>
+                        </div>
+                        <div style="margin-top: 15px; display: flex; align-items: center; gap: 15px;">
+                            <label><strong>Calibrate Verified Score:</strong></label>
+                            <select class="score-adjust-select">
+                                <option value="0">0 Marks</option>
+                                <option value="1">1 Mark</option>
+                                <option value="2">2 Marks</option>
+                                <option value="3" selected>3 Marks</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="saq-node-item" id="saq-node-4" style="margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px dashed var(--glass-border);">
+                    <div class="question-meta-row">
+                        <span>QUESTION 04: SCHRÖDINGER ELECTRON CLOUD STRUCTURES (ALLOCATION: 4 MARKS)</span>
+                        <span class="difficulty-tag diff-hard">Challenging Level</span>
+                    </div>
+                    <p><strong>Q4. Explain how the Schrödinger wave model of the atom addresses and overcomes the structural limitations inherent in the earlier planetary Bohr electronic model.</strong></p>
+                    <textarea class="saq-textarea" id="saq-input-4" placeholder="Type your formal academic response here..."></textarea>
+                    <button type="button" onclick="processSAQ(4, ['bohr', 'schrodinger', 'orbital', 'probability', 'emission', 'repulsion', 'wave'])">Submit and Evaluate Response 04</button>
+                    
+                    <div class="marking-criteria-block" id="criteria-saq-4">
+                        <div class="criteria-badge">Automated Diagnostic Grading Engine Output</div>
+                        <p class="keyword-match-results"></p>
+                        <div class="exam-sample-box">
+                            <strong>Syllabus Sample Complete Answer:</strong>
+                            <p>The Bohr model treats electrons as particles moving in fixed, circular orbits. While this successfully explains the emission spectrum of hydrogen, it cannot predict the complex spectra of multi-electron atoms or account for subshell splitting. The Schrödinger model overcomes these limitations by treating electrons as having wave-particle duality. It uses mathematical wave functions to define 3D regional 'orbitals' ($s, p, d, f$) based on statistical probability, which accurately accounts for electron-electron repulsion and spectral behaviors.</p>
+                        </div>
+                        <div style="margin-top: 15px; display: flex; align-items: center; gap: 15px;">
+                            <label><strong>Calibrate Verified Score:</strong></label>
+                            <select class="score-adjust-select">
+                                <option value="0">0 Marks</option>
+                                <option value="1">1 Mark</option>
+                                <option value="2">2 Marks</option>
+                                <option value="3">3 Marks</option>
+                                <option value="4" selected>4 Marks</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="saq-node-item" id="saq-node-5" style="margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px dashed var(--glass-border);">
+                    <div class="question-meta-row">
+                        <span>QUESTION 05: SHIELDING PERIODICITY TRENDS (ALLOCATION: 3 MARKS)</span>
+                        <span class="difficulty-tag diff-medium">Medium Level</span>
+                    </div>
+                    <p><strong>Q5. Describe and explain the trend observed in electronegativity values down a single group of the periodic table.</strong></p>
+                    <textarea class="saq-textarea" id="saq-input-5" placeholder="Type your formal academic response here..."></textarea>
+                    <button type="button" onclick="processSAQ(5, ['electronegativity', 'decrease', 'shielding', 'radius', 'distance', 'attraction'])">Submit and Evaluate Response 05</button>
+                    
+                    <div class="marking-criteria-block" id="criteria-saq-5">
+                        <div class="criteria-badge">Automated Diagnostic Grading Engine Output</div>
+                        <p class="keyword-match-results"></p>
+                        <div class="exam-sample-box">
+                            <strong>Syllabus Sample Complete Answer:</strong>
+                            <p>Electronegativity values predictably decrease moving down a group. As you progress down, each consecutive period adds an extra principal quantum electron shell, increasing the overall atomic radius. This extra distance, combined with increased electron shielding from the inner shells, weakens the electrostatic attraction between the nucleus and any shared bonding electrons, lowering the atom's electronegativity score.</p>
+                        </div>
+                        <div style="margin-top: 15px; display: flex; align-items: center; gap: 15px;">
+                            <label><strong>Calibrate Verified Score:</strong></label>
+                            <select class="score-adjust-select">
+                                <option value="0">0 Marks</option>
+                                <option value="1">1 Mark</option>
+                                <option value="2">2 Marks</option>
+                                <option value="3" selected>3 Marks</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="saq-node-item" id="saq-node-6" style="margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px dashed var(--glass-border);">
+                    <div class="question-meta-row">
+                        <span>QUESTION 06: METALLIC PERIODIC REACTIVITIES (ALLOCATION: 3 MARKS)</span>
+                        <span class="difficulty-tag diff-medium">Medium Level</span>
+                    </div>
+                    <p><strong>Q6. Predict and compare the reactivity of Sodium ($\text{Na}$) and Magnesium ($\text{Mg}$) with water, justifying your response using their atomic structures and configurations.</strong></p>
+                    <textarea class="saq-textarea" id="saq-input-6" placeholder="Type your formal academic response here..."></textarea>
+                    <button type="button" onclick="processSAQ(6, ['sodium', 'magnesium', 'reactive', 'ionisation', 'valence', 'charge', 'effective'])">Submit and Evaluate Response 06</button>
+                    
+                    <div class="marking-criteria-block" id="criteria-saq-6">
+                        <div class="criteria-badge">Automated Diagnostic Grading Engine Output</div>
+                        <p class="keyword-match-results"></p>
+                        <div class="exam-sample-box">
+                            <strong>Syllabus Sample Complete Answer:</strong>
+                            <p>Sodium is significantly more reactive with water than Magnesium. Sodium only needs to lose a single valence electron ($3s^1$) to achieve a stable octet, and it experiences a lower effective nuclear charge than Magnesium. Magnesium has a higher effective nuclear charge holding its two valence electrons ($3s^2$) more tightly, giving it a higher first ionisation energy and making it less reactive in cold water.</p>
+                        </div>
+                        <div style="margin-top: 15px; display: flex; align-items: center; gap: 15px;">
+                            <label><strong>Calibrate Verified Score:</strong></label>
+                            <select class="score-adjust-select">
+                                <option value="0">0 Marks</option>
+                                <option value="1">1 Mark</option>
+                                <option value="2">2 Marks</option>
+                                <option value="3" selected>3 Marks</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="saq-node-item" id="saq-node-7" style="margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px dashed var(--glass-border);">
+                    <div class="question-meta-row">
+                        <span>QUESTION 07: FLAME EMISSION DIAGNOSTICS (ALLOCATION: 3 MARKS)</span>
+                        <span class="difficulty-tag diff-easy">Easy Level</span>
+                    </div>
+                    <p><strong>Q7. Outline how the characteristic light color observed during laboratory flame tests relates to electron transitions between atomic energy levels.</strong></p>
+                    <textarea class="saq-textarea" id="saq-input-7" placeholder="Type your formal academic response here..."></textarea>
+                    <button type="button" onclick="processSAQ(7, ['absorb', 'emit', 'excited', 'ground', 'photon', 'energy', 'color'])">Submit and Evaluate Response 07</button>
+                    
+                    <div class="marking-criteria-block" id="criteria-saq-7">
+                        <div class="criteria-badge">Automated Diagnostic Grading Engine Output</div>
+                        <p class="keyword-match-results"></p>
+                        <div class="exam-sample-box">
+                            <strong>Syllabus Sample Complete Answer:</strong>
+                            <p>When metal ions are heated in a Bunsen burner flame, their electrons absorb thermal energy and are promoted to higher, unstable 'excited' energy states. As these electrons drop back down to lower, stable 'ground' states, they release the excess energy as a photon of light. The wavelength of this emitted light corresponds to a specific color in the visible spectrum, based on the exact energy gap between the levels.</p>
+                        </div>
+                        <div style="margin-top: 15px; display: flex; align-items: center; gap: 15px;">
+                            <label><strong>Calibrate Verified Score:</strong></label>
+                            <select class="score-adjust-select">
+                                <option value="0">0 Marks</option>
+                                <option value="1">1 Mark</option>
+                                <option value="2">2 Marks</option>
+                                <option value="3" selected>3 Marks</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="saq-node-item" id="saq-node-8" style="margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px dashed var(--glass-border);">
+                    <div class="question-meta-row">
+                        <span>QUESTION 08: ELECTRONEGATIVITY AND BONDING POLARITY (ALLOCATION: 3 MARKS)</span>
+                        <span class="difficulty-tag diff-medium">Medium Level</span>
+                    </div>
+                    <p><strong>Q8. Describe how the difference in electronegativity ($\Delta \chi$) between two bonding atoms determines whether they form a non-polar covalent, polar covalent, or ionic bond.</strong></p>
+                    <textarea class="saq-textarea" id="saq-input-8" placeholder="Type your formal academic response here..."></textarea>
+                    <button type="button" onclick="processSAQ(8, ['difference', 'covalent', 'polar', 'ionic', 'transfer', 'sharing', 'electronegativity'])">Submit and Evaluate Response 08</button>
+                    
+                    <div class="marking-criteria-block" id="criteria-saq-8">
+                        <div class="criteria-badge">Automated Diagnostic Grading Engine Output</div>
+                        <p class="keyword-match-results"></p>
+                        <div class="exam-sample-box">
+                            <strong>Syllabus Sample Complete Answer:</strong>
+                            <p>A small or zero electronegativity difference ($\Delta \chi < 0.4$) results in equal electron sharing and forms a non-polar covalent bond. An intermediate difference ($0.4 \le \Delta \chi \le 1.8$) leads to unequal electron sharing, creating partial charges ($\delta^+, \delta^-$) that characterize a polar covalent bond. A large difference ($\Delta \chi > 1.8$) causes a complete transfer of electrons from the metal to the non-metal, forming an ionic bond held together by electrostatic attraction.</p>
+                        </div>
+                        <div style="margin-top: 15px; display: flex; align-items: center; gap: 15px;">
+                            <label><strong>Calibrate Verified Score:</strong></label>
+                            <select class="score-adjust-select">
+                                <option value="0">0 Marks</option>
+                                <option value="1">1 Mark</option>
+                                <option value="2">2 Marks</option>
+                                <option value="3" selected>3 Marks</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="saq-node-item" id="saq-node-9" style="margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px dashed var(--glass-border);">
+                    <div class="question-meta-row">
+                        <span>QUESTION 09: PHYSICAL PROPERTIES OF CRYSTALLINE SALTS (ALLOCATION: 4 MARKS)</span>
+                        <span class="difficulty-tag diff-medium">Medium Level</span>
+                    </div>
+                    <p><strong>Q9. Explain why ionic compounds are typically brittle and cannot conduct electricity in their solid state, but become highly conductive when molten or dissolved in an aqueous solution.</strong></p>
+                    <textarea class="saq-textarea" id="saq-input-9" placeholder="Type your formal academic response here..."></textarea>
+                    <button type="button" onclick="processSAQ(9, ['brittle', 'lattice', 'repulsion', 'conduct', 'mobile', 'ions', 'fixed'])">Submit and Evaluate Response 09</button>
+                    
+                    <div class="marking-criteria-block" id="criteria-saq-9">
+                        <div class="criteria-badge">Automated Diagnostic Grading Engine Output</div>
+                        <p class="keyword-match-results"></p>
+                        <div class="exam-sample-box">
+                            <strong>Syllabus Sample Complete Answer:</strong>
+                            <p>Ionic compounds are brittle because a mechanical force shifts the crystalline lattice layers, bringing ions of like charges into direct contact. The resulting electrostatic repulsion shatters the crystal structure. In the solid state, these ions are locked in fixed positions and cannot move to carry an electrical current. When molten or dissolved in water, the rigid lattice breaks down, freeing the ions to move and conduct electricity smoothly.</p>
+                        </div>
+                        <div style="margin-top: 15px; display: flex; align-items: center; gap: 15px;">
+                            <label><strong>Calibrate Verified Score:</strong></label>
+                            <select class="score-adjust-select">
+                                <option value="0">0 Marks</option>
+                                <option value="1">1 Mark</option>
+                                <option value="2">2 Marks</option>
+                                <option value="3">3 Marks</option>
+                                <option value="4" selected>4 Marks</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="saq-node-item" id="saq-node-10" style="margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px dashed var(--glass-border);">
+                    <div class="question-meta-row">
+                        <span>QUESTION 10: ORGANIC PREFIX MATRIX (ALLOCATION: 3 MARKS)</span>
+                        <span class="difficulty-tag diff-easy">Easy Level</span>
+                    </div>
+                    <p><strong>Q10. Draw or describe the structural differences between pentane and pent-2-ene based on systematic IUPAC naming conventions.</strong></p>
+                    <textarea class="saq-textarea" id="saq-input-10" placeholder="Type your formal academic response here..."></textarea>
+                    <button type="button" onclick="processSAQ(10, ['pentane', 'alkane', 'double', 'single', 'saturated', 'unsaturated', 'bond'])">Submit and Evaluate Response 10</button>
+                    
+                    <div class="marking-criteria-block" id="criteria-saq-10">
+                        <div class="criteria-badge">Automated Diagnostic Grading Engine Output</div>
+                        <p class="keyword-match-results"></p>
+                        <div class="exam-sample-box">
+                            <strong>Syllabus Sample Complete Answer:</strong>
+                            <p>Both molecules feature a linear five-carbon backbone chain. Pentane is a saturated alkane ($\text{C}_5\text{H}_{12}$) containing exclusively single covalent carbon-carbon bonds. Pent-2-ene is an unsaturated alkene ($\text{C}_5\text{H}_{10}$) that contains a reactive carbon-carbon double bond located precisely between the second and third carbon atoms in the chain sequence.</p>
+                        </div>
+                        <div style="margin-top: 15px; display: flex; align-items: center; gap: 15px;">
+                            <label><strong>Calibrate Verified Score:</strong></label>
+                            <select class="score-adjust-select">
+                                <option value="0">0 Marks</option>
+                                <option value="1">1 Mark</option>
+                                <option value="2">2 Marks</option>
+                                <option value="3" selected>3 Marks</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="saq-node-item" id="saq-node-11" style="margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px dashed var(--glass-border);">
+                    <div class="question-meta-row">
+                        <span>QUESTION 11: INTRA VS INTERMOLECULAR FORCES (ALLOCATION: 4 MARKS)</span>
+                        <span class="difficulty-tag diff-medium">Medium Level</span>
+                    </div>
+                    <p><strong>Q11. Distinguish clearly between intramolecular forces and intermolecular forces, explaining how each impacts the physical and chemical behavior of covalent molecular substances.</strong></p>
+                    <textarea class="saq-textarea" id="saq-input-11" placeholder="Type your formal academic response here..."></textarea>
+                    <button type="button" onclick="processSAQ(11, ['intramolecular', 'intermolecular', 'chemical', 'physical', 'covalent', 'break', 'boiling'])">Submit and Evaluate Response 11</button>
+                    
+                    <div class="marking-criteria-block" id="criteria-saq-11">
+                        <div class="criteria-badge">Automated Diagnostic Grading Engine Output</div>
+                        <p class="keyword-match-results"></p>
+                        <div class="exam-sample-box">
+                            <strong>Syllabus Sample Complete Answer:</strong>
+                            <p>Intramolecular forces are strong chemical bonds within a molecule (such as covalent bonds) that hold its atoms together and dictate its chemical stability and reactivity. Intermolecular forces are weaker attractions that exist between separate molecules (such as dispersion forces or hydrogen bonds). These weaker interactions determine the substance's physical properties, such as its melting and boiling points, because they are the forces overcome during phase changes.</p>
+                        </div>
+                        <div style="margin-top: 15px; display: flex; align-items: center; gap: 15px;">
+                            <label><strong>Calibrate Verified Score:</strong></label>
+                            <select class="score-adjust-select">
+                                <option value="0">0 Marks</option>
+                                <option value="1">1 Mark</option>
+                                <option value="2">2 Marks</option>
+                                <option value="3">3 Marks</option>
+                                <option value="4" selected>4 Marks</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="saq-node-item" id="saq-node-12" style="margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px dashed var(--glass-border);">
+                    <div class="question-meta-row">
+                        <span>QUESTION 12: HYDROGEN BONDING MECHANICS (ALLOCATION: 3 MARKS)</span>
+                        <span class="difficulty-tag diff-hard">Challenging Level</span>
+                    </div>
+                    <p><strong>Q12. Explain why Water ($\text{H}_2\text{O}$) has a remarkably higher boiling point ($100^\circ\text{C}$) than Hydrogen Sulfide ($\text{H}_2\text{S}$, $-60^\circ\text{C}$), despite Hydrogen Sulfide having a larger molecular mass.</strong></p>
+                    <textarea class="saq-textarea" id="saq-input-12" placeholder="Type your formal academic response here..."></textarea>
+                    <button type="button" onclick="processSAQ(12, ['hydrogen', 'oxygen', 'sulfur', 'electronegative', 'dipole', 'dispersion', 'boiling'])">Submit and Evaluate Response 12</button>
+                    
+                    <div class="marking-criteria-block" id="criteria-saq-12">
+                        <div class="criteria-badge">Automated Diagnostic Grading Engine Output</div>
+                        <p class="keyword-match-results"></p>
+                        <div class="exam-sample-box">
+                            <strong>Syllabus Sample Complete Answer:</strong>
+                            <p>Water contains highly polar $\text{O-H}$ bonds because oxygen is a highly compact, strongly electronegative atom. This allows water molecules to form extensive, highly cohesive intermolecular hydrogen bonds, which require significant thermal energy to break. In contrast, sulfur is larger and less electronegative, meaning $\text{H}_2\text{S}$ can only form weaker dipole-dipole interactions. These require much less energy to overcome, resulting in a far lower boiling point despite its larger molecular mass.</p>
+                        </div>
+                        <div style="margin-top: 15px; display: flex; align-items: center; gap: 15px;">
+                            <label><strong>Calibrate Verified Score:</strong></label>
+                            <select class="score-adjust-select">
+                                <option value="0">0 Marks</option>
+                                <option value="1">1 Mark</option>
+                                <option value="2">2 Marks</option>
+                                <option value="3" selected>3 Marks</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="saq-node-item" id="saq-node-13" style="margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px dashed var(--glass-border);">
+                    <div class="question-meta-row">
+                        <span>QUESTION 13: ALLOTROPIC DESIGN PARAMETERS (ALLOCATION: 3 MARKS)</span>
+                        <span class="difficulty-tag diff-medium">Medium Level</span>
+                    </div>
+                    <p><strong>Q13. Define the term 'allotropy' and explain how diamond and graphite can possess completely different physical properties while consisting exclusively of pure carbon atoms.</strong></p>
+                    <textarea class="saq-textarea" id="saq-input-13" placeholder="Type your formal academic response here..."></textarea>
+                    <button type="button" onclick="processSAQ(13, ['allotropy', 'diamond', 'graphite', 'tetrahedral', 'layers', 'delocalised', 'structure'])">Submit and Evaluate Response 13</button>
+                    
+                    <div class="marking-criteria-block" id="criteria-saq-13">
+                        <div class="criteria-badge">Automated Diagnostic Grading Engine Output</div>
+                        <p class="keyword-match-results"></p>
+                        <div class="exam-sample-box">
+                            <strong>Syllabus Sample Complete Answer:</strong>
+                            <p>Allotropy is the ability of a single element to exist in multiple distinct structural forms in the same physical state. Diamond consists of carbon atoms locked in a rigid, 3D tetrahedral network of covalent bonds, making it extremely hard. Graphite organizes its carbon atoms into flat, 2D hexagonal sheets held together by weak dispersion forces. This layered structure allows the sheets to slide past each other smoothly, making graphite soft and lubricious, while its delocalised electrons allow it to conduct electricity.</p>
+                        </div>
+                        <div style="margin-top: 15px; display: flex; align-items: center; gap: 15px;">
+                            <label><strong>Calibrate Verified Score:</strong></label>
+                            <select class="score-adjust-select">
+                                <option value="0">0 Marks</option>
+                                <option value="1">1 Mark</option>
+                                <option value="2">2 Marks</option>
+                                <option value="3" selected>3 Marks</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="saq-node-item" id="saq-node-14" style="margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px dashed var(--glass-border);">
+                    <div class="question-meta-row">
+                        <span>QUESTION 14: SCIENTIFIC MODELLING VALIDATIONS (ALLOCATION: 3 MARKS)</span>
+                        <span class="difficulty-tag diff-easy">Easy Level</span>
+                    </div>
+                    <p><strong>Q14. Justify why scientists frequently utilize structural models, such as Lewis dot diagrams or VSEPR plastic space-filling kits, when communicating abstract chemical concepts.</strong></p>
+                    <textarea class="saq-textarea" id="saq-input-14" placeholder="Type your formal academic response here..."></textarea>
+                    <button type="button" onclick="processSAQ(14, ['model', 'visualise', 'abstract', 'predict', 'geometry', 'simplify', 'communication'])">Submit and Evaluate Response 14</button>
+                    
+                    <div class="marking-criteria-block" id="criteria-saq-14">
+                        <div class="criteria-badge">Automated Diagnostic Grading Engine Output</div>
+                        <p class="keyword-match-results"></p>
+                        <div class="exam-sample-box">
+                            <strong>Syllabus Sample Complete Answer:</strong>
+                            <p>Models are essential in chemistry to simplify and visualise abstract structures and mechanisms that cannot be observed directly, such as subatomic configurations or molecular geometry. They provide a standardized visual framework that helps scientists communicate complex properties, test hypotheses, and predict the chemical behavior of newly synthesized structures.</p>
+                        </div>
+                        <div style="margin-top: 15px; display: flex; align-items: center; gap: 15px;">
+                            <label><strong>Calibrate Verified Score:</strong></label>
+                            <select class="score-adjust-select">
+                                <option value="0">0 Marks</option>
+                                <option value="1">1 Mark</option>
+                                <option value="2">2 Marks</option>
+                                <option value="3" selected>3 Marks</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="saq-node-item" id="saq-node-15" style="margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px dashed var(--glass-border);">
+                    <div class="question-meta-row">
+                        <span>QUESTION 15: MOLECULAR DIPOLE ORIENTATIONS (ALLOCATION: 4 MARKS)</span>
+                        <span class="difficulty-tag diff-hard">Challenging Level</span>
+                    </div>
+                    <p><strong>Q15. Carbon dioxide ($\text{CO}_2$) and water ($\text{H}_2\text{O}$) both contain polar covalent bonds. Explain why water is a highly polar molecule, whereas carbon dioxide functions as a non-polar molecule.</strong></p>
+                    <textarea class="saq-textarea" id="saq-input-15" placeholder="Type your formal academic response here..."></textarea>
+                    <button type="button" onclick="processSAQ(15, ['linear', 'bent', 'geometry', 'dipole', 'cancel', 'asymmetrical', 'symmetrical'])">Submit and Evaluate Response 15</button>
+                    
+                    <div class="marking-criteria-block" id="criteria-saq-15">
+                        <div class="criteria-badge">Automated Diagnostic Grading Engine Output</div>
+                        <p class="keyword-match-results"></p>
+                        <div class="exam-sample-box">
+                            <strong>Syllabus Sample Complete Answer:</strong>
+                            <p>Carbon dioxide has a symmetrical, linear geometry ($180^\circ$). Because the molecule is perfectly symmetrical, the individual $\text{C=O}$ bond dipoles point in opposite directions and cancel each other out completely, resulting in a non-polar molecule. Water has an asymmetrical, bent geometry ($104.5^\circ$) caused by the repulsion of its central lone pairs. This asymmetrical layout prevents the $\text{O-H}$ bond dipoles from cancelling out, creating a permanent net dipole moment across the molecule.</p>
+                        </div>
+                        <div style="margin-top: 15px; display: flex; align-items: center; gap: 15px;">
+                            <label><strong>Calibrate Verified Score:</strong></label>
+                            <select class="score-adjust-select">
+                                <option value="0">0 Marks</option>
+                                <option value="1">1 Mark</option>
+                                <option value="2">2 Marks</option>
+                                <option value="3">3 Marks</option>
+                                <option value="4" selected>4 Marks</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="saq-node-item" id="saq-node-16" style="margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px dashed var(--glass-border);">
+                    <div class="question-meta-row">
+                        <span>QUESTION 16: PERCENTAGE BY WEIGHT ALGORITHMS (ALLOCATION: 3 MARKS)</span>
+                        <span class="difficulty-tag diff-medium">Medium Level</span>
+                    </div>
+                    <p><strong>Q16. Calculate the theoretical percentage composition by mass weight of Oxygen within pure Copper(II) Carbonate ($\text{CuCO}_3$). Show all calculation steps.</strong></p>
+                    <textarea class="saq-textarea" id="saq-input-16" placeholder="Type your formal academic response here..."></textarea>
+                    <button type="button" onclick="processSAQ(16, ['theoretical', 'molar', 'mass', '123.5', '48', '38.8', 'cuco3'])">Submit and Evaluate Response 16</button>
+                    
+                    <div class="marking-criteria-block" id="criteria-saq-16">
+                        <div class="criteria-badge">Automated Diagnostic Grading Engine Output</div>
+                        <p class="keyword-match-results"></p>
+                        <div class="exam-sample-box">
+                            <strong>Syllabus Sample Complete Answer:</strong>
+                            <p>Step 1: Calculate the total molar mass of $\text{CuCO}_3$ using reference atomic weights:</p>
+                            <p>$$\text{Molar Mass} = 63.55 (\text{Cu}) + 12.01 (\text{C}) + [3 \times 16.00] (\text{O}) = 123.56 \text{ g/mol}$$</p>
+                            <p>Step 2: Determine the mass contribution of Oxygen:</p>
+                            <p>$$\text{Mass of Oxygen} = 3 \times 16.00 = 48.00 \text{ g/mol}$$</p>
+                            <p>Step 3: Calculate the percentage composition by weight:</p>
+                            <p>$$\%\text{ Oxygen} = \left( \frac{48.00}{123.56} \right) \times 100\% = 38.85\%$$</p>
+                        </div>
+                        <div style="margin-top: 15px; display: flex; align-items: center; gap: 15px;">
+                            <label><strong>Calibrate Verified Score:</strong></label>
+                            <select class="score-adjust-select">
+                                <option value="0">0 Marks</option>
+                                <option value="1">1 Mark</option>
+                                <option value="2">2 Marks</option>
+                                <option value="3" selected>3 Marks</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="saq-node-item" id="saq-node-17" style="margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px dashed var(--glass-border);">
+                    <div class="question-meta-row">
+                        <span>QUESTION 17: COVALENT NETWORK CONSTRAINTS (ALLOCATION: 4 MARKS)</span>
+                        <span class="difficulty-tag diff-hard">Challenging Level</span>
+                    </div>
+                    <p><strong>Q17. Contrast the macroscopic structural physical property profiles of covalent molecular substances with covalent network substances, referencing internal chemical bonding arrangements.</strong></p>
+                    <textarea class="saq-textarea" id="saq-input-17" placeholder="Type your formal academic response here..."></textarea>
+                    <button type="button" onclick="processSAQ(17, ['molecular', 'network', 'intermolecular', 'melting', 'continuous', 'weak', 'strong'])">Submit and Evaluate Response 17</button>
+                    
+                    <div class="marking-criteria-block" id="criteria-saq-17">
+                        <div class="criteria-badge">Automated Diagnostic Grading Engine Output</div>
+                        <p class="keyword-match-results"></p>
+                        <div class="exam-sample-box">
+                            <strong>Syllabus Sample Complete Answer:</strong>
+                            <p>Covalent molecular substances consist of separate molecules held together by weak intermolecular forces. These weak interactions require little energy to overcome, resulting in low melting points, low boiling points, and soft mechanical structures. Covalent network substances consist of atoms linked in a continuous, 3D lattice of strong covalent bonds. Breaking this expansive network requires massive thermal energy, leading to extremely high melting points, exceptional hardness, and complete insolubility.</p>
+                        </div>
+                        <div style="margin-top: 15px; display: flex; align-items: center; gap: 15px;">
+                            <label><strong>Calibrate Verified Score:</strong></label>
+                            <select class="score-adjust-select">
+                                <option value="0">0 Marks</option>
+                                <option value="1">1 Mark</option>
+                                <option value="2">2 Marks</option>
+                                <option value="3">3 Marks</option>
+                                <option value="4" selected>4 Marks</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="saq-node-item" id="saq-node-18" style="margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px dashed var(--glass-border);">
+                    <div class="question-meta-row">
+                        <span>QUESTION 18: HOMOGENEOUS SYSTEM PROPERTIES (ALLOCATION: 3 MARKS)</span>
+                        <span class="difficulty-tag diff-easy">Easy Level</span>
+                    </div>
+                    <p><strong>Q18. Define a homogeneous mixture and provide two distinct examples of chemical solutions that fit this classification within standard laboratory workflows.</strong></p>
+                    <textarea class="saq-textarea" id="saq-input-18" placeholder="Type your formal academic response here..."></textarea>
+                    <button type="button" onclick="processSAQ(18, ['homogeneous', 'uniform', 'phase', 'solution', 'saltwater', 'alloy', 'brass'])">Submit and Evaluate Response 18</button>
+                    
+                    <div class="marking-criteria-block" id="criteria-saq-18">
+                        <div class="criteria-badge">Automated Diagnostic Grading Engine Output</div>
+                        <p class="keyword-match-results"></p>
+                        <div class="exam-sample-box">
+                            <strong>Syllabus Sample Complete Answer:</strong>
+                            <p>A homogeneous mixture is a uniform combination of two or more substances that blends completely into a single physical phase, ensuring the composition is identical throughout any collected sample. Two standard laboratory examples include a dissolved aqueous sodium chloride solution ($\text{NaCl}_{(aq)}$) and a solid copper-zinc brass alloy metal engine matrix.</p>
+                        </div>
+                        <div style="margin-top: 15px; display: flex; align-items: center; gap: 15px;">
+                            <label><strong>Calibrate Verified Score:</strong></label>
+                            <select class="score-adjust-select">
+                                <option value="0">0 Marks</option>
+                                <option value="1">1 Mark</option>
+                                <option value="2">2 Marks</option>
+                                <option value="3" selected>3 Marks</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="saq-node-item" id="saq-node-19" style="margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px dashed var(--glass-border);">
+                    <div class="question-meta-row">
+                        <span>QUESTION 19: TRANSITION STATE ENERGY BARRIERS (ALLOCATION: 3 MARKS)</span>
+                        <span class="difficulty-tag diff-medium">Medium Level</span>
+                    </div>
+                    <p><strong>Q19. Outline the cause and physical consequences of core structural electron shielding variations moving down a group in the Periodic Table.</strong></p>
+                    <textarea class="saq-textarea" id="saq-input-19" placeholder="Type your formal academic response here..."></textarea>
+                    <button type="button" onclick="processSAQ(19, ['shielding', 'inner', 'shell', 'core', 'repulsion', 'attenuate', 'ionisation'])">Submit and Evaluate Response 19</button>
+                    
+                    <div class="marking-criteria-block" id="criteria-saq-19">
+                        <div class="criteria-badge">Automated Diagnostic Grading Engine Output</div>
+                        <p class="keyword-match-results"></p>
+                        <div class="exam-sample-box">
+                            <strong>Syllabus Sample Complete Answer:</strong>
+                            <p>Moving down a group, each consecutive element adds an extra inner layer of core electron shells. These inner electrons create electrostatic repulsion that blocks or 'shields' the outer valence electrons from the full attractive pull of the positive nucleus. This increased shielding overrides the growing nuclear charge, making it easier for the atom to lose its outer valence electrons, which systematically lowers its first ionisation energy.</p>
+                        </div>
+                        <div style="margin-top: 15px; display: flex; align-items: center; gap: 15px;">
+                            <label><strong>Calibrate Verified Score:</strong></label>
+                            <select class="score-adjust-select">
+                                <option value="0">0 Marks</option>
+                                <option value="1">1 Mark</option>
+                                <option value="2">2 Marks</option>
+                                <option value="3" selected>3 Marks</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="saq-node-item" id="saq-node-20" style="margin-bottom: 10px;">
+                    <div class="question-meta-row">
+                        <span>QUESTION 20: TRANSURANIC RADIONUCLIDE SYNTHESIS (ALLOCATION: 4 MARKS)</span>
+                        <span class="difficulty-tag diff-hard">Challenging Level</span>
+                    </div>
+                    <p><strong>Q20. Contrast the environmental origin profiles of naturally occurring radioisotopes with artificial, human-made transuranic elements, providing one named example for each category.</strong></p>
+                    <textarea class="saq-textarea" id="saq-input-20" placeholder="Type your formal academic response here..."></textarea>
+                    <button type="button" onclick="processSAQ(20, ['natural', 'artificial', 'transuranic', 'bombardment', 'uranium', 'carbon-14', 'technetium-99m'])">Submit and Evaluate Response 20</button>
+                    
+                    <div class="marking-criteria-block" id="criteria-saq-20">
+                        <div class="criteria-badge">Automated Diagnostic Grading Engine Output</div>
+                        <p class="keyword-match-results"></p>
+                        <div class="exam-sample-box">
+                            <strong>Syllabus Sample Complete Answer:</strong>
+                            <p>Naturally occurring radioisotopes (such as Carbon-14 or Uranium-238) are formed through natural planetary pathways, like cosmic ray interactions in the upper atmosphere or primordial supernova events. Artificial, human-made radioisotopes (such as Technetium-99m or Americium-241) are synthesized in particle accelerators or nuclear reactors by bombarding stable target nuclei with high-energy neutrons or alpha particles to force nuclear conversions past the atomic limits of Uranium ($Z > 92$).</p>
+                        </div>
+                        <div style="margin-top: 15px; display: flex; align-items: center; gap: 15px;">
+                            <label><strong>Calibrate Verified Score:</strong></label>
+                            <select class="score-adjust-select">
+                                <option value="0">0 Marks</option>
+                                <option value="1">1 Mark</option>
+                                <option value="2">2 Marks</option>
+                                <option value="3">3 Marks</option>
+                                <option value="4" selected>4 Marks</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr style="border: 0.5px solid var(--glass-border); margin: 40px 0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 20px; margin-bottom: 50px;">
+                <a href="mod1.html" class="action-btn secondary-action" style="width: auto; padding: 14px 28px;">← Return to Module 1 Theory</a>
+                <a href="mod2.html" class="action-btn primary-action" style="width: auto; padding: 14px 28px;">Proceed to Module 2 Workspace →</a>
+            </div>
+
+            <footer id="portal-global-footer">
+                <div class="footer-lower-row">
+                    <p>&copy; 2026 NexusSci Academic Frameworks. Static Deployment Sandbox Environment via GitHub Pages.</p>
+                </div>
+            </footer>
+
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Unified Theme Switch Controller
+            const themeToggleBtn = document.getElementById('theme-toggle-btn');
+            const cachedTheme = localStorage.getItem('nexus-color-theme') || 'dark-mode';
+            document.body.classList.add(cachedTheme);
+            
+            themeToggleBtn.addEventListener('click', () => {
+                if (document.body.classList.contains('dark-mode')) {
+                    document.body.classList.replace('dark-mode', 'light-mode');
+                    localStorage.setItem('nexus-color-theme', 'light-mode');
+                } else {
+                    document.body.classList.replace('light-mode', 'dark-mode');
+                    localStorage.setItem('nexus-color-theme', 'dark-mode');
+                }
+            });
+        });
+
+        // MCQ Interactive Checking Logic
+        function evaluateMCQ(qNum, correctAns, analyticalExplanation) {
+            const feedbackBox = document.getElementById(`feedback-mcq-${qNum}`);
+            const selectedOpt = document.querySelector(`input[name="mcq-${qNum}"]:checked`);
+            
+            if (!selectedOpt) {
+                alert("Please select a valid option token before submitting evaluation request.");
+                return;
+            }
+            
+            feedbackBox.style.display = "block";
+            if (selectedOpt.value === correctAns) {
+                feedbackBox.className = "feedback-pane feedback-correct";
+                feedbackBox.innerHTML = `<strong>✔ Correct Response Verified:</strong> ${analyticalExplanation}`;
+            } else {
+                feedbackBox.className = "feedback-pane feedback-incorrect";
+                feedbackBox.innerHTML = `<strong>✘ Incorrect Selection Detected:</strong> Expected Option [${correctAns}]. <br><br><em>Key Rationale:</em> ${analyticalExplanation}`;
+            }
+        }
+
+        // Short-Answer Automated Assessment Keyphrase Parser
+        function processSAQ(qNum, keywordMatrix) {
+            const studentInputText = document.getElementById(`saq-input-${qNum}`).value.trim();
+            const criteriaBox = document.getElementById(`criteria-saq-${qNum}`);
+            
+            if (studentInputText.length < 5) {
+                alert("Please write a complete structured response before running diagnostic checks.");
+                return;
+            }
+            
+            // Analyze match frequency metrics
+            let matchCount = 0;
+            const normalizedInput = studentInputText.toLowerCase();
+            
+            keywordMatrix.forEach(keyword => {
+                if (normalizedInput.includes(keyword.toLowerCase())) {
+                    matchCount++;
+                }
+            });
+            
+            const matchPercentage = Math.round((matchCount / keywordMatrix.length) * 100);
+            const resultsLabel = criteriaBox.querySelector('.keyword-match-results');
+            
+            criteriaBox.style.display = "block";
+            resultsLabel.innerHTML = `<strong>Syllabus Match Metric:</strong> ${matchPercentage}% of core response validation targets found (${matchCount} / ${keywordMatrix.length} key terms matched). Review the model solution below to grade your work or adjust your final score.`;
+            
+            // Scroll to newly populated field smoothly
+            criteriaBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        // MathJax Core Configuration Objects
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>

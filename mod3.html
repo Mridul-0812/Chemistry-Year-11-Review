@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 3: Reactive Chemistry Compendium | NexusSci</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div id="global-utility-bar">
+        <div class="utility-container">
+            <span>NESA Year 11 Chemistry Preliminary Core Syllabus Framework</span>
+            <div class="utility-controls">
+                <button id="theme-toggle-btn" aria-label="Toggle between dark and light mode">
+                    <span class="mode-text">Toggle Theme</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="portal-layout">
+        <aside id="portal-sidebar" aria-label="Main Navigation">
+            <div class="sidebar-brand">
+                <div class="brand-logo">
+                    <span class="logo-icon">🧮</span>
+                    <span class="brand-name">Nexus<span class="highlight">Sci</span></span>
+                </div>
+                <p class="brand-tagline">NSW Curriculum Mastery</p>
+            </div>
+
+            <nav class="sidebar-nav" aria-label="Primary Directory">
+                <div class="nav-section-label">Core Directory</div>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <span class="nav-icon">🏠</span>
+                            <span class="nav-text">Portal Home</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="nav-section-label">Syllabus Modules</div>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="mod1.html" class="nav-link">
+                            <span class="nav-icon">🧪</span>
+                            <span class="nav-text">Module 1: Properties of Matter</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="mod2.html" class="nav-link">
+                            <span class="nav-icon">📊</span>
+                            <span class="nav-text">Module 2: Introduction to Quantitative Chemistry</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="mod3.html" class="nav-link active">
+                            <span class="nav-icon">🔥</span>
+                            <span class="nav-text">Module 3: Reactive Chemistry</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="mod4.html" class="nav-link">
+                            <span class="nav-icon">⚗️</span>
+                            <span class="nav-text">Module 4: Drivers of Reactions</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer-card">
+                <div class="status-indicator-group">
+                    <span class="status-dot online"></span>
+                    <span class="status-label">Compendium Live</span>
+                </div>
+                <div class="version-tag">v2.4.0-Prelim</div>
+            </div>
+        </aside>
+
+        <main id="main-content" class="portal-main">
+            
+            <header id="dashboard-header">
+                <div class="breadcrumb-trail">
+                    <span>Nexus Core</span> &gt; <span>Module 3: Reactive Chemistry</span>
+                </div>
+                <div class="user-avatar-block">
+                    <div class="avatar-initials">RC</div>
+                    <div class="avatar-meta">
+                        <span class="user-name">Syllabus Deep-Dive</span>
+                        <span class="user-role">Preliminary Academic Track</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-hero-banner">
+                <div class="hero-left-block">
+                    <span class="badge-accent">Term 2 Weeks 6 - 9 & Term 3 Weeks 1 - 4</span>
+                    <h1>Module 3: Reactive Chemistry</h1>
+                    <p class="hero-description">
+                        All chemical reactions involve the creation of new substances and associated energy transformations, commonly observable as changes in temperature and/or the emission of light. These transformations depend entirely on the making and breaking of chemical bonds, governed by kinetic, thermodynamic, and electron-transfer frameworks.
+                    </p>
+                </div>
+            </div>
+
+            <section class="glass-panel" style="margin-bottom: 30px;">
+                <h2>Inquiry Matrix Blueprint</h2>
+                <p class="vault-sub">Select an Inquiry Question core branch to jump directly to deep-dive analytical content.</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-top: 20px;">
+                    <a href="#iq1" class="nav-link" style="background: rgba(255,255,255,0.02); border: 1px solid var(--glass-border); text-align: center; display: block; padding: 20px; border-radius: 12px;">
+                        <strong>IQ1: Chemical Products</strong><br><span style="font-size: 11px; color: var(--text-muted);">Indicators & Classes</span>
+                    </a>
+                    <a href="#iq2" class="nav-link" style="background: rgba(255,255,255,0.02); border: 1px solid var(--glass-border); text-align: center; display: block; padding: 20px; border-radius: 12px;">
+                        <strong>IQ2: Metal Reactivity</strong><br><span style="font-size: 11px; color: var(--text-muted);">Activity Series & Redox</span>
+                    </a>
+                    <a href="#iq3" class="nav-link" style="background: rgba(255,255,255,0.02); border: 1px solid var(--glass-border); text-align: center; display: block; padding: 20px; border-radius: 12px;">
+                        <strong>IQ3: Reaction Rates</strong><br><span style="font-size: 11px; color: var(--text-muted);">Collision Theory Kinetics</span>
+                    </a>
+                    <a href="#iq4" class="nav-link" style="background: rgba(255,255,255,0.02); border: 1px solid var(--glass-border); text-align: center; display: block; padding: 20px; border-radius: 12px;">
+                        <strong>IQ4: Energy Changes</strong><br><span style="font-size: 11px; color: var(--text-muted);">Enthalpy & Calorimetry</span>
+                    </a>
+                </div>
+            </section>
+
+            <section id="iq1" class="glass-panel" style="margin-bottom: 30px;">
+                <div class="badge-accent">Inquiry Question 1</div>
+                <h2>What are the products of a chemical reaction?</h2>
+                <p class="vault-sub">Investigating the macroscopic indicators of chemical transformations, atomic conservation mechanics, reaction classifications, precipitation stoichiometry, and cultural detoxification processes.</p>
+                <hr style="border: 0.5px solid var(--glass-border); margin: 20px 0;">
+
+                <h3>1. Macroscopic Indicators of Chemical Change</h3>
+                <p>A chemical reaction occurs when chemical bonds within reactant substances are broken and new bonds are formed to create entirely new products with different physical and chemical properties. This stands in stark contrast to physical changes, which merely alter intermolecular spacing or physical states without rearranging intramolecular bonds. The macroscopic indicators that strongly suggest a chemical change has transpired include:</p>
+                <ul>
+                    <li><strong>Spontaneous Temperature Deviation:</strong> Exothermic transitions release thermal energy into the surroundings, resulting in a temperature increase. Endothermic transitions absorb environmental thermal energy, causing a measurable drop in temperature.</li>
+                    <li><strong>Evolution of a Gas:</strong> Effervescence or bubbling that occurs without external boiling indicates the production of a new gaseous compound.</li>
+                    <li><strong>Precipitation Formation:</strong> The sudden appearance of an insoluble solid suspended in solution upon mixing two clear, soluble aqueous solutions.</li>
+                    <li><strong>Permanent or Distinct Colour Shift:</strong> A change in the electronic structure of the valence shells within the substance, often via transition metal complexes or newly synthesized chromophores.</li>
+                    <li><strong>Emission of Light or Sound:</strong> Rapid chemiluminescent or combustion reactions releasing photons due to electrons cascading down distinct quantum energy levels.</li>
+                </ul>
+
+                <h3>2. Atomic Conservation and Rearrangement Modelling</h3>
+                <p>The <strong>Law of Conservation of Mass</strong> states that matter cannot be created or destroyed within an isolated system. Consequently, the total mass of the reactants must identically equal the total mass of the chemical products. On an atomic level, every single atom present at the initiation of the reaction must be accounted for in the final arrangement.</p>
+                <blockquote>
+                    <strong>Atomic Balance Equation:</strong><br>
+                    $$\sum \text{Atoms}_{\text{Reactants}} = \sum \text{Atoms}_{\text{Products}}$$
+                </blockquote>
+                <p>Chemical equations are balanced by adjusting stoichiometric coefficients placed before formula units, never by altering the subscripts within a molecular formula, as modifying subscripts would fundamentally change the identity of the chemical species.</p>
+
+                <h3>3. Classification Profiles of Chemical Reactions</h3>
+                <p>Reactions are broadly categorized into distinct mechanistic pathways to predict product outcomes:</p>
+                
+                <h4>A. Synthesis (Combination) Reactions</h4>
+                <p>Two or more simple chemical entities coalesce to construct a single, more complex product matrix.</p>
+                $$\text{A} + \text{B} \rightarrow \text{AB}$$
+                <p><em>Exemplar:</em> The combustion of magnesium metal ribbon in air to yield magnesium oxide powder:</p>
+                $$2\text{Mg}_{(s)} + \text{O}_{2(g)} \rightarrow 2\text{MgO}_{(s)}$$
+
+                <h4>B. Decomposition Reactions</h4>
+                <p>A single complex compound undergoes bond scission to yield two or more simpler elemental substances or components. This generally requires an input of energy, which can take several forms:</p>
+                <ul>
+                    <li><strong>Thermal Decomposition ($\Delta$):</strong> Cleavage induced by heat. For example, heating copper(II) carbonate:
+                        $$\text{CuCO}_{3(s)} \xrightarrow{\Delta} \text{CuO}_{(s)} + \text{CO}_{2(g)}$$
+                    </li>
+                    <li><strong>Electrolytic Decomposition (Electrolysis):</strong> Cleavage forced by an electrical current. For example, the industrial separation of liquid water:
+                        $$2\text{H}_2\text{O}_{(l)} \xrightarrow{\text{electricity}} 2\text{H}_{2(g)} + \text{O}_{2(g)}$$
+                    </li>
+                    <li><strong>Photolytic Decomposition (Photolysis):</strong> Cleavage triggered by electromagnetic radiation photons. For example, the decomposition of silver chloride when exposed to sunlight:
+                        $$2\text{AgCl}_{(s)} \xrightarrow{h\nu} 2\text{Ag}_{(s)} + \text{Cl}_{2(g)}$$
+                    </li>
+                </ul>
+
+                <h4>C. Combustion Reactions</h4>
+                <p>An exothermic redox pathway where an element or hydrocarbon compound reacts rapidly with gaseous diatomic oxygen, releasing heat and light. Complete combustion occurs in an excess oxygen environment, yielding carbon dioxide gas and water vapor. Incomplete combustion occurs when oxygen is limiting, producing toxic carbon monoxide gas and elemental carbon black soot.</p>
+                <p><em>Complete Combustion of Propane ($3\text{ s.f.}$):</em></p>
+                $$\text{C}_3\text{H}_{8(g)} + 5\text{O}_{2(g)} \rightarrow 3\text{CO}_{2(g)} + 4\text{H}_2\text{O}_{(g)}$$
+                <p><em>Incomplete Combustion of Propane (Limiting Oxygen Environment):</em></p>
+                $$\text{C}_3\text{H}_{8(g)} + 3\text{O}_{2(g)} \rightarrow 3\text{CO}_{(g)} + 4\text{H}_2\text{O}_{(g)}$$
+
+                <h4>D. Precipitation Reactions</h4>
+                <p>When two clear, soluble aqueous ionic solutions are blended, an exchange of ions occurs (metathesis). If the combination of a specific cation and anion forms an insoluble ionic lattice, it precipitates out of solution as a solid crystal structure.</p>
+                <p>To systematically predict precipitation events, chemists consult standard <strong>Solubility Rules</strong>:</p>
+                <table class="vault-links-table" style="font-size:12px; margin: 15px 0;">
+                    <thead>
+                        <tr>
+                            <th>Soluble Compounds (Aqueous status)</th>
+                            <th>Critical Lattice Exceptions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>All Group 1 Cations ($\text{Li}^+$, $\text{Na}^+$, $\text{K}^+$, $\text{Cs}^+$) and Ammonium ($\text{NH}_4^+$)</td>
+                            <td>None (Always soluble)</td>
+                        </tr>
+                        <tr>
+                            <td>All Nitrates ($\text{NO}_3^-$) and Acetates ($\text{CH}_3\text{COO}^-$)</td>
+                            <td>None (Always soluble)</td>
+                        </tr>
+                        <tr>
+                            <td>Halides ($\text{Cl}^-$, $\text{Br}^-$, $\text{I}^-$)</td>
+                            <td>$\text{Ag}^+$, $\text{Pb}^{2+}$ (Insoluble halides)</td>
+                        </tr>
+                        <tr>
+                            <td>Sulfates ($\text{SO}_4^{2-}$)</td>
+                            <td>$\text{Ba}^{2+}$, $\text{Pb}^{2+}$, $\text{Ca}^{2+}$ (Insoluble sulfates)</td>
+                        </tr>
+                        <tr style="background: rgba(0,0,0,0.15);">
+                            <td><strong>Insoluble Compounds (Solid status)</strong></td>
+                            <td><strong>Soluble Exceptions</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Carbonates ($\text{CO}_3^{2-}$), Phosphates ($\text{PO}_4^{3-}$), Sulfides ($\text{S}^{2-}$)</td>
+                            <td>Group 1 cations, $\text{NH}_4^+$</td>
+                        </tr>
+                        <tr>
+                            <td>Hydroxides ($\text{OH}^-$)</td>
+                            <td>Group 1 cations, $\text{NH}_4^+$, $\text{Ba}^{2+}$ ($\text{Ca}^{2+}$ is slightly soluble)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p><em>Full Molecular Equation:</em></p>
+                $$\text{BaCl}_{2(aq)} + \text{Na}_2\text{SO}_{4(aq)} \rightarrow \text{BaSO}_{4(s)} \downarrow + 2\text{NaCl}_{(aq)}$$
+                <p><em>Net Ionic Equation:</em> Spectator ions ($\text{Na}^+$ and $\text{Cl}^-$) are omitted because they do not participate directly in bond formation, remaining dissolved before and after the reaction:</p>
+                $$\text{Ba}^{2+}_{(aq)} + \text{SO}_{4(aq)}^{2-} \rightarrow \text{BaSO}_{4(s)}$$
+
+                <h4>E. Acid/Base Reactions (Neutralisation)</h4>
+                <p>An acid (proton donor, $\text{H}^+$) reacts with a base (proton acceptor, usually containing $\text{OH}^-$ or an oxide oxide framework) to generate an ionic salt and liquid water molecules. Neutralisation pathways are universally exothermic.</p>
+                $$\text{Acid} + \text{Base} \rightarrow \text{Salt} + \text{H}_2\text{O}_{(l)}$$
+                $$\text{HCl}_{(aq)} + \text{NaOH}_{(aq)} \rightarrow \text{NaCl}_{(aq)} + \text{H}_2\text{O}_{(l)}$$
+                <p>The net ionic equation for any strong acid reacting with a strong base simplifies directly to proton-hydroxide recombination:</p>
+                $$\text{H}^+_{(aq)} + \text{OH}^-_{(aq)} \rightarrow \text{H}_2\text{O}_{(l)}$$
+
+                <h4>F. Acid/Carbonate Reactions</h4>
+                <p>An acid reacts with an ionic carbonate salt, producing a soluble ionic salt, liquid water, and gaseous carbon dioxide. Effervescence is observed immediately due to the escaping gas.</p>
+                $$\text{Acid} + \text{Carbonate} \rightarrow \text{Salt} + \text{H}_2\text{O}_{(l)} + \text{CO}_{2(g)}$$
+                $$2\text{HCl}_{(aq)} + \text{Na}_2\text{CO}_{3(aq)} \rightarrow 2\text{NaCl}_{(aq)} + \text{H}_2\text{O}_{(l)} + \text{CO}_{2(g)}$$
+                <p><em>Net Ionic Equation:</em></p>
+                $$2\text{H}^+_{(aq)} + \text{CO}_{3(aq)}^{2-} \rightarrow \text{H}_2\text{O}_{(l)} + \text{CO}_{2(g)}$$
+
+                <h3>4. High-Precision Gravimetric Precipitation Stoichiometry</h3>
+                <p>To accurately calculate the mass of a precipitate formed during a reaction, follow these rigorous stoichiometric steps, ensuring your final value complies with the <strong>Least Significant Figures rule</strong>:</p>
+                <div class="exam-sample-box">
+                    <strong>Worked Precision Scenario:</strong><br>
+                    A chemist mixes $50.00\text{ mL}$ of $0.250\text{ mol}\cdot\text{L}^{-1}\text{ AgNO}_{3(aq)}$ with $40.0\text{ mL}$ of $0.300\text{ mol}\cdot\text{L}^{-1}\text{ CaCl}_{2(aq)}$. Calculate the final mass of dry $\text{AgCl}_{(s)}$ formed.<br><br>
+                    1. Formulate the fully balanced molecular chemical framework:<br>
+                    $$2\text{AgNO}_{3(aq)} + \text{CaCl}_{2(aq)} \rightarrow 2\text{AgCl}_{(s)} + \text{Ca(NO}_3)_{2(aq)}$$<br>
+                    2. Calculate initial chemical amounts ($n = c \times V$):<br>
+                    $$n(\text{AgNO}_3) = 0.250\text{ mol}\cdot\text{L}^{-1} \times 0.05000\text{ L} = 0.01250\text{ mol}$$<br>
+                    $$n(\text{CaCl}_2) = 0.300\text{ mol}\cdot\text{L}^{-1} \times 0.0400\text{ L} = 0.01200\text{ mol}$$<br>
+                    3. Determine the limiting reagent by scaling by stoichiometric coefficients:<br>
+                    $$\text{From AgNO}_3: \frac{0.01250}{2} = 0.00625, \quad \text{From CaCl}_2: \frac{0.01200}{1} = 0.01200$$<br>
+                    Since $0.00625 &lt; 0.01200$, <strong>$\text{AgNO}_3$ is the limiting reagent</strong>. Calculations must be based entirely on its concentration profile.<br><br>
+                    4. Calculate product moles based on the limiting reactant coefficient ratio ($2:2$, or $1:1$):<br>
+                    $$n(\text{AgCl}) = n(\text{AgNO}_3) = 0.01250\text{ mol}$$<br>
+                    5. Convert product moles to macroscopic mass ($m = n \times \text{MM}$), using atomic weights to 4 s.f. ($\text{Ag}=107.9, \text{Cl}=35.45$):<br>
+                    $$\text{MM}(\text{AgCl}) = 107.9 + 35.45 = 143.35\text{ g}\cdot\text{mol}^{-1}$$<br>
+                    $$m(\text{AgCl}) = 0.01250\text{ mol} \times 143.35\text{ g}\cdot\text{mol}^{-1} = 1.791875\text{ g}$$<br>
+                    6. Apply precision limits: The limiting initial precision parameter ($40.0\text{ mL}$ or $0.300\text{ M}$) contains <strong>3 significant figures</strong>.<br>
+                    <strong>Final Mass Value:</strong> $1.79\text{ g}$
+                </div>
+
+                <h3>5. Indigenous Chemical Practices: Cycad Detoxification</h3>
+                <p>Aboriginal and Torres Strait Islander Peoples have long utilized sophisticated biochemical technologies to exploit toxic food sources safely. A prime example is the detoxification of the seeds from the cycad palm (such as <em>Cycas media</em>). Raw cycad seeds are an rich carbohydrate source but contain lethal concentrations of water-soluble toxins, primarily <strong>cycasin</strong>, which causes severe hepatic necrosis and neurotoxicity.</p>
+                
+                <p>Two primary chemical and physical processes were deployed to remove these toxins:</p>
+                <ul>
+                    <li><strong>Physical Cleavage & Thermal Denaturation (Cooking):</strong> The seeds are roasted in open pits. This heat application cracks the tough outer protective hulls and partially denatures complex toxic proteins and volatile compounds within the seed matrix.</li>
+                    <li><strong>Extensive Aqueous Leaching (Solubility & Diffusion Kinetics):</strong> The roasted, sliced seeds are placed into woven grass baskets and submerged in flowing river water or tidal streams for several days to weeks. Because cycasin contains polar hydroxyl functional groups, it dissolves readily in water. Submerging the seeds establishes a steep concentration gradient across the seed tissue boundary. The moving water continually sweeps away dissolved toxins, driving the mass transfer equilibrium toward complete extraction via passive diffusion.</li>
+                    <li><strong>Fermentation Storage (Biochemical Breakdown):</strong> Alternatively, seeds are buried in anaerobic pits for several months. Microorganisms ferment the organic starches, biochemically breaking down cycasin molecules into non-toxic metabolites, allowing the safe collection of shelf-stable food reserves.</li>
+                </ul>
+            </section>
+
+            <section id="iq2" class="glass-panel" style="margin-bottom: 30px;">
+                <div class="badge-accent">Inquiry Question 2</div>
+                <h2>How is the reactivity of various metals predicted?</h2>
+                <p class="vault-sub">Constructing the metal activity series from empirical observation, explaining reactivity patterns via periodic trends, and applying rigorous electrochemical principles to redox and galvanic systems.</p>
+                <hr style="border: 0.5px solid var(--glass-border); margin: 20px 0;">
+
+                <h3>1. Empirical Metal Reactivity Trends</h3>
+                <p>When investigating the chemical properties of metals, their relative reactivity is determined by their tendency to lose valence electrons and form positive ions (cations). Reactivity can be quantified by observing how vigorously metals react with water, dilute acids, oxygen gas, and other metal ions in solution.</p>
+
+                <h4>A. Reactions with Water ($\text{H}_2\text{O}$)</h4>
+                <ul>
+                    <li>Highly reactive metals (Group 1 and lower Group 2, e.g., $\text{K}$, $\text{Na}$, $\text{Ca}$) react vigorously with cold water to produce a metal hydroxide solution and flammable hydrogen gas.
+                        $$2\text{Na}_{(s)} + 2\text{H}_2\text{O}_{(l)} \rightarrow 2\text{NaOH}_{(aq)} + \text{H}_{2(g)}$$
+                    </li>
+                    <li>Magnesium ($\text{Mg}$) reacts very slowly with cold water but reacts vigorously with steam ($\text{H}_2\text{O}_{(g)}$), producing solid white magnesium oxide and hydrogen gas.
+                        $$\text{Mg}_{(s)} + \text{H}_2\text{O}_{(g)} \rightarrow \text{MgO}_{(s)} + \text{H}_{2(g)}$$
+                    </li>
+                    <li>Passivated or unreactive transition metals (e.g., $\text{Fe}$, $\text{Cu}$, $\text{Au}$) do not react with cold water or steam under normal conditions.</li>
+                </ul>
+
+                <h4>B. Reactions with Dilute Acid ($\text{HCl}$ or $\text{H}_2\text{SO}_4$)</h4>
+                <p>Metals situated above hydrogen in the activity series displace hydrogen ions from solution, producing an ionic salt solution and hydrogen gas. The rate of effervescence indicates the relative reactivity of the metal.</p>
+                $$\text{Metal}_{(s)} + \text{Acid}_{(aq)} \rightarrow \text{Ionic Salt}_{(aq)} + \text{H}_{2(g)}$$
+                $$\text{Zn}_{(s)} + 2\text{HCl}_{(aq)} \rightarrow \text{ZnCl}_{2(aq)} + \text{H}_{2(g)}$$
+                <p>Unreactive metals located below hydrogen (e.g., $\text{Cu}$, $\text{Ag}$, $\text{Au}$) cannot reduce hydrogen ions and show no reaction with dilute acids.</p>
+
+                <h4>C. Reactions with Atmospheric Oxygen ($\text{O}_2$)</h4>
+                <p>Most metals react with oxygen to form solid metal oxides. The speed and intensity of the reaction vary widely:</p>
+                <ul>
+                    <li>$\text{K}$ and $\text{Na}$ tarnish instantly upon exposure to air and must be stored submerged in liquid paraffin oil.</li>
+                    <li>$\text{Mg}$ and $\text{Al}$ burn brightly when heated strongly, forming an oxide layer. Aluminum forms a tight, passivating oxide coating ($\text{Al}_2\text{O}_3$) that prevents further internal oxidation.</li>
+                    <li>$\text{Fe}$ oxidises slowly at room temperature in the presence of water to form hydrated iron(III) oxide (rust).</li>
+                </ul>
+
+                <h4>D. Metal Displacement Reactions</h4>
+                <p>A more reactive metal will displace a less reactive metal from its aqueous salt solution. The more reactive metal oxidises, losing electrons to form aqueous cations, while the less reactive metal ions gain those electrons to precipitate out as a solid metal coating.</p>
+                $$\text{Zn}_{(s)} + \text{CuSO}_{4(aq)} \rightarrow \text{ZnSO}_{4(aq)} + \text{Cu}_{(s)}$$
+                <p><em>Net Ionic Equation:</em></p>
+                $$\text{Zn}_{(s)} + \text{Cu}^{2+}_{(aq)} \rightarrow \text{Zn}^{2+}_{(aq)} + \text{Cu}_{(s)}$$
+
+                <h3>2. Correlating Reactivity with Atomic Properties</h3>
+                <p>The macroscopic reactivity profile of a metal correlates directly with basic atomic properties on the Periodic Table:</p>
+                <ul>
+                    <li><strong>First Ionisation Energy:</strong> The lower the first ionisation energy, the less energy required to remove a valence electron. Consequently, the metal oxidises more readily, increasing its chemical reactivity.</li>
+                    <li><strong>Atomic Radius:</strong> Reactivity increases as atomic radius expands down a group. The valence electrons are located further from the positive nucleus, experiencing weaker electrostatic attraction according to Coulomb's Law, allowing them to be lost more easily.</li>
+                    <li><strong>Electronegativity:</strong> Reactive metals exhibit very low electronegativity values, indicating they have a weak affinity for drawing bonding electrons toward themselves and readily release their valence electrons.</li>
+                </ul>
+
+                <h3>3. Foundational Electron-Transfer Redox Theory</h3>
+                <p>Redox reactions involve the transfer of electrons between chemical species. Oxidation and reduction occur simultaneously.</p>
+                <blockquote>
+                    <strong>The Electron-Transfer Mnemonic: OIL RIG</strong><br>
+                    <strong>O</strong>xidation <strong>I</strong>s <strong>L</strong>oss of electrons | <strong>R</strong>eduction <strong>I</strong>s <strong>G</strong>ain of electrons
+                </blockquote>
+                <ul>
+                    <li><strong>Oxidant (Oxidising Agent):</strong> A species that oxidises another substance by gaining electrons. The oxidant itself undergoes reduction.</li>
+                    <li><strong>Reductant (Reducing Agent):</strong> A species that reduces another substance by losing electrons. The reductant itself undergoes oxidation.</li>
+                </ul>
+
+                <h4>Rules for Assigning Oxidation Numbers</h4>
+                <p>Oxidation numbers are formal charges assigned to atoms to track electron transfer within complex chemical pathways:</p>
+                <ol>
+                    <li>The oxidation state of an uncombined pure element is always $0$ (e.g., solid $\text{Zn}$, gaseous $\text{O}_2$).</li>
+                    <li>For simple monatomic ions, the oxidation number equals the net charge of the ion (e.g., $\text{Cu}^{2+} = +2, \text{Cl}^- = -1$).</li>
+                    <li>Oxygen possesses an oxidation number of $-2$ in almost all compounds, except in peroxides where it is $-1$ (e.g., $\text{H}_2\text{O}_2$).</li>
+                    <li>Hydrogen is $+1$ when bonded to non-metals, and $-1$ when bonded to metals (metal hydrides, e.g., $\text{NaH}$).</li>
+                    <li>The sum of all oxidation numbers in a neutral compound must equal $0$. In a polyatomic ion, the sum must equal the net charge of the ion.</li>
+                </ol>
+                <p>A reaction is a redox reaction if the oxidation numbers of elements change during the reaction. An <strong>increase in oxidation number</strong> indicates oxidation, whereas a <strong>decrease in oxidation number</strong> indicates reduction.</p>
+
+                <h3>4. Electrochemical Galvanic Cells</h3>
+                <p>A galvanic cell converts chemical energy from a spontaneous redox reaction into electrical energy by physically separating the oxidation and reduction half-reactions. Electrons are forced to travel through an external circuit, generating an electric current.</p>
+                
+                
+                <h4>Cell Structural Architecture</h4>
+                <ul>
+                    <li><strong>Anode Half-Cell:</strong> The electrode where <strong>oxidation</strong> takes place. In a galvanic cell, the anode is the negative ($-$) terminal. The more reactive metal forms the anode. For a Zinc electrode:
+                        $$\text{Zn}_{(s)} \rightarrow \text{Zn}^{2+}_{(aq)} + 2\text{e}^-$$
+                    </li>
+                    <li><strong>Cathode Half-Cell:</strong> The electrode where <strong>reduction</strong> takes place. In a galvanic cell, the cathode is the positive ($+$) terminal. The less reactive metal ions are reduced here. For a Copper electrode:
+                        $$\text{Cu}^{2+}_{(aq)} + 2\text{e}^- \rightarrow \text{Cu}_{(s)}$$
+                    </li>
+                    <li><strong>External Circuit:</strong> Conductive wiring that allows electrons to flow from the negative anode to the positive cathode.</li>
+                    <li><strong>The Salt Bridge:</strong> A porous barrier or filter paper tube saturated with an inert electrolyte solution (commonly $\text{KNO}_3$). The salt bridge maintains electrical neutrality by allowing ions to migrate between the half-cells, preventing charge build-up that would instantly stop the electron flow. Anions migrate toward the anode, while cations migrate toward the cathode.</li>
+                </ul>
+
+                <h4>Standard Galvanic Cell Notation Syntax</h4>
+                <p>Electrochemical cells can be represented concisely using standard phase-boundary notation:</p>
+                <blockquote>
+                    $$\text{Anode}_{s} \;\big|\; \text{Anode Ion}_{(aq)} \;\big\|\; \text{Cathode Ion}_{(aq)} \;\big|\; \text{Cathode}_{s}$$
+                </blockquote>
+                <p>A single vertical line ($|$) indicates a phase boundary between a solid electrode and its aqueous solution. A double vertical line ($\|$) represents the salt bridge interface. For the zinc-copper cell, the notation is:</p>
+                $$\text{Zn}_{(s)} \;\big|\; \text{Zn}^{2+}_{(aq)} \,(1\text{ mol}\cdot\text{L}^{-1}) \;\big\|\; \text{Cu}^{2+}_{(aq)} \,(1\text{ mol}\cdot\text{L}^{-1}) \;\big|\; \text{Cu}_{(s)}$$
+
+                <h3>5. Predicting Spontaneity and Calculating Cell Potential ($E^\circ_{\text{cell}}$)</h3>
+                <p>The standard reduction potential ($E^\circ$) measures the tendency of a chemical species to gain electrons relative to the Standard Hydrogen Electrode ($\text{SHE}$), measured at $25^\circ\text{C}$, $100\text{ kPa}$, and $1.0\text{ mol}\cdot\text{L}^{-1}$ concentrations. Cell potential is calculated using values from the standard reduction potential table:</p>
+                <blockquote>
+                    $$E^\circ_{\text{cell}} = E^\circ_{\text{reduction}} - E^\circ_{\text{oxidation}}$$
+                    $$E^\circ_{\text{cell}} = E^\circ_{\text{cathode}} - E^\circ_{\text{anode}}$$
+                </blockquote>
+                <p>A redox reaction is <strong>spontaneous</strong> if the total standard cell potential is positive ($E^\circ_{\text{cell}} &gt; 0$). If $E^\circ_{\text{cell}}$ is negative, the reverse reaction is spontaneous, and the forward reaction requires an external energy input to proceed.</p>
+                
+                <div class="exam-sample-box">
+                    <strong>Galvanic Calculation Example:</strong><br>
+                    Calculate the cell potential for a galvanic cell constructed from standard $\text{Zn}^{2+}|\text{Zn}$ and $\text{Cu}^{2+}|\text{Cu}$ half-cells.<br>
+                    Given standard reduction potentials from the NESA data sheet:<br>
+                    $$\text{Cu}^{2+}_{(aq)} + 2\text{e}^- \rightleftharpoons \text{Cu}_{(s)} \quad (E^\circ = +0.34\text{ V})$$
+                    $$\text{Zn}^{2+}_{(aq)} + 2\text{e}^- \rightleftharpoons \text{Zn}_{(s)} \quad (E^\circ = -0.76\text{ V})$$<br>
+                    1. Identify the cathode and anode: Since copper has a higher reduction potential ($+0.34\text{ V} &gt; -0.76\text{ V}$), it undergoes reduction at the cathode. The zinc half-cell forms the anode, where oxidation occurs.<br>
+                    2. Apply the cell potential formula:<br>
+                    $$E^\circ_{\text{cell}} = E^\circ_{\text{cathode}} - E^\circ_{\text{anode}} = (+0.34\text{ V}) - (-0.76\text{ V}) = +1.10\text{ V}$$<br>
+                    Since $E^\circ_{\text{cell}}$ is positive ($+1.10\text{ V}$), the forward redox reaction is spontaneous.
+                </div>
+            </section>
+
+            <section id="iq3" class="glass-panel" style="margin-bottom: 30px;">
+                <div class="badge-accent">Inquiry Question 3</div>
+                <h2>What affects the rate of a chemical reaction?</h2>
+                <p class="vault-sub">Investigating chemical kinetics, defining rate parameters, and using collision theory to explain how environmental factors alter reaction speeds.</p>
+                <hr style="border: 0.5px solid var(--glass-border); margin: 20px 0;">
+
+                <h3>1. Defining Reaction Rate</h3>
+                <p>The <strong>rate of reaction</strong> is defined as the change in concentration of a reactant or product per unit of time. It quantifies the speed at which a chemical process proceeds.</p>
+                $$\text{Rate} = \frac{\Delta[\text{Product}]}{\Delta t} = -\frac{\Delta[\text{Reactant}]}{\Delta t}$$
+                <p>Reaction rates can be monitored experimentally by measuring physical changes over time, such as mass loss during gas evolution, volume of gas collected, changes in light absorbance via spectrophotometry, or sudden pH shifts.</p>
+
+                <h3>2. Fundamentals of Collision Theory</h3>
+                <p>For a chemical reaction to occur, reactant particles must collide. However, not all collisions result in a chemical transformation. A collision will only lead to a reaction if it is a <strong>successful (fruitful) collision</strong>, which requires meeting two criteria:</p>
+                <ol>
+                    <li><strong>Sufficient Activation Energy ($E_a$):</strong> The colliding particles must possess a minimum amount of kinetic energy, known as the activation energy ($E_a$). This energy is required to overcome electron shell repulsions and break existing chemical bonds, allowing new bonds to form.</li>
+                    <li><strong>Correct Molecular Orientation:</strong> The reactant particles must collide in a specific geometric alignment that allows the reacting atoms to interact directly and reconfigure their chemical bonds.</li>
+                </ol>
+                <p>The overall reaction rate is proportional to the <strong>frequency of successful collisions</strong> per unit of time.</p>
+
+                <h3>3. Kinetic Modification Factors</h3>
+                <p>Collision theory explains how changing environmental factors alters reaction rates:</p>
+
+                <h4>A. Concentration of Reactants</h4>
+                <p>Increasing the concentration of dissolved reactants increases the number of reactant particles per unit volume. This reduces the distance between particles, increasing the total frequency of collisions. Consequently, the frequency of successful collisions per unit time increases, speeding up the reaction rate.</p>
+
+                <h4>B. Gas Pressure</h4>
+                <p>Increasing the pressure of a gaseous system (by reducing the container volume or adding more gas particles) forces the particles closer together, increasing particle density. This mimics an increase in concentration, raising the frequency of collisions and increasing the overall reaction rate.</p>
+
+                <h4>C. Total Surface Area of Solid Reactants</h4>
+                <p>Crushing a large solid reactant into a fine powder exposes more particles to the surrounding liquid or gaseous reactants. This increases the total surface area available for collisions, raising the frequency of collisions across the phase boundary and increasing the reaction rate.</p>
+
+                <h4>D. System Temperature</h4>
+                <p>Temperature is a measure of the average kinetic energy of the particles in a system. Increasing the temperature affects the reaction rate in two ways:</p>
+                <ul>
+                    <li><strong>Increased Velocity:</strong> Particles move faster, which increases the total frequency of collisions. (This has a minor effect on the overall reaction rate).</li>
+                    <li><strong>Shifted Energy Distribution (Maxwell-Boltzmann Distribution):</strong> A larger fraction of the colliding particles now possess kinetic energy equal to or greater than the required activation energy ($E_k \ge E_a$). This significantly increases the proportion of collisions that are successful, leading to a major increase in the reaction rate.</li>
+                </ul>
+                
+
+                <h4>E. Addition of a Chemical Catalyst</h4>
+                <p>A catalyst is a substance that increases the rate of a chemical reaction without being consumed in the process. It functions by providing an alternative reaction pathway with a <strong>lower activation energy ($E_a$)</strong>. This increases the fraction of colliding particles that possess sufficient energy to react, raising the frequency of successful collisions and accelerating the reaction rate.</p>
+            </section>
+
+            <section id="iq4" class="glass-panel" style="margin-bottom: 30px;">
+                <div class="badge-accent">Inquiry Question 4</div>
+                <h2>What energy changes occur in chemical reactions?</h2>
+                <p class="vault-sub">Quantifying thermodynamic principles, using energy profile diagrams, and applying the mathematical laws of calorimetry to measure enthalpy changes.</p>
+                <hr style="border: 0.5px solid var(--glass-border); margin: 20px 0;">
+
+                <h3>1. Enthalpy Framework and Energy Profiles</h3>
+                <p>Enthalpy ($H$) is a measure of the total internal chemical energy stored within a substance. The net energy change during a chemical reaction is called the change in enthalpy ($\Delta H$), defined as the difference between the enthalpy of the products and the enthalpy of the reactants:</p>
+                <blockquote>
+                    $$\Delta H = H_{\text{products}} - H_{\text{reactants}}$$
+                </blockquote>
+                <p>On an atomic scale, chemical reactions involve two distinct energetic processes:</p>
+                <ul>
+                    <li><strong>Bond Breaking:</strong> An <strong>endothermic</strong> process that requires absorbing energy from the surroundings to overcome electrostatic attractions between atoms.</li>
+                    <li><strong>Bond Making:</strong> An <strong>exothermic</strong> process that releases energy as atoms settle into stable, lower-energy bonding configurations.</li>
+                </ul>
+
+                <h4>Exothermic Chemical Profile</h4>
+                <p>In an exothermic reaction, the total energy released during bond making is greater than the total energy absorbed during bond breaking. The products store less chemical energy than the reactants ($H_{\text{products}} &lt; H_{\text{reactants}}$). The excess energy is released into the surroundings as heat, causing a temperature rise, resulting in a <strong>negative enthalpy change ($\Delta H &lt; 0$)</strong>.</p>
+                $$\text{Reactants} \rightarrow \text{Products} + \text{Heat} \quad (\Delta H = -\text{X kJ}\cdot\text{mol}^{-1})$$
+
+                <h4>Endothermic Chemical Profile</h4>
+                <p>In an endothermic reaction, the total energy absorbed during bond breaking is greater than the total energy released during bond making. The products store more chemical energy than the reactants ($H_{\text{products}} &gt; H_{\text{reactants}}$). Energy is absorbed from the surroundings, causing a temperature drop, resulting in a <strong>positive enthalpy change ($\Delta H &gt; 0$)</strong>.</p>
+                $$\text{Reactants} + \text{Heat} \rightarrow \text{Products} \quad (\Delta H = +\text{Y kJ}\cdot\text{mol}^{-1})$$
+
+                <h3>2. Reaction Energy Diagrams</h3>
+                <p>Energy profile diagrams show how enthalpy changes as a reaction progresses along its coordinates:</p>
+                [Image side-by-side comparing Exothermic and Endothermic Potential Energy Diagrams with activation energy and enthalpy changes labeled]
+                <ul>
+                    <li><strong>Activation Energy ($E_a$):</strong> The energy barrier represented by the height of the curve from the initial reactant energy level to the peak of the transition state. This represents the energy required to reach the unstable activated complex.</li>
+                    <li><strong>Enthalpy Change ($\Delta H$):</strong> The vertical distance between the initial reactant energy baseline and the final product energy baseline.</li>
+                </ul>
+
+                <h3>3. Quantitative Calorimetry Calculations</h3>
+                <p>The heat energy absorbed or released by a system can be quantified experimentally using a calorimeter. The heat energy change ($q$) is calculated using the specific heat capacity formula:</p>
+                <blockquote>
+                    $$q = m c \Delta T$$
+                </blockquote>
+                <p>Where:</p>
+                <ul>
+                    <li>$q$ = quantity of heat energy transferred (expressed in Joules, $\text{J}$).</li>
+                    <li>$m$ = mass of the substance undergoing the temperature change (expressed in grams, $\text{g}$, typically water inside the calorimeter container).</li>
+                    <li>$c$ = specific heat capacity of the substance ($\text{for liquid water } c = 4.184\text{ J}\cdot\text{g}^{-1}\cdot\text{K}^{-1}$).</li>
+                    <li>$\Delta T$ = net change in temperature ($T_{\text{final}} - T_{\text{initial}}$, expressed in Kelvin or degrees Celsius).</li>
+                </ul>
+                <p>The molar enthalpy change ($\Delta H$) is the heat energy change per mole of reactant consumed, expressed in kilojoules per mole ($\text{kJ}\cdot\text{mol}^{-1}$):</p>
+                $$\Delta H = -\frac{q}{n \times 1000}$$
+
+                <div class="exam-sample-box">
+                    <strong>Calorimetry Calculation Scenario:</strong><br>
+                    A student burns $0.525\text{ g}$ of pure ethanol ($\text{C}_2\text{H}_5\text{OH}$, $\text{MM} = 46.07\text{ g}\cdot\text{mol}^{-1}$) beneath a copper calorimeter containing exactly $200.0\text{ g}$ of water. The water temperature rises from $21.5^\circ\text{C}$ to $39.8^\circ\text{C}$. Calculate the molar enthalpy of combustion ($\Delta H_c$) for ethanol, applying the 3 significant figures precision ceiling based on the starting temperature parameters.<br><br>
+                    1. Calculate the heat energy absorbed by the water container array ($q$):<br>
+                    $$\Delta T = 39.8^\circ\text{C} - 21.5^\circ\text{C} = 18.3^\circ\text{C} = 18.3\text{ K}$$<br>
+                    $$q = m c \Delta T = 200.0\text{ g} \times 4.184\text{ J}\cdot\text{g}^{-1}\cdot\text{K}^{-1} \times 18.3\text{ K} = 15313.44\text{ J} = 15.3134\text{ kJ}$$<br>
+                    2. Calculate the chemical amount in moles ($n$) of fuel consumed:<br>
+                    $$n = \frac{m}{\text{MM}} = \frac{0.525\text{ g}}{46.07\text{ g}\cdot\text{mol}^{-1}} = 0.0113956\text{ mol}$$<br>
+                    3. Calculate the molar enthalpy change ($\Delta H$):<br>
+                    $$\Delta H = \frac{-q}{n} = \frac{-15.3134\text{ kJ}}{0.0113956\text{ mol}} = -1343.80\text{ kJ}\cdot\text{mol}^{-1}$$<br>
+                    4. Round to 3 significant figures to match initial precision data ceilings:<br>
+                    <strong>Final Enthalpy value:</strong> $-1.34 \times 10^3\text{ kJ}\cdot\text{mol}^{-1}$ (or $-1340\text{ kJ}\cdot\text{mol}^{-1}$)
+                </div>
+
+                <h3>4. Dissolution Energy Profiles</h3>
+                <p>When an ionic compound dissolves in water, the overall enthalpy of solution ($\Delta H_{\text{soln}}$) depends on three steps:</p>
+                <ol>
+                    <li><strong>Lattice Dissociation Energy (Endothermic):</strong> Energy must be absorbed to break ionic bonds and separate the solid crystal lattice into free ions ($\Delta H_1 &gt; 0$).</li>
+                    <li><strong>Intermolecular Hydrogen Bond Disruption (Endothermic):</strong> Energy must be absorbed to separate water molecules to accommodate the free ions ($\Delta H_2 &gt; 0$).</li>
+                    <li><strong>Ion-Dipole Hydration Energy (Exothermic):</strong> Energy is released as water molecules surround the free ions, forming new ion-dipole interactions ($\Delta H_3 &lt; 0$).</li>
+                </ol>
+                $$\Delta H_{\text{soln}} = \Delta H_1 + \Delta H_2 + \Delta H_3$$
+                <p>If the hydration energy ($\Delta H_3$) releases more energy than absorbed by lattice dissociation and water separation, the overall dissolution process is exothermic (e.g., dissolving $\text{NaOH}$). If the hydration energy releases less energy, the process is endothermic (e.g., dissolving $\text{NH}_4\text{NO}_3$).</p>
+            </section>
+
+            <section class="glass-panel" style="margin-bottom: 40px; text-align: center;">
+                <h2>Knowledge Checkpoint</h2>
+                <p class="vault-sub">Test your understanding against our high-precision diagnostic engine.</p>
+                <a href="mod3_1.html" class="action-btn" style="padding: 14px 28px; font-size: 15px;">Launch Module 3 Diagnostic Evaluation Engine →</a>
+            </section>
+
+            <footer id="portal-global-footer">
+                <div class="footer-lower-row">
+                    <p>&copy; 2026 NexusSci Academic Frameworks. Preliminary Chemistry Curriculum Directory.</p>
+                </div>
+            </footer>
+
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggleBtn = document.getElementById('theme-toggle-btn');
+            const cachedTheme = localStorage.getItem('nexus-color-theme') || 'dark-mode';
+            document.body.classList.add(cachedTheme);
+            
+            themeToggleBtn.addEventListener('click', () => {
+                if(document.body.classList.contains('dark-mode')){
+                    document.body.classList.replace('dark-mode', 'light-mode');
+                    localStorage.setItem('nexus-color-theme', 'light-mode');
+                } else {
+                    document.body.classList.replace('light-mode', 'dark-mode');
+                    localStorage.setItem('nexus-color-theme', 'dark-mode');
+                }
+            });
+        });
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>

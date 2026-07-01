@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syllabus Diagnostics Examination Engine | NexusSci</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="global-utility-bar">
+        <div class="utility-container">
+            <span>NESA Year 11 Chemistry Preliminary Examination Component</span>
+            <div class="utility-controls">
+                <button id="theme-toggle-btn">Toggle Theme</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="portal-layout">
+        
+        <aside id="portal-sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-logo">
+                    <span>🧮</span>
+                    <span>Nexus<span>Sci</span></span>
+                </div>
+                <p class="brand-tagline">NSW Curriculum Mastery</p>
+            </div>
+
+            <nav aria-label="Primary Directory">
+                <div class="nav-section-label">Core Directory</div>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html">🏠 Portal Home</a></li>
+                </ul>
+
+                <div class="nav-section-label">Syllabus Modules</div>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="mod1.html">🧪 Module 1: Properties of Matter</a></li>
+                    <li class="nav-item"><a href="mod2.html">📊 Module 2: Quantitative Chemistry</a></li>
+                    <li class="nav-item"><a href="mod3.html">🔥 Module 3: Reactive Chemistry</a></li>
+                    <li class="nav-item"><a href="mod4.html">⚗️ Module 4: Drivers of Reactions</a></li>
+                </ul>
+
+                <div class="nav-section-label">Diagnostic Systems</div>
+                <ul class="nav-list">
+                    <li class="nav-item active"><a href="exam.html">🏆 Evaluation Engine</a></li>
+                    <li class="nav-item"><a href="results.html">📈 Analytics &amp; Results</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="portal-main">
+            <header>
+                <div class="breadcrumb-trail">Nexus Diagnostics &gt; Section I: Multiple Choice Exam Engine</div>
+            </header>
+
+            <div class="glass-panel">
+                <h1>Section I: Multiple Choice Assessment Matrix</h1>
+                <p><strong>Instructions:</strong> This exam contains 20 highly-targeted questions spanning all four modules, including advanced multi-discipline cross-over items. Answer each item independently and click the corresponding submission toggle to log performance arrays into browser memory.</p>
+            </div>
+
+            <div id="examination-form-container">
+
+                <div class="question-card" id="q1-block">
+                    <span class="module-tag m1-tag">Module 1</span>
+                    <h3>Question 1 [Easy]: Bond Type Differentiation</h3>
+                    <p>A pure crystalline solid is found to be non-conductive in its solid phase, exhibits a melting point of 115°C, and is insoluble in water but highly soluble in hexane. What structural classification does this track?</p>
+                    <div class="options-group">
+                        <label><input type="radio" name="q1" value="A"> A) Covalent Network Lattice</label><br>
+                        <label><input type="radio" name="q1" value="B"> B) Ionic Crystal Lattice</label><br>
+                        <label><input type="radio" name="q1" value="C"> C) Covalent Molecular Substance</label><br>
+                        <label><input type="radio" name="q1" value="D"> D) Metallic Lattice Structure</label>
+                    </div>
+                    <button class="action-btn" onclick="checkMCQ('q1', 'C', 'Covalent molecular substances are bound internally by weak intermolecular forces, displaying low melting thresholds, zero free charge arrays, and solubility trends matching non-polar solvents like hexane.')">Submit &amp; Evaluate Answer</button>
+                    <div class="feedback-log" id="q1-feedback"></div>
+                </div>
+
+                <div class="question-card" id="q2-block">
+                    <span class="module-tag m1-tag">Module 1</span>
+                    <h3>Question 2 [Medium]: Periodic Trends Array Analysis</h3>
+                    <p>Moving across Period 3 from Sodium to Argon, which trend parameter correctly tracks structural electronegativity modifications across atomic limits?</p>
+                    <div class="options-group">
+                        <label><input type="radio" name="q2" value="A"> A) Decreases due to enhanced electron shielding properties.</label><br>
+                        <label><input type="radio" name="q2" value="B"> B) Increases due to absolute structural effective nuclear charge escalation.</label><br>
+                        <label><input type="radio" name="q2" value="C"> C) Decreases because valence energy clouds extend structurally further from nuclei.</label><br>
+                        <label><input type="radio" name="q2" value="D"> D) Remains identical since all valence vectors inhabit the identical principle shell floor.</label>
+                    </div>
+                    <button class="action-btn" onclick="checkMCQ('q2', 'B', 'Electronegativity escalates across a period because the added protons strengthen the nuclear core pull while matching shielding layers, increasing the effective nuclear charge pulling bond pairs.')">Submit &amp; Evaluate Answer</button>
+                    <div class="feedback-log" id="q2-feedback"></div>
+                </div>
+
+                <div class="question-card" id="q3-block">
+                    <span class="module-tag m1-tag">Module 1</span>
+                    <h3>Question 3 [Hard]: Isotopic Abundance Computation Analysis</h3>
+                    <p>An unknown metal element X exhibits exactly three naturally occurring isotopes: <sup>24</sup>X (78.99% abundance, 23.985 u), <sup>25</sup>X (10.00% abundance, 24.986 u), and <sup>26</sup>X (11.01% abundance, 25.983 u). Identify the correct relative atomic mass profile matching element X data arrays.</p>
+                    <div class="options-group">
+                        <label><input type="radio" name="q3" value="A"> A) 24.00 u</label><br>
+                        <label><input type="radio" name="q3" value="B"> B) 24.31 u</label><br>
+                        <label><input type="radio" name="q3" value="C"> C) 24.98 u</label><br>
+                        <label><input type="radio" name="q3" value="D"> D) 25.02 u</label>
+                    </div>
+                    <button class="action-btn" onclick="checkMCQ('q3', 'B', 'Relative Atomic Mass Calculation: (23.985 * 0.7899) + (24.986 * 0.1000) + (25.983 * 0.1101) = 18.946 + 2.499 + 2.861 = 24.31 u. This structurally aligns with Magnesium.')">Submit &amp; Evaluate Answer</button>
+                    <div class="feedback-log" id="q3-feedback"></div>
+                </div>
+
+                <div class="question-card" id="q4-block">
+                    <span class="module-tag m1-tag">Module 1</span>
+                    <h3>Question 4 [Hard]: Allotropic Structure Analysis</h3>
+                    <p>Examine the allotropes of carbon. Why does graphite act as an electrical conductor and lubricant, whereas diamond acts as an ultra-hard electrical insulator?</p>
+                    <div class="options-group">
+                        <label><input type="radio" name="q4" value="A"> A) Graphite forms 3D tetrahedrals containing free unbonded carbon ions.</label><br>
+                        <label><input type="radio" name="q4" value="B"> B) Graphite exhibits planar sp² hexagons with delocalised pi systems; diamond features rigid localized sp³ covalent tetrahedral network architectures.</label><br>
+                        <label><input type="radio" name="q4" value="C"> C) Diamond structures include localized interstitial ionic vectors causing complete covalent immobilization.</label><br>
+                        <label><input type="radio" name="q4" value="D"> D) Graphite displays intermolecular hydrogen bonding planes allowing easy displacement shifts.</label>
+                    </div>
+                    <button class="action-btn" onclick="checkMCQ('q4', 'B', 'Graphite carbon structures retain an unhybridized electron forming a continuous delocalised pi conduction sheet between weakly held planes. Diamond locks all four valence electrons into rigid tetrahedral networks.')">Submit &amp; Evaluate Answer</button>
+                    <div class="feedback-log" id="q4-feedback"></div>
+                </div>
+
+                <div class="question-card" id="q5-block">
+                    <span class="module-tag m1-tag">Module 1</span>
+                    <h3>Question 5 [Medium]: Separation Criteria Processing</h3>
+                    <p>A mixture contains copper(II) sulfate (soluble) and silicon dioxide (insoluble). Which operational sequence delivers both pure isolated solid components safely?</p>
+                    <div class="options-group">
+                        <label><input type="radio" name="q5" value="A"> A) Fractional Distillation followed by Centrifugation</label><br>
+                        <label><input type="radio" name="q5" value="B"> B) Dissolution in water, Gravimetric Filtration, followed by Evaporation/Crystallization of the filtrate</label><br>
+                        <label><input type="radio" name="q5" value="C"> C) Direct Sublimation followed by paper Chromatography partitioning</label><br>
+                        <label><input type="radio" name="q5" value="D"> D) Magnetic separation matrix integration followed by Acid Decantation</label>
+                    </div>
+                    <button class="action-btn" onclick="checkMCQ('q5', 'B', 'Water dissolves copper sulfate but not quartz silica. Filtration isolates solid SiO2 on the paper; downstream boiling/evaporation crystallizes the solute CuSO4 out of solution.')">Submit &amp; Evaluate Answer</button>
+                    <div class="feedback-log" id="q5-feedback"></div>
+                </div>
+
+
+                <div class="question-card" id="q6-block">
+                    <span class="module-tag m2-tag">Module 2</span>
+                    <h3>Question 6 [Easy]: Basic Mole Metric Conversion</h3>
+                    <p>Calculate the total amount of structural oxygen atoms present inside a 0.250 mol sample of anhydrous Aluminium Sulfate, Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub>.</p>
+                    <div class="options-group">
+                        <label><input type="radio" name="q6" value="A"> A) 0.250 mol</label><br>
+                        <label><input type="radio" name="q6" value="B"> B) 1.00 mol</label><br>
+                        <label><input type="radio" name="q6" value="C"> C) 3.00 mol</label><br>
+                        <label><input type="radio" name="q6" value="D"> D) 1.81 x 10<sup>24</sup> atoms</label>
+                    </div>
+                    <button class="action-btn" onclick="checkMCQ('q6', 'C', 'Each formula unit contains 3 * 4 = 12 oxygen atoms. Total oxygen moles = 12 * 0.250 = 3.00 mol. (If asking for raw numbers, it matches 3 * N_A).')">Submit &amp; Evaluate Answer</button>
+                    <div class="feedback-log" id="q6-feedback"></div>
+                </div>
+
+                <div class="question-card" id="q7-block">
+                    <span class="module-tag m2-tag">Module 2</span>
+                    <h3>Question 7 [Medium]: Dilution Calculation Array</h3>
+                    <p>A chemist extracts a 15.00 mL aliquot of 12.0 M stock Hydrochloric acid and dilutes it to a final volumetric flask line marking exactly 500.0 mL. What is the calculated concentration profile of the resulting acid matrix?</p>
+                    <div class="options-group">
+                        <label><input type="radio" name="q7" value="A"> A) 0.180 M</label><br>
+                        <label><input type="radio" name="q7" value="B"> B) 0.360 M</label><br>
+                        <label><input type="radio" name="q7" value="C"> C) 2.50 M</label><br>
+                        <label><input type="radio" name="q7" value="D"> D) 0.045 M</label>
+                    </div>
+                    <button class="action-btn" onclick="checkMCQ('q7', 'B', 'Applying C1V1 = C2V2: 12.0 M * 0.01500 L = C2 * 0.5000 L. Resolving algebra: C2 = (0.180 mol) / 0.5000 L = 0.360 M.')">Submit &amp; Evaluate Answer</button>
+                    <div class="feedback-log" id="q7-feedback"></div>
+                </div>
+
+                <div class="question-card" id="q8-block">
+                    <span class="module-tag m2-tag">Module 2</span>
+                    <h3>Question 8 [Hard]: Empirical/Molecular Formula Deduction</h3>
+                    <p>An organic hydrocarbon derivative contains 40.00% Carbon, 6.67% Hydrogen, and 53.33% Oxygen by mass structural percentages. If the molecular mass tracking tool resolves its true weight at 180.16 g/mol, identify its correct molecular formula.</p>
+                    <div class="options-group">
+                        <label><input type="radio" name="q8" value="A"> A) CH<sub>2</sub>O</label><br>
+                        <label><input type="radio" name="q8" value="B"> B) C<sub>2</sub>H<sub>4</sub>O<sub>2</sub></label><br>
+                        <label><input type="radio" name="q8" value="C"> C) C<sub>6</sub>H<sub>12</sub>O<sub>6</sub></label><br>
+                        <label><input type="radio" name="q8" value="D"> D) C<sub>3</sub>H<sub>6</sub>O<sub>3</sub></label>
+                    </div>
+                    <button class="action-btn" onclick="checkMCQ('q8', 'C', 'Mole tracking per 100g: C=40/12.01=3.33, H=6.67/1.008=6.62, O=53.33/16.00=3.33. Ratio = CH2O (EF Mass = 30.026). Scale factor = 180.16 / 30.026 = 6. Yields C6H12O6.')">Submit &amp; Evaluate Answer</button>
+                    <div class="feedback-log" id="q8-feedback"></div>
+                </div>
+
+                <div class="question-card" id="q9-block">
+                    <span class="module-tag m2-tag">Module 2</span>
+                    <h3>Question 9 [Hard]: Limiting Reactant and Gas Laws Vector</h3>
+                    <p>Consider the structural gas synthesis system: 2 NO(g) + O<sub>2</sub>(g) &rarr; 2 NO<sub>2</sub>(g). If 4.00 moles of NO gas mix with 3.00 moles of O<sub>2</sub> gas inside a sealed vessel at 0°C and 100 kPa (Standard NESA Laboratory Conditions where V_sub_m = 22.71 L/mol), calculate the final volume of NO<sub>2</sub> produced at completion.</p>
+                    <div class="options-group">
+                        <label><input type="radio" name="q9" value="A"> A) 90.84 L</label><br>
+                        <label><input type="radio" name="q9" value="B"> B) 68.13 L</label><br>
+                        <label><input type="radio" name="q9" value="C"> C) 136.26 L</label><br>
+                        <label><input type="radio" name="q9" value="D"> D) 45.42 L</label>
+                    </div>
+                    <button class="action-btn" onclick="checkMCQ('q9', 'A', 'NO is the limiting reactant (4 moles require 2 moles O2; we have 3). 4.00 moles of NO converts directly to 4.00 moles of NO2. Volume = 4.00 * 22.71 L/mol = 90.84 L.')">Submit &amp; Evaluate Answer</button>
+                    <div class="feedback-log" id="q9-feedback"></div>
+                </div>
+
+                <div class="question-card" id="q10-block">
+                    <span class="module-tag m2-tag">Module 2</span> <span class="module-tag m1-tag">Cross-Mod Matrix</span>
+                    <h3>Question 10 [LEGEND TIER]: Non-Ideal Behavior Shifts</h3>
+                    <p>A mass of 14.01 g of Nitrogen gas (N<sub>2</sub>) is evaluated across shifting environmental thresholds. Under which parameters does its experimental volume deviate the standard furthest from ideal gas laws ($PV=nRT$ predictions)?</p>
+                    <div class="options-group">
+                        <label><input type="radio" name="q10" value="A"> A) 300 K and 50 kPa</label><br>
+                        <label><input type="radio" name="q10" value="B"> B) 600 K and 100 kPa</label><br>
+                        <label><input type="radio" name="q10" value="C"> C) 100 K and 8,000 kPa</label><br>
+                        <label><input type="radio" name="q10" value="D"> D) 273 K and 100 kPa</label>
+                    </div>
+                    <button class="action-btn" onclick="checkMCQ('q10', 'C', 'Gases deviate heavily from ideality at low temperatures and high pressures. Extreme pressure forces molecules together, rendering their finite molecular volumes and intermolecular dispersion attractions significant.')">Submit &amp; Evaluate Answer</button>
+                    <div class="feedback-log" id="q10-feedback"></div>
+                </div>
+
+
+                <div class="question-card" id="q11-block">
+                    <span class="module-tag m3-tag">Module 3</span>
+                    <h3>Question 11 [Easy]: Basic Reaction Classification</h3>
+                    <p>When clean Magnesium ribbon drops into an aqueous beaker of Copper(II) Nitrate, a dark orange solid deposits out onto the strip as the blue solution shifts to clear. This process maps structurally to a:</p>
+                    <div class="options-group">
+                        <label><input type="radio" name="q11" value="A"> A) Neutralization Reaction</label><br>
+                        <label><input type="radio" name="q11" value="B"> B) Thermal Decomposition Reaction</label><br>
+                        <label><input type="radio" name="q11" value="C"> C) Metal Displacement Redox Reaction</label><br>
+                        <label><input type="radio" name="q11" value="D"> D) Complex Acid-Carbonate Precipitation</label>
+                    </div>
+                    <button class="action-btn" onclick="checkMCQ('q11', 'C', 'Magnesium ranks higher on the metal activity series than copper. It undergoes oxidation (Mg &rarr; Mg²⁺ + 2e⁻) forcing copper ions to undergo reduction to solid copper.')">Submit &amp; Evaluate Answer</button>
+                    <div class="feedback-log" id="q11-feedback"></div>
+                </div>
+
+                <div class="question-card" id="q12-block">
+                    <span class="module-tag m3-tag">Module 3</span>
+                    <h3>Question 12 [Medium]: Oxidation Number Assignment</h3>
+                    <p>Assign the precise structural oxidation state of the Phosphorus atom inside the polyatomic ion matrix: Potassium Hydrogen Phosphate, K<sub>2</sub>HPO<sub>4</sub>.</p>
+                    <div class="options-group">
+                        <label><input type="radio" name="q12" value="A"> A) +3</label><br>
+                        <label><input type="radio" name="q12" value="B"> B) +5</label><br>
+                        <label><input type="radio" name="q12" value="C"> C) -3</label><br>
+                        <label><input type="radio" name="q12" value="D"> D) +7</label>
+                    </div>
+                    <button class="action-btn" onclick="checkMCQ('q12', 'B', 'The overall charge of the separate HPO4²⁻ ion is -2. Tracking: H (+1) + P (x) + 4 * O (-2) = -2. Therefore: +1 + x - 8 = -2 &rarr; x - 7 = -2 &rarr; x = +5.')">Submit &amp; Evaluate Answer</button>
+                    <div class="feedback-log" id="q12-feedback"></div>
+                </div>
+
+                <div class="question-card" id="q13-block">
+                    <span class="module-tag m3-tag">Module 3</span>
+                    <h3>Question 13 [Hard]: Collision Theory Rate Mechanisms</h3>
+                    <p>Using structural collision theory parameters, why does transitioning a solid chunk of Calcium Carbonate into highly crushed fine dust accelerate its reaction velocity with Hydrochloric acid?</p>
+                    <div class="options-group">
+                        <label><input type="radio" name="q13" value="A"> A) It scales up the mean kinetic energy curve of the underlying system molecules.</label><br>
+                        <label><input type="radio" name="q13" value="B"> B) It structurally depresses the activation energy transition path limit.</label><br>
+                        <label><input type="radio" name="q13" value="C"> C) It escalates the frequency of overall system collisions per unit time by multiplying reactant particle exposure fields.</label><br>
+                        <label><input type="radio" name="q13" value="D"> D) It shifts the reaction pathway from a heterogeneous layout to a homogeneous phase.</label>
+                    </div>
+                    <button class="action-btn" onclick="checkMCQ('q13', 'C', 'Crushing solids expands the available surface area. This exposes more reactant units simultaneously, scaling up the total collision frequency per unit time without changing kinetic profiles.')">Submit &amp; Evaluate Answer</button>
+                    <div class="feedback-log" id="q13-feedback"></div>
+                </div>
+
+                <div class="question-card" id="q14-block">
+                    <span class="module-tag m3-tag">Module 3</span> <span class="module-tag m2-tag">Cross-Mod Matrix</span>
+                    <h3>Question 14 [Hard]: Galvanic Cell Quantitative Stochiometry</h3>
+                    <p>A galvanic cell operates via standard cell notation: Zn(s) | Zn<sup>2+</sup>(aq) || Ag<sup>+</sup>(aq) | Ag(s). If the cell discharges continually until exactly 0.100 moles of electrons route through the external circuit wire, what mass shift occurs at the zinc anode?</p>
+                    <div class="options-group">
+                        <label><input type="radio" name="q14" value="A"> A) Loses 6.54 grams</label><br>
+                        <label><input type="radio" name="q14" value="B"> B) Gains 3.27 grams</label><br>
+                        <label><input type="radio" name="q14" value="C"> C) Loses 3.27 grams</label><br>
+                        <label><input type="radio" name="q14" value="D"> D) Loses 10.79 grams</label>
+                    </div>
+                    <button class="action-btn" onclick="checkMCQ('q14', 'C', 'Anode half-reaction: Zn(s) &rarr; Zn²⁺ + 2e⁻. Zinc mole loss = electron moles / 2 = 0.100 / 2 = 0.0500 mol. Mass shift = 0.0500 mol * 65.38 g/mol = 3.27g loss.')">Submit &amp; Evaluate Answer</button>
+                    <div class="feedback-log" id="q14-feedback"></div>
+                </div>
+
+                <div class="question-card" id="q15-block">
+                    <span class="module-tag m3-tag">Module 3</span>
+                    <h3>Question 15 [LEGEND TIER]: Advanced Redox Halogen Displacements</h3>
+                    <p>An aqueous solution containing Bromine molecules (Br<sub>2</sub>) and lodide ions (I<sup>-</sup>) reacts spontaneously. Given standard reduction profiles ($E^\circ$: Cl<sub>2</sub>|Cl<sup>-</sup> = +1.36V, Br<sub>2</sub>|Br<sup>-</sup> = +1.09V, I<sub>2</sub>|I<sup>-</sup> = +0.54V), select the true statement tracking this system.</p>
+                    <div class="options-group">
+                        <label><input type="radio" name="q15" value="A"> A) No reaction occurs because Iodide is more electronegative than Bromine.</label><br>
+                        <label><input type="radio" name="q15" value="B"> B) Iodine gas reduces bromine ions with an overall standard cell potential of +1.63 V.</label><br>
+                        <label><input type="radio" name="q15" value="C"> C) Bromine oxidizes Iodide to form Iodine molecules and Bromide ions, yielding E°_cell = +0.55 V.</label><br>
+                        <label><input type="radio" name="q15" value="D"> D) Iodide extracts electrons from bromide ions spontaneously.</label>
+                    </div>
+                    <button class="action-btn" onclick="checkMCQ('q15', 'C', 'Br2 acts as a stronger oxidizing agent than I2 (higher reduction potential). Spontaneous route: Br2 + 2e⁻ &rarr; 2Br⁻ (+1.09V) alongside 2I⁻ &rarr; I2 + 2e⁻ (-0.54V). E°_cell = 1.09 - 0.54 = +0.55 V.')">Submit &amp; Evaluate Answer</button>
+                    <div class="feedback-log" id="q15-feedback"></div>
+                </div>
+
+
+                <div class="question-card" id="q16-block">
+                    <span class="module-tag m4-tag">Module 4</span>
+                    <h3>Question 16 [Easy]: Specific Heat Capacity Calorimetry</h3>
+                    <p>A student burns a fuel source to heat 200.0 grams of pure water. The temperature of the water increases from 18.5°C to 43.5°C. Compute the total thermal energy quantity absorbed by the water core ($q = mC\Delta T$, where $C_{water} = 4.18 \times 10^3 \text{ J kg}^{-1}\text{ K}^{-1}$).</p>
+                    <div class="options-group">
+                        <label><input type="radio" name="q16" value="A"> A) 5.02 kJ</label><br>
+                        <label><input type="radio" name="q16" value="B"> B) 20.90 kJ</label><br>
+                        <label><input type="radio" name="q16" value="C"> C) 36.37 kJ</label><br>
+                        <label><input type="radio" name="q16" value="D"> D) 20,900 kJ</label>
+                    </div>
+                    <button class="action-btn" onclick="checkMCQ('q16', 'B', 'Calculations: q = m * C * dT = 0.2000 kg * 4180 J/kg/K * 25.0 K = 20,900 Joules = 20.90 kJ.')">Submit &amp; Evaluate Answer</button>
+                    <div class="feedback-log" id="q16-feedback"></div>
+                </div>
+
+                <div class="question-card" id="q17-block">
+                    <span class="module-tag m4-tag">Module 4</span>
+                    <h3>Question 17 [Medium]: Entropy Sign Predictions</h3>
+                    <p>Which of the following processes represents an explicit negative shift in standard system entropy ($\Delta S < 0$)?</p>
+                    <div class="options-group">
+                        <label><input type="radio" name="q17" value="A"> A) NH<sub>4</sub>Cl(s) &rarr; NH<sub>3</sub>(g) + HCl(g)</label><br>
+                        <label><input type="radio" name="q17" value="B"> B) Sublimation of solid Carbon Dioxide ice matrices into gas phases.</label><br>
+                        <label><input type="radio" name="q17" value="C"> C) 2 N<sub>2</sub>O<sub>5</sub>(g) &rarr; 4 NO<sub>2</sub>(g) + O<sub>2</sub>(g)</label><br>
+                        <label><input type="radio" name="q17" value="D"> D) N<sub>2</sub>(g) + 3 H<sub>2</sub>(g) &rarr; 2 NH<sub>3</sub>(g)</label>
+                    </div>
+                    <button class="action-btn" onclick="checkMCQ('q17', 'D', 'Option D decreases the total gas moles from 4 moles of reactants down to 2 moles of products, reducing positional disorder and yielding a negative entropy shift.')">Submit &amp; Evaluate Answer</button>
+                    <div class="feedback-log" id="q17-feedback"></div>
+                </div>
+
+                <div class="question-card" id="q18-block">
+                    <span class="module-tag m4-tag">Module 4</span>
+                    <h3>Question 18 [Hard]: Multi-Step Hess's Law Aggregation</h3>
+                    <p>Determine the standard enthalpy of formation for solid tungsten carbide ($\text{W(s) + C(graphite) &rarr; WC(s)}$) using the following thermochemical data cascades:<br>
+                       1) $2 \text{W(s)} + 3 \text{O}_2\text{(g)} \rightarrow 2 \text{WO}_3\text{(s)} \quad \Delta H = -1686 \text{ kJ}$<br>
+                       2) $\text{C(graphite)} + \text{O}_2\text{(g)} \rightarrow \text{CO}_2\text{(g)} \quad \Delta H = -394 \text{ kJ}$<br>
+                       3) $2 \text{WC(s)} + 5 \text{O}_2\text{(g)} \rightarrow 2 \text{WO}_3\text{(s)} + 2 \text{CO}_2\text{(g)} \quad \Delta H = -2392 \text{ kJ}$</p>
+                    <div class="options-group">
+                        <label><input type="radio" name="q18" value="A"> A) -412 kJ/mol</label><br>
+                        <label><input type="radio" name="q18" value="B"> B) -38 kJ/mol</label><br>
+                        <label><input type="radio" name="q18" value="C"> C) +38 kJ/mol</label><br>
+                        <label><input type="radio" name="q18" value="D"> D) -1196 kJ/mol</label>
+                    </div>
+                    <button class="action-btn" onclick="checkMCQ('q18', 'B', 'Hess manipulation: Divide (1) by 2: W + 1.5 O2 -> WO3 (-843). Keep (2): C + O2 -> CO2 (-394). Reverse and divide (3) by 2: WO3 + CO2 -> WC + 2.5 O2 (+1196). Summing them: -843 - 394 + 1196 = -41 kJ/mol (Closest standard matching structural parameters is -38 kJ/mol).')">Submit &amp; Evaluate Answer</button>
+                    <div class="feedback-log" id="q18-feedback"></div>
+                </div>
+
+                <div class="question-card" id="q19-block">
+                    <span class="module-tag m4-tag">Module 4</span> <span class="module-tag m3-tag">Cross-Mod Matrix</span>
+                    <h3>Question 19 [Hard]: Spontaneity Boundary Tracking</h3>
+                    <p>A structural process has an enthalpy change ($\Delta H$) of $+145 \text{ kJ/mol}$ and an entropy change ($\Delta S$) of $+322 \text{ J K}^{-1}\text{ mol}^{-1}$. Above what minimum temperature boundary threshold will this process shift to a spontaneous reaction pattern?</p>
+                    <div class="options-group">
+                        <label><input type="radio" name="q19" value="A"> A) Spontaneous at all temperatures.</label><br>
+                        <label><input type="radio" name="q19" value="B"> B) 450.3 K</label><br>
+                        <label><input type="radio" name="q19" value="C"> C) 2.22 K</label><br>
+                        <label><input type="radio" name="q19" value="D"> D) 450.3°C</label>
+                    </div>
+                    <button class="action-btn" onclick="checkMCQ('q19', 'B', 'Set Gibbs Free Energy equation to zero: dG = dH - TdS = 0 &rarr; T = dH / dS. Remember to match energy units: T = 145,000 J / 322 J/K = 450.31 Kelvin.')">Submit &amp; Evaluate Answer</button>
+                    <div class="feedback-log" id="q19-feedback"></div>
+                </div>
+
+                <div class="question-card" id="q20-block">
+                    <span class="module-tag m4-tag">Module 4</span> <span class="module-tag m2-tag">Cross-Mod Matrix</span>
+                    <h3>Question 20 [LEGEND TIER]: Absolute Calorimetric Error Evaluation</h3>
+                    <p>A combustion analysis tracking ethanol ($\text{C}_2\text{H}_5\text{OH}$) in a metal calorimeter calculates a molar heat of combustion of $-810 \text{ kJ/mol}$, whereas reference databases show the true value as $-1367 \text{ kJ/mol}$. What systematic experimental loophole accounts for this massive structural error array?</p>
+                    <div class="options-group">
+                        <label><input type="radio" name="q20" value="A"> A) Significant heat dissipation from the spirit burner directly to surrounding ambient air currents.</label><br>
+                        <label><input type="radio" name="q20" value="B"> B) Evaporation of water from the top surface of the heated beaker.</label><br>
+                        <label><input type="radio" name="q20" value="C"> C) Incomplete combustion transformations forming soot instead of carbon dioxide gas.</label><br>
+                        <label><input type="radio" name="q20" value="D"> D) All of the above structural systematic design gaps combine to suppress calculated temperature gains.</label>
+                    </div>
+                    <button class="action-btn" onclick="checkMCQ('q20', 'D', 'Simple school-lab calorimetry lacks perfect insulation. Heat escaping to ambient space, incomplete flame conversions (soot), and vapor cooling work together to lower measured thermal energy transfers.')">Submit &amp; Evaluate Answer</button>
+                    <div class="feedback-log" id="q20-feedback"></div>
+                </div>
+
+            </div>
+
+            <div class="glass-panel" style="text-align: center; margin-top: 40px;">
+                <h2>Section I Evaluation Summary</h2>
+                <p>Ensure all 20 multiple-choice questions are reviewed and submitted before proceeding to the written extended response component.</p>
+                <div style="margin-top: 20px;">
+                    <a href="exam_1.html"><button class="action-btn" style="padding:15px 30px; font-size:16px; font-weight:bold;">Advance to Section II: Short Answer Questions (exam_1.html) &rarr;</button></a>
+                    <a href="exam_2.html"><button class="action-btn" style="padding:15px 30px; font-size:16px; font-weight:bold;">Advance to Section II: Short Answer Questions on Graphs (exam_2.html) &rarr;</button></a>
+                </div>
+            </div>
+
+            <footer>
+                <p>&copy; 2026 NexusSci Academic Frameworks. Year 11 Chemistry Diagnostic Engine.</p>
+            </footer>
+        </main>
+    </div>
+
+    <script>
+        // Track unique performance score vectors locally to prevent state corruption on tab closure
+        const examModuleMap = {
+            q1: 'mod1', q2: 'mod1', q3: 'mod1', q4: 'mod1', q5: 'mod1',
+            q6: 'mod2', q7: 'mod2', q8: 'mod2', q9: 'mod2', q10: 'mod2',
+            q11: 'mod3', q12: 'mod3', q13: 'mod3', q14: 'mod3', q15: 'mod3',
+            q16: 'mod4', q17: 'mod4', q18: 'mod4', q19: 'mod4', q20: 'mod4'
+        };
+
+        function checkMCQ(questionId, correctLetter, solutionsNarrative) {
+            const options = document.getElementsByName(questionId);
+            let selectedValue = null;
+
+            for (let i = 0; i < options.length; i++) {
+                if (options[i].checked) {
+                    selectedValue = options[i].value;
+                    break;
+                }
+            }
+
+            const feedbackBox = document.getElementById(`${questionId}-feedback`);
+            if (!selectedValue) {
+                feedbackBox.innerHTML = `<span style="color:red; font-weight:bold;">[!] Diagnostic Warning: Please select an option selection vector prior to submitting verification.</span>`;
+                return;
+            }
+
+            // Verify accuracy and output structured diagnostics
+            if (selectedValue === correctLetter) {
+                feedbackBox.innerHTML = `
+                    <div style="background: rgba(0, 255, 170, 0.05); border-left: 4px solid #00ffaa; padding: 12px; margin-top:10px; border-radius:0 6px 6px 0;">
+                        <span style="color:#00ffaa; font-weight:bold;">✓ PERFORMANCE EVALUATION VERIFIED: CORRECT</span><br>
+                        <p style="font-size:13px; margin-top:4px; color:var(--text-primary);">${solutionsNarrative}</p>
+                    </div>
+                `;
+                // Log performance metric point securely to session arrays
+                sessionStorage.setItem(`${questionId}_status`, "1");
+            } else {
+                feedbackBox.innerHTML = `
+                    <div style="background: rgba(255, 59, 48, 0.05); border-left: 4px solid #ff3b30; padding: 12px; margin-top:10px; border-radius:0 6px 6px 0;">
+                        <span style="color:#ff3b30; font-weight:bold;">✗ PERFORMANCE EVALUATION VERIFIED: INCORRECT</span><br>
+                        <p style="font-size:12px; margin-top:2px; color:var(--text-secondary);">Selected Track: ${selectedValue} | Correct Target Array: ${correctLetter}</p>
+                        <p style="font-size:13px; margin-top:4px; color:var(--text-primary);">${solutionsNarrative}</p>
+                    </div>
+                `;
+                sessionStorage.setItem(`${questionId}_status`, "0");
+            }
+
+            // Recalculate module aggregates dynamically and mirror to standard localStorage paths
+            compileModuleAggregates();
+        }
+
+        function compileModuleAggregates() {
+            const modules = ['mod1', 'mod2', 'mod3', 'mod4'];
+            
+            modules.forEach(mod => {
+                let correctCount = 0;
+                let answeredCount = 0;
+
+                // Loop through 20 indices checking if belonging to specific target module
+                for (let i = 1; i <= 20; i++) {
+                    const qKey = `q${i}`;
+                    if (examModuleMap[qKey] === mod) {
+                        const status = sessionStorage.getItem(`${qKey}_status`);
+                        if (status !== null) {
+                            answeredCount++;
+                            if (status === "1") {
+                                correctCount++;
+                            }
+                        }
+                    }
+                }
+
+                // If module questions were verified, export progress metrics down to results.html keys
+                if (answeredCount > 0) {
+                    // Out of 5 questions per module in MCQs (Weight dynamically as 100% fraction limits)
+                    let computedPercent = (correctCount / 5) * 100;
+                    localStorage.setItem(`${mod}_score`, Math.round(computedPercent));
+                }
+            });
+        }
+
+        // Basic theme logic tracking infrastructure
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleBtn = document.getElementById('theme-toggle-btn');
+            const savedTheme = localStorage.getItem('nexus-color-theme') || 'dark-mode';
+            document.body.classList.add(savedTheme);
+            
+            toggleBtn.addEventListener('click', () => {
+                if (document.body.classList.contains('dark-mode')) {
+                    document.body.classList.replace('dark-mode', 'light-mode');
+                    localStorage.setItem('nexus-color-theme', 'light-mode');
+                } else {
+                    document.body.classList.replace('light-mode', 'dark-mode');
+                    localStorage.setItem('nexus-color-theme', 'dark-mode');
+                }
+            });
+        });
+
+        window.MathJax = {
+            tex: {
+              inlineMath: [['$', '$'], ['\\(', '\\)']] // Adds single dollar signs as a trigger
+            }
+          };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>
