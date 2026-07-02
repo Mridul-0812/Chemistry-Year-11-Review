@@ -1059,6 +1059,81 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- QUESTION 21: ALGEBRAIC ISOTOPIC ABUNDANCE (x and 1-x) -->
+                <div class="saq-node-item" id="saq-node-21" style="margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px dashed var(--glass-border);">
+                    <div class="question-meta-row">
+                        <span>QUESTION 21: SIMULTANEOUS ISOTOPIC ABUNDANCE ALGEBRA (ALLOCATION: 3 MARKS)</span>
+                        <span class="difficulty-tag diff-hard">Hard Level</span>
+                    </div>
+                    <p><strong>Q21. Element Z has a known relative atomic mass of 10.81 amu and consists of only two naturally occurring isotopes: ¹⁰Z (mass = 10.01 amu) and ¹¹Z (mass = 11.01 amu). Using simultaneous substitution logic (setting the fractional abundances as $x$ and $1-x$), calculate the percentage abundance of both isotopes. Show all algebraic steps clearly.</strong></p>
+                    <textarea class="saq-textarea" id="saq-input-21" placeholder="Type your formal academic response here..."></textarea>
+                    <button type="button" onclick="processSAQ(21, ['substitution', 'fractional', 'abundance', 'algebra', 'percentage', 'simultaneous'])">Submit and Evaluate Response 21</button>
+                    
+                    <div class="marking-criteria-block" id="criteria-saq-21">
+                        <div class="criteria-badge">Automated Diagnostic Grading Engine Output</div>
+                        <p class="keyword-match-results"></p>
+                        <div class="exam-sample-box">
+                            <strong>Syllabus Sample Complete Answer:</strong>
+                            <p>Let the fractional abundance of ¹⁰Z be $x$. Since the total abundance must equal 1 (or 100%), the fractional abundance of ¹¹Z must be $1-x$.<br><br>
+                            <strong>Step 1: Set up the weighted atomic mass equation:</strong><br>
+                            $$\text{Relative Atomic Mass} = (x \times \text{Mass of }^{10}\text{Z}) + ((1-x) \times \text{Mass of }^{11}\text{Z})$$<br>
+                            $$10.81 = 10.01x + 11.01(1-x)$$<br><br>
+                            <strong>Step 2: Expand the brackets and collect like terms:</strong><br>
+                            $$10.81 = 10.01x + 11.01 - 11.01x$$<br>
+                            $$10.81 = -1.00x + 11.01$$<br><br>
+                            <strong>Step 3: Solve for $x$ and convert to a percentage:</strong><br>
+                            $$-0.20 = -1.00x$$<br>
+                            $$x = 0.20 \implies \text{Abundance of }^{10}\text{Z} = 20.00\%$$<br>
+                            $$1-x = 1 - 0.20 = 0.80 \implies \text{Abundance of }^{11}\text{Z} = 80.00\%$$<br><br>
+                            Therefore, the relative abundance of <strong>¹⁰Z is 20.00%</strong> and <strong>¹¹Z is 80.00%</strong>. (Note: This matches the real-world profile of Boron).</p>
+                        </div>
+                        <div style="margin-top: 15px; display: flex; align-items: center; gap: 15px;">
+                            <label><strong>Calibrate Verified Score:</strong></label>
+                            <select class="score-adjust-select">
+                                <option value="0">0 Marks</option>
+                                <option value="1">1 Mark</option>
+                                <option value="2">2 Marks</option>
+                                <option value="3" selected>3 Marks</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- QUESTION 22: STANDARD MULTI-ISOTOPE WEIGHTED RAM -->
+                <div class="saq-node-item" id="saq-node-22" style="margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px dashed var(--glass-border);">
+                    <div class="question-meta-row">
+                        <span>QUESTION 22: MULTI-ISOTOPIC WEIGHTED ATOMIC MASS (ALLOCATION: 3 MARKS)</span>
+                        <span class="difficulty-tag diff-medium">Medium Level</span>
+                    </div>
+                    <p><strong>Q22. A pure sample of Magnesium gas is processed through a mass spectrometer. The device logs three distinct stable isotopes with the following percentage abundances: ²⁴Mg (78.99% abundance, mass = 23.99 amu), ²⁵Mg (10.00% abundance, mass = 24.99 amu), and ²⁶Mg (11.01% abundance, mass = 25.98 amu). Calculate the overall relative atomic mass of the sample to two decimal places.</strong></p>
+                    <textarea class="saq-textarea" id="saq-input-22" placeholder="Type your formal academic response here..."></textarea>
+                    <button type="button" onclick="processSAQ(22, ['weighted', 'average', 'abundance', 'percentage', 'sum', 'mass', 'amu'])">Submit and Evaluate Response 22</button>
+                    
+                    <div class="marking-criteria-block" id="criteria-saq-22">
+                        <div class="criteria-badge">Automated Diagnostic Grading Engine Output</div>
+                        <p class="keyword-match-results"></p>
+                        <div class="exam-sample-box">
+                            <strong>Syllabus Sample Complete Answer:</strong>
+                            <p>To find the overall relative atomic mass, calculate the sum of each isotope's mass multiplied by its respective fractional abundance (percentage divided by 100):<br><br>
+                            $$\text{Relative Atomic Mass} = \sum \left(\frac{\text{Percentage Abundance}}{100} \times \text{Isotopic Mass}\right)$$<br>
+                            $$\text{RAM} = \left(\frac{78.99}{100} \times 23.99\right) + \left(\frac{10.00}{100} \times 24.99\right) + \left(\frac{11.01}{100} \times 25.98\right)$流通<br>
+                            $$\text{RAM} = (0.7899 \times 23.99) + (0.1000 \times 24.99) + (0.1101 \times 25.98)$<br>
+                            $$\text{RAM} = 18.9497 + 2.4990 + 2.8604 = 24.3091\text{ amu}$$<br><br>
+                            Rounded to two decimal places to match standard NESA data sheets, the relative atomic mass of Magnesium is <strong>24.31 amu</strong>.</p>
+                        </div>
+                        <div style="margin-top: 15px; display: flex; align-items: center; gap: 15px;">
+                            <label><strong>Calibrate Verified Score:</strong></label>
+                            <select class="score-adjust-select">
+                                <option value="0">0 Marks</option>
+                                <option value="1">1 Mark</option>
+                                <option value="2">2 Marks</option>
+                                <option value="3" selected>3 Marks</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
             </section>
 
             <hr style="border: 0.5px solid var(--glass-border); margin: 40px 0;">
