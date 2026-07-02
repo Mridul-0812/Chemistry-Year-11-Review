@@ -659,6 +659,613 @@
                         <p>To balance this equation, track the nitrogen atoms carefully. Two nitrogen atoms are fixed within the copper nitrate salt product, while the remaining nitrogen atoms exit the reaction as nitrogen dioxide gas. Setting a coefficient of 4 for nitric acid provides 4 hydrogen atoms, which can be balanced by producing 2 water molecules. This balances the 12 oxygen atoms across both sides of the equation perfectly ($4 \times 3 = 12 \rightarrow 6 + 4 + 2 = 12$).</p>
                     </div>
                 </div>
+
+                <div class="saq-container" style="margin-bottom: 30px;">
+                    <div class="question-meta-row"><span>SAQ 21: ION PRECILIATION CONSUMPTION PROFILE</span><span class="difficulty-tag diff-hard">Hard (James Ruse / BHHS Style)</span></div>
+                    <p><strong>Question:</strong> A student mixes $150.0\text{ mL}$ of $0.400\text{ M}$ iron(III) nitrate ($\text{Fe(NO}_3)_3$) solution with $250.0\text{ mL}$ of $0.300\text{ M}$ sodium carbonate ($\text{Na}_2\text{CO}_3$) solution. A precipitation reaction occurs to completion. Determine the final concentration of unreacted iron(III) ions ($\text{Fe}^{3+}$) remaining in the solution (assume volumes are completely additive).</p>
+                    <input type="text" id="ans-saq21" class="saq-textarea" style="height: 45px;" placeholder="Enter final [Fe3+] in mol/L">
+                    <button onclick="processSAQ(21, ['0.0250', '0.025'], 'saq21-sol')">Submit & Check Answer</button>
+                    <div id="saq21-sol" class="marking-criteria-block">
+                        <span class="criteria-badge">Full Worked Solution Matrix</span>
+                        <p><strong>Correct Answer:</strong> $0.0250\text{ M}$</p>
+                        <p>1. Write the initial moles of dissociating species:<br>
+                        $$n(\text{Fe}^{3+})_{\text{initial}} = 0.1500\text{ L} \times 0.400\text{ M} = 0.0600\text{ mol}$$<br>
+                        $$n(\text{CO}_3^{2-})_{\text{initial}} = 0.2500\text{ L} \times 0.300\text{ M} = 0.0750\text{ mol}$$<br>
+                        2. Set up the net ionic balancing equation for the precipitate formation:<br>
+                        $$2\text{Fe}^{3+}_{(aq)} + 3\text{CO}_{3\,(aq)}^{2-} \rightarrow \text{Fe}_2(\text{CO}_3)_{3(s)}$$<br>
+                        3. Determine the limiting ion via stoichiometric factors:<br>
+                        $$\text{Fe}^{3+}\text{ factor} = \frac{0.0600}{2} = 0.0300, \quad \text{CO}_3^{2-}\text{ factor} = \frac{0.0750}{3} = 0.0250$$<br>
+                        Since $0.0250 < 0.0300$, <strong>carbonate ($\text{CO}_3^{2-}$) is the limiting reagent</strong> and is fully consumed.<br>
+                        4. Calculate the moles of iron(III) consumed and remaining:<br>
+                        $$n(\text{Fe}^{3+})_{\text{consumed}} = 0.0750\text{ mol} \times \left(\frac{2}{3}\right) = 0.0500\text{ mol}$$<br>
+                        $$n(\text{Fe}^{3+})_{\text{excess remaining}} = 0.0600 - 0.0500 = 0.0100\text{ mol}$$<br>
+                        5. Compute final concentration relative to total system volume ($V_{\text{total}} = 150.0 + 250.0 = 400.0\text{ mL} = 0.4000\text{ L}$):<br>
+                        $$[\text{Fe}^{3+}] = \frac{0.0100\text{ mol}}{0.4000\text{ L}} = 0.0250\text{ M}$$</p>
+                        <p>Rounding to 3 significant figures matches the precision baseline: <strong>0.0250 M</strong>.</p>
+                    </div>
+                </div>
+                
+                <div class="saq-container" style="margin-bottom: 30px;">
+                    <div class="question-meta-row"><span>SAQ 22: CO-PRECIPITATION & NEUTRALISATION MATRIX</span><span class="difficulty-tag diff-hard">Hard (James Ruse / AHS Style)</span></div>
+                    <p><strong>Question:</strong> A $200.0\text{ mL}$ aliquot of $0.150\text{ M}$ barium hydroxide ($\text{Ba(OH)}_2$) is completely combined with $300.0\text{ mL}$ of $0.0800\text{ M}$ sulfuric acid ($\text{H}_2\text{SO}_4$). Simultaneous neutralization and precipitation eliminate species from the aqueous phase. Calculate the final concentration of free hydroxide ions ($\text{OH}^-$) left in the final solution.</p>
+                    <input type="text" id="ans-saq22" class="saq-textarea" style="height: 45px;" placeholder="Enter final [OH-] in mol/L">
+                    <button onclick="processSAQ(22, ['0.0240', '0.024'], 'saq22-sol')">Submit & Check Answer</button>
+                    <div id="saq22-sol" class="marking-criteria-block">
+                        <span class="criteria-badge">Full Worked Solution Matrix</span>
+                        <p><strong>Correct Answer:</strong> $0.0240\text{ M}$</p>
+                        <p>1. Identify the starting quantities of all individual ions prior to cross-reaction:<br>
+                        $$n(\text{Ba}^{2+}) = 0.2000 \times 0.150 = 0.0300\text{ mol}, \quad n(\text{OH}^-) = 0.0300 \times 2 = 0.0600\text{ mol}$$<br>
+                        $$n(\text{H}^+) = 0.3000 \times 0.0800 \times 2 = 0.0480\text{ mol}, \quad n(\text{SO}_4^{2-}) = 0.3000 \times 0.0800 = 0.0240\text{ mol}$$<br>
+                        2. Evaluate Reaction Phase 1 (Acid-Base Neutralisation): $\text{H}^+_{(aq)} + \text{OH}^-_{(aq)} \rightarrow \text{H}_2\text{O}_{(l)}$<br>
+                        $\text{H}^+$ is the limiting reagent ($0.0480\text{ mol} < 0.0600\text{ mol}$).<br>
+                        $$n(\text{OH}^-)_{\text{remaining}} = 0.0600 - 0.0480 = 0.0120\text{ mol}$$<br>
+                        3. Evaluate Reaction Phase 2 (Precipitation): $\text{Ba}^{2+}_{(aq)} + \text{SO}_{4\,(aq)}^{2-} \rightarrow \text{BaSO}_{4(s)}$<br>
+                        (Note: While $\text{Ba}^{2+}$ also decreases, it does not affect the independent net excess calculation of the remaining $\text{OH}^-$ pool).<br>
+                        4. Calculate final concentration over the blended volume metric ($V_{\text{total}} = 200.0 + 300.0 = 500.0\text{ mL} = 0.5000\text{ L}$):<br>
+                        $$[\text{OH}^-] = \frac{0.0120\text{ mol}}{0.5000\text{ L}} = 0.0240\text{ M}$$</p>
+                        <p>Refining to 3 significant figures yields: <strong>0.0240 M</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="saq-container" style="margin-bottom: 30px;">
+                    <div class="question-meta-row"><span>SAQ 23: MULTI-STEP HYDRATE PURITY ANALYSIS</span><span class="difficulty-tag diff-hard">Hard (James Ruse / BHHS Style)</span></div>
+                    <p><strong>Question:</strong> A $10.00\text{ g}$ sample of impure barium chloride dihydrate ($\text{BaCl}_2 \cdot 2\text{H}_2\text{O}$) contains completely inert rock salt impurities. The sample is heated intensely to drive off all water of crystallisation, reducing the total mass of the solid mixture to $8.80\text{ g}$. Calculate the mass of pure water lost, and use it to determine the percentage purity of the original $\text{BaCl}_2 \cdot 2\text{H}_2\text{O}$ sample by mass. Provide your final answer as: <strong>mass of water, % purity</strong> (e.g., if mass is 1.50g and purity is 85.2%, enter "1.50, 85.2").</p>
+                    <input type="text" id="ans-saq23" class="saq-textarea" style="height: 45px;" placeholder="Enter answer as: mass, % purity">
+                    <button onclick="processSAQ(23, ['1.20, 81.3', '1.2, 81.3', '1.20,81.3', '1.2,81.3'], 'saq23-sol')">Submit & Check Answer</button>
+                    <div id="saq23-sol" class="marking-criteria-block">
+                        <span class="criteria-badge">Full Worked Solution Matrix</span>
+                        <p><strong>Correct Answer:</strong> 1.20, 81.3%</p>
+                        <p>This problem tests your ability to link mass loss from thermal decomposition directly to the mole ratios of a hydrated salt to calculate overall purity.</p>
+                        
+                        <p><strong>Phase 1: Determine the mass and moles of water lost</strong><br>
+                        Since the impurities are completely inert and do not decompose or evaporate, any mass lost during heating is entirely due to the loss of water vapor:<br>
+                        $$m(\text{H}_2\text{O lost}) = m(\text{Initial Sample}) - m(\text{Anhydrous Residue})$$<br>
+                        $$m(\text{H}_2\text{O lost}) = 10.00\text{ g} - 8.80\text{ g} = 1.20\text{ g}$$<br>
+                        Calculate the moles of water molecules released ($\text{MM}(\text{H}_2\text{O}) = 18.016\text{ g/mol}$):<br>
+                        $$n(\text{H}_2\text{O}) = \frac{1.20\text{ g}}{18.016\text{ g/mol}} = 0.06661\text{ mol}$$</p>
+                
+                        <p><strong>Phase 2: Use stoichiometry to find the mass of the pure hydrated salt</strong><br>
+                        From the chemical formula $\text{BaCl}_2 \cdot 2\text{H}_2\text{O}$, we know that $1\text{ mole}$ of the hydrated salt contains exactly $2\text{ moles}$ of water. Therefore:<br>
+                        $$n(\text{BaCl}_2 \cdot 2\text{H}_2\text{O}) = \frac{n(\text{H}_2\text{O})}{2} = \frac{0.06661\text{ mol}}{2} = 0.03330\text{ mol}$$<br>
+                        Calculate the molar mass of pure barium chloride dihydrate ($\text{MM}(\text{BaCl}_2 \cdot 2\text{H}_2\text{O}) = 137.33 + (2 \times 35.45) + (2 \times 18.016) = 244.262\text{ g/mol}$):<br>
+                        $$m(\text{BaCl}_2 \cdot 2\text{H}_2\text{O pure}) = 0.03330\text{ mol} \times 244.262\text{ g/mol} = 8.134\text{ g}$$</p>
+                
+                        <p><strong>Phase 3: Calculate the percentage purity</strong><br>
+                        Compare the mass of the pure crystal structure against the original mass of the dirty mixture ($10.00\text{ g}$):<br>
+                        $$\%\text{ Purity} = \left(\frac{8.134\text{ g}}{10.00\text{ g}}\right) \times 100\% = 81.34\%$$</p>
+                        <p>Rounding to 3 significant figures based on your data constraints yields: <strong>1.20, 81.3</strong></p>
+                    </div>
+                </div>
+                
+                <div class="saq-container" style="margin-bottom: 30px;">
+                    <div class="question-meta-row"><span>SAQ 24: PRIMARY STANDARD & DILUTION COMPLEX MATRIX</span><span class="difficulty-tag diff-hard">Hard (James Ruse / BHHS Style)</span></div>
+                    <p><strong>Question:</strong> A student prepares a primary standard solution by dissolving $2.650\text{ g}$ of pure anhydrous sodium carbonate ($\text{Na}_2\text{CO}_3$) in distilled water and making it up to exactly $250.0\text{ mL}$ in a volumetric flask. The student then pipettes a $20.00\text{ mL}$ aliquot of this stock solution into a new $500.0\text{ mL}$ volumetric flask and dilutes it to the mark with distilled water. Calculate the exact mass of sodium carbonate present in the second flask, and determine the final diluted concentration of sodium carbonate. Provide your final answer as: <strong>mass, concentration</strong> (e.g., if mass is 0.500g and concentration is 0.0500M, enter "0.500, 0.0500").</p>
+                    <input type="text" id="ans-saq24" class="saq-textarea" style="height: 45px;" placeholder="Enter answer as: mass, concentration">
+                    <button onclick="processSAQ(24, ['0.212, 0.00400', '0.212g, 0.00400M', '0.212,0.00400', '0.212, 0.004'], 'saq24-sol')">Submit & Check Answer</button>
+                    <div id="saq24-sol" class="marking-criteria-block">
+                        <span class="criteria-badge">Full Worked Solution Matrix</span>
+                        <p><strong>Correct Answer:</strong> 0.212, 0.00400</p>
+                        <p>This problem tracks your accuracy through a classic multi-step quantitative volumetric analysis routine required by NESA Module 2.</p>
+                        
+                        <p><strong>Phase 1: Calculate the concentration of the stock solution</strong><br>
+                        Determine the molar mass ($\text{MM}$) of anhydrous sodium carbonate ($\text{Na}_2\text{CO}_3$):<br>
+                        $$\text{MM} = (2 \times 22.99) + 12.01 + (3 \times 16.00) = 105.99\text{ g/mol}$$<br>
+                        Calculate the moles of $\text{Na}_2\text{CO}_3$ dissolved in the primary standard:<br>
+                        $$n(\text{Na}_2\text{CO}_3)_{\text{stock}} = \frac{2.650\text{ g}}{105.99\text{ g/mol}} = 0.025002\text{ mol}$$<br>
+                        Calculate the initial stock concentration in the $250.0\text{ mL}$ ($0.2500\text{ L}$) volumetric flask:<br>
+                        $$C_{\text{stock}} = \frac{0.025002\text{ mol}}{0.2500\text{ L}} = 0.10001\text{ M}$$</p>
+                
+                        <p><strong>Phase 2: Track mass and moles in the aliquot transfer</strong><br>
+                        When a $20.00\text{ mL}$ ($0.02000\text{ L}$) aliquot is drawn out, it contains a specific fractional portion of the initial mass and moles:<br>
+                        $$\text{Fraction transferred} = \frac{20.00\text{ mL}}{250.0\text{ mL}} = 0.08000$$<br>
+                        Calculate the precise mass of solute transferred into the second flask:<br>
+                        $$m(\text{Na}_2\text{CO}_3)_{\text{transferred}} = 2.650\text{ g} \times 0.08000 = 0.2120\text{ g}$$<br>
+                        Calculate the moles transferred in that same aliquot:<br>
+                        $$n(\text{Na}_2\text{CO}_3)_{\text{aliquot}} = 0.025002\text{ mol} \times 0.08000 = 0.002000\text{ mol}$$</p>
+                
+                        <p><strong>Phase 3: Calculate the final diluted concentration</strong><br>
+                        The aliquot is diluted to a new total volume of $500.0\text{ mL}$ ($0.5000\text{ L}$):<br>
+                        $$C_{\text{diluted}} = \frac{n_{\text{aliquot}}}{V_{\text{new}}} = \frac{0.002000\text{ mol}}{0.5000\text{ L}} = 0.004000\text{ M}$$<br>
+                        *(Alternatively, using $C_1V_1 = C_2V_2 \rightarrow 0.10001\text{ M} \times 0.02000\text{ L} = C_2 \times 0.5000\text{ L} \rightarrow C_2 = 0.004000\text{ M}$)*</p>
+                        
+                        <p>Applying the 4 significant figures constraint from the initial $2.650\text{ g}$ mass value gives: <strong>0.2120, 0.004000</strong>. When rounded to standard 3-4 sig fig formatting variations, the baseline output is <strong>0.212, 0.00400</strong>.</p>
+                    </div>
+                </div>
+                
+                <div class="saq-container" style="margin-bottom: 30px;">
+                    <div class="question-meta-row"><span>SAQ 25: PRIMARY STANDARD DESIGN & METHODOLOGY</span><span class="difficulty-tag diff-hard">Hard (James Ruse / BHHS Style)</span></div>
+                    <p><strong>Question:</strong> A student needs to prepare exactly $250.0\text{ mL}$ of a $0.0500\text{ M}$ primary standard solution of anhydrous sodium carbonate ($\text{Na}_2\text{CO}_3$). First, calculate the precise mass of solid solute required. Second, outline the key experimental steps required to prepare this standard solution to NESA guidelines. Provide your final mass answer rounded to 3 significant figures.</p>
+                    <input type="text" id="ans-saq25" class="saq-textarea" style="height: 45px;" placeholder="Enter required mass in grams (e.g., 1.23g)">
+                    <button onclick="processSAQ(25, ['1.32', '1.32g', '1.33', '1.33g'], 'saq25-sol')">Submit & Check Answer</button>
+                    <div id="saq25-sol" class="marking-criteria-block">
+                        <span class="criteria-badge">Full Worked Solution & Practical Matrix</span>
+                        <p><strong>Correct Mass Answer:</strong> $1.32\text{ g}$ (or $1.33\text{ g}$ depending on intermediate rounding)</p>
+                        
+                        <p><strong>Part 1: Quantitative Calculation Matrix</strong><br>
+                        1. Calculate the required moles of solute for the target concentration and volume:<br>
+                        $$n(\text{Na}_2\text{CO}_3) = C \times V = 0.0500\text{ mol/L} \times 0.2500\text{ L} = 0.0125\text{ mol}$$<br>
+                        2. Determine the molar mass ($\text{MM}$) of anhydrous sodium carbonate ($\text{Na}_2\text{CO}_3$):<br>
+                        $$\text{MM} = (2 \times 22.99) + 12.01 + (3 \times 16.00) = 105.99\text{ g/mol}$$<br>
+                        3. Calculate the required dry mass:<br>
+                        $$m = n \times \text{MM} = 0.0125\text{ mol} \times 105.99\text{ g/mol} = 1.3248\text{ g} \approx \mathbf{1.32\text{ g}}$$</p>
+                
+                        <p><strong>Part 2: Mandatory NESA Practical Steps for Full Marks</strong><br>
+                        To get full marks in an independent school or HSC exam, your written procedure must explicitly include these key steps and equipment names:</p>
+                        <ol>
+                            <li><strong>Weighing:</strong> Weigh exactly $1.325\text{ g}$ of anhydrous $\text{Na}_2\text{CO}_3$ into a clean, dry electronic balance using a weighing boat.</li>
+                            <li><strong>Dissolving:</strong> Transfer the solid completely into a small beaker. Rinse the weighing boat into the beaker with distilled water to ensure no solute is lost. Stir with a glass rod until completely dissolved.</li>
+                            <li><strong>Quantitative Transfer:</strong> Pour the dissolved solution into a clean $250.0\text{ mL}$ <strong>volumetric flask</strong> using a clean filter funnel. </li>
+                            <li><strong>Rinsing (Crucial):</strong> Rinse the beaker, glass rod, and funnel at least three times with distilled water, pouring all washings directly into the volumetric flask to catch residual ions.</li>
+                            <li><strong>Dilution to the Mark:</strong> Add distilled water until the level is just below the calibration line. Use a Pasteur pipette to add the final drops until the <strong>bottom of the meniscus</strong> sits exactly on the etched graduation line at eye level.</li>
+                            <li><strong>Homogenisation:</strong> Stopper the flask securely and invert it multiple times ($10\text{--}20$ times) to ensure the final concentration is perfectly uniform throughout.</li>
+                        </ol>
+                        
+                        <p><strong>Common Exam Traps to Avoid:</strong> Never dissolve the solid directly inside the volumetric flask (it makes mixing inefficient), and never rinse the volumetric flask with anything other than distilled water.</p>
+                    </div>
+                </div>
+                
+                <div class="saq-container" style="margin-bottom: 30px;">
+                    <div class="question-meta-row"><span>SAQ 26: ADVANCED GRAPHICAL ANALYSIS & MULTI-STAGE DILUTION ALLOY ASSAY</span><span class="difficulty-tag diff-hard">Extreme (James Ruse / BHHS Trial Profile)</span></div>
+                    <p><strong>Context:</strong> A Stage 6 Chemistry student is tasked with determining the percentage purity of copper within a brass alloy sample. The student dissolves a $25.00\text{ g}$ sample of the impure alloy in excess concentrated nitric acid, converting all elemental copper into aqueous copper(II) ions ($\text{Cu}^{2+}$). The resulting deep blue solution is transferred quantitatively into a $250.0\text{ mL}$ volumetric flask and made up to the mark with distilled water (<strong>Stock Solution A</strong>).</p>
+                    
+                    <p>Because <strong>Stock Solution A</strong> is far too concentrated to be read directly by the school's colorimeter, a multi-stage dilution sequence is performed:
+                    <br>1. A $10.00\text{ mL}$ aliquot of <strong>Stock Solution A</strong> is pipetted into a $100.0\text{ mL}$ volumetric flask and diluted to the mark with distilled water (<strong>Solution B</strong>).
+                    <br>2. A $25.00\text{ mL}$ aliquot of <strong>Solution B</strong> is then pipetted into a $100.0\text{ mL}$ volumetric flask and diluted to the mark with distilled water (<strong>Solution C</strong>).</p>
+                    
+                    <p><strong>Solution C</strong> is placed into the colorimeter and yields an absorbance reading of exactly <strong>$0.360\text{ AU}$</strong>. To find its concentration, the student constructs the high-precision calibration graph shown below using five analytically pure $\text{Cu}^{2+}$ standard solutions.</p>
+                
+                    <p><strong>High-Precision Colorimetric Calibration Curve (635 nm):</strong></p>
+                    <div style="text-align: center; margin-bottom: 25px;">
+                        <svg width="500" height="400" viewBox="0 0 500 400" style="background-color: #ffffff; border: 1px solid #b0b0b0; font-family: 'Segoe UI', -apple-system, sans-serif;">
+                            <!-- Grid Lines -->
+                            <line x1="70" y1="50" x2="440" y2="50" stroke="#e5e5e5" stroke-width="1" />
+                            <line x1="70" y1="90" x2="440" y2="90" stroke="#e5e5e5" stroke-width="1" />
+                            <line x1="70" y1="130" x2="440" y2="130" stroke="#e5e5e5" stroke-width="1" />
+                            <line x1="70" y1="170" x2="440" y2="170" stroke="#e5e5e5" stroke-width="1" />
+                            <line x1="70" y1="210" x2="440" y2="210" stroke="#e5e5e5" stroke-width="1" />
+                            <line x1="70" y1="250" x2="440" y2="250" stroke="#e5e5e5" stroke-width="1" />
+                            <line x1="70" y1="290" x2="440" y2="290" stroke="#e5e5e5" stroke-width="1" />
+                            <line x1="70" y1="330" x2="440" y2="330" stroke="#e5e5e5" stroke-width="1" />
+                            
+                            <line x1="131.6" y1="350" x2="131.6" y2="50" stroke="#e5e5e5" stroke-width="1" />
+                            <line x1="193.3" y1="350" x2="193.3" y2="50" stroke="#e5e5e5" stroke-width="1" />
+                            <line x1="255.0" y1="350" x2="255.0" y2="50" stroke="#e5e5e5" stroke-width="1" />
+                            <line x1="316.6" y1="350" x2="316.6" y2="50" stroke="#e5e5e5" stroke-width="1" />
+                            <line x1="378.3" y1="350" x2="378.3" y2="50" stroke="#e5e5e5" stroke-width="1" />
+                            <line x1="440" y1="350" x2="440" y2="50" stroke="#e5e5e5" stroke-width="1" />
+                            
+                            <!-- Solid Graph Axes -->
+                            <line x1="70" y1="350" x2="450" y2="350" stroke="#222222" stroke-width="2" />
+                            <line x1="70" y1="40" x2="70" y2="350" stroke="#222222" stroke-width="2" />
+                            
+                            <!-- Y-Axis Labels -->
+                            <text x="60" y="354" font-size="11" text-anchor="end">0.00</text>
+                            <text x="60" y="314" font-size="11" text-anchor="end">0.10</text>
+                            <text x="60" y="274" font-size="11" text-anchor="end">0.20</text>
+                            <text x="60" y="234" font-size="11" text-anchor="end">0.30</text>
+                            <text x="60" y="194" font-size="11" text-anchor="end">0.40</text>
+                            <text x="60" y="154" font-size="11" text-anchor="end">0.50</text>
+                            <text x="60" y="114" font-size="11" text-anchor="end">0.60</text>
+                            <text x="60" y="74" font-size="11" text-anchor="end">0.70</text>
+                            <text x="25" y="200" font-size="12" font-weight="600" transform="rotate(-90 25,200)" text-anchor="middle">Absorbance (AU)</text>
+                            
+                            <!-- X-Axis Labels -->
+                            <text x="70" y="368" font-size="11" text-anchor="middle">0.00</text>
+                            <text x="131.6" y="368" font-size="11" text-anchor="middle">0.01</text>
+                            <text x="193.3" y="368" font-size="11" text-anchor="middle">0.02</text>
+                            <text x="255.0" y="368" font-size="11" text-anchor="middle">0.03</text>
+                            <text x="316.6" y="368" font-size="11" text-anchor="middle">0.04</text>
+                            <text x="378.3" y="368" font-size="11" text-anchor="middle">0.05</text>
+                            <text x="440" y="368" font-size="11" text-anchor="middle">0.06</text>
+                            <text x="255" y="392" font-size="12" font-weight="600" text-anchor="middle">Concentration of Cu²⁺ (mol/L)</text>
+                            
+                            <!-- Line of Best Fit -->
+                            <line x1="70" y1="350" x2="440" y2="110" stroke="#004085" stroke-width="2.5" />
+                            
+                            <!-- Standard Data Points -->
+                            <circle cx="131.6" cy="302" r="5" fill="#cc0000" />
+                            <circle cx="193.3" cy="254" r="5" fill="#cc0000" />
+                            <circle cx="255.0" cy="206" r="5" fill="#cc0000" />
+                            <circle cx="316.6" cy="158" r="5" fill="#cc0000" />
+                            <circle cx="378.3" cy="110" r="5" fill="#cc0000" />
+                            
+                            <!-- Intercept Tracker -->
+                            <polyline points="70,206 255,206 255,350" fill="none" stroke="#28a745" stroke-width="1.5" stroke-dasharray="5,4" />
+                            <circle cx="255.0" cy="206" r="5" fill="#28a745" />
+                        </svg>
+                    </div>
+                
+                    <p><strong>Question Tasks:</strong></p>
+                    <ol style="margin-top: 0; padding-left: 20px;">
+                        <li>Use the line of best fit on the calibration graph to determine the concentration of <strong>Solution C</strong>.</li>
+                        <li>Perform a logical back-calculation tracking through both dilution steps to determine the true molar concentration of $\text{Cu}^{2+}$ ions in the initial <strong>Stock Solution A</strong>.</li>
+                        <li>Calculate the total mass of copper dissolved in the volumetric system, and evaluate the final <strong>percentage purity by mass (% w/w)</strong> of copper within the original alloy sample.</li>
+                    </ol>
+                    <p>Provide your final formatted answer as: <strong>Stock Concentration A, % purity</strong> (e.g., if concentration is 1.20M and purity is 76.3%, enter "1.20, 76.3").</p>
+                    
+                    <input type="text" id="ans-saq26" class="saq-textarea" style="height: 45px;" placeholder="Enter answer as: Concentration A, % purity">
+                    <button onclick="processSAQ(26, ['1.20, 76.3', '1.2, 76.3', '1.20,76.3', '1.2,76.3'], 'saq26-sol')">Submit & Check Answer</button>
+                    <div id="saq26-sol" class="marking-criteria-block">
+                        <span class="criteria-badge">Full Worked Solution Matrix</span>
+                        <p><strong>Correct Answer:</strong> 1.20, 76.3%</p>
+                        
+                        <p><strong>Step 1: Formulate the Linear Calibration Curve Profile</strong><br>
+                        Using coordinates from the line of best fit ($C = 0.0500\text{ mol/L}$, $A = 0.600\text{ AU}$), evaluate the gradient ($m$):<br>
+                        $$\text{Gradient } (m) = \frac{\Delta A}{\Delta C} = \frac{0.600 - 0.000}{0.0500 - 0.0000} = 12.0\text{ L/mol}$$<br>
+                        This yields the linear equation: $A = 12.0 \times C$.<br>
+                        For <strong>Solution C</strong>, where $A = 0.360\text{ AU}$:<br>
+                        $$C_{\text{Solution C}} = \frac{0.360}{12.0} = \mathbf{0.0300\text{ mol/L}}$$</p>
+                
+                        <p><strong>Step 2: Dilution Factor Back-Tracking Calculations</strong><br>
+                        Trace back through the dilution processing path via the $C_1V_1 = C_2V_2$ framework:
+                        <br>• <strong>From C back to B:</strong> A $25.00\text{ mL}$ aliquot of B was diluted into a total volume of $100.0\text{ mL}$ to form C.<br>
+                        $$\text{Dilution Factor}_1 = \frac{100.0\text{ mL}}{25.00\text{ mL}} = 4.00 \implies C_{\text{Solution B}} = 0.0300\text{ M} \times 4.00 = 0.120\text{ mol/L}$$
+                        • <strong>From B back to A:</strong> A $10.00\text{ mL}$ aliquot of A was diluted into a total volume of $100.0\text{ mL}$ to form B.<br>
+                        $$\text{Dilution Factor}_2 = \frac{100.0\text{ mL}}{10.00\text{ mL}} = 10.00 \implies C_{\text{Stock Solution A}} = 0.120\text{ M} \times 10.00 = \mathbf{1.20\text{ mol/L}}$$</p>
+                
+                        <p><strong>Step 3: Mass and Percent Composition Matrix</strong><br>
+                        The total volume of <strong>Stock Solution A</strong> is exactly $250.0\text{ mL}$ ($0.2500\text{ L}$):<br>
+                        $$n(\text{Cu}^{2+})_{\text{total}} = C_{\text{Stock Solution A}} \times V_{\text{Stock Solution A}} = 1.20\text{ mol/L} \times 0.2500\text{ L} = 0.300\text{ mol}$$<br>
+                        Calculate the exact absolute mass of pure elemental copper present within the volumetric flask ($\text{MM}(\text{Cu}) = 63.55\text{ g/mol}$):<br>
+                        $$m(\text{Cu}) = 0.300\text{ mol} \times 63.55\text{ g/mol} = 19.065\text{ g}$$<br>
+                        Evaluate the mass percentage purity relative to the initial $25.00\text{ g}$ sample constraint:<br>
+                        $$\%\text{ Purity} = \left(\frac{19.065\text{ g}}{25.00\text{ g}}\right) \times 100\% = \mathbf{76.26\%}$$</p>
+                        <p>Rounding consistently to 3 significant figures based on data limits yields: <strong>1.20, 76.3</strong></p>
+                    </div>
+                </div>
+                
+                <div class="saq-container" style="margin-bottom: 30px;">
+                    <div class="question-meta-row"><span>SAQ 27: GAS STOICHIOMETRY & KINETIC LIMITING REAGENT PROFILE</span><span class="difficulty-tag diff-hard">Extreme (James Ruse / BHHS Trial Profile)</span></div>
+                    <p><strong>Context:</strong> A student reacts a $0.450\text{ g}$ piece of pure solid magnesium metal ($\text{Mg}$) with $50.0\text{ mL}$ of $0.500\text{ M}$ hydrochloric acid ($\text{HCl}$) in a sealed flask connected to a gas syringe. The experiment is conducted at Standard Laboratory Conditions (SLC), where the molar volume of an ideal gas ($V_m$) is exactly $24.79\text{ L/mol}$. The student records discrete measurements of the total volume of hydrogen gas ($\text{H}_2$) collected every 10 seconds to trace the chemical reaction to completion.</p>
+                    
+                    <p><strong>Gas Production Kinetic Tracking Curve:</strong></p>
+                    <div style="text-align: center; margin-bottom: 25px;">
+                        <svg width="500" height="400" viewBox="0 0 500 400" style="background-color: #ffffff; border: 1px solid #b0b0b0; font-family: 'Segoe UI', -apple-system, sans-serif;">
+                            <!-- Grid Lines -->
+                            <!-- Horizontal Grid Lines (Every 50 mL) -->
+                            <line x1="70" y1="50" x2="440" y2="50" stroke="#e5e5e5" stroke-width="1" />
+                            <line x1="70" y1="100" x2="440" y2="100" stroke="#e5e5e5" stroke-width="1" />
+                            <line x1="70" y1="150" x2="440" y2="150" stroke="#e5e5e5" stroke-width="1" />
+                            <line x1="70" y1="200" x2="440" y2="200" stroke="#e5e5e5" stroke-width="1" />
+                            <line x1="70" y1="250" x2="440" y2="250" stroke="#e5e5e5" stroke-width="1" />
+                            <line x1="70" y1="300" x2="440" y2="300" stroke="#e5e5e5" stroke-width="1" />
+                            
+                            <!-- Vertical Grid Lines (Every 20 Seconds) -->
+                            <line x1="144" y1="350" x2="144" y2="50" stroke="#e5e5e5" stroke-width="1" />
+                            <line x1="218" y1="350" x2="218" y2="50" stroke="#e5e5e5" stroke-width="1" />
+                            <line x1="292" y1="350" x2="292" y2="50" stroke="#e5e5e5" stroke-width="1" />
+                            <line x1="366" y1="350" x2="366" y2="50" stroke="#e5e5e5" stroke-width="1" />
+                            <line x1="440" y1="350" x2="440" y2="50" stroke="#e5e5e5" stroke-width="1" />
+                            
+                            <!-- Solid Graph Axes -->
+                            <line x1="70" y1="350" x2="460" y2="350" stroke="#222222" stroke-width="2" />
+                            <line x1="70" y1="40" x2="70" y2="350" stroke="#222222" stroke-width="2" />
+                            
+                            <!-- Y-Axis Labels (Volume of H2 Gas in mL) -->
+                            <text x="60" y="354" font-size="11" text-anchor="end">0</text>
+                            <text x="60" y="304" font-size="11" text-anchor="end">50</text>
+                            <text x="60" y="254" font-size="11" text-anchor="end">100</text>
+                            <text x="60" y="204" font-size="11" text-anchor="end">150</text>
+                            <text x="60" y="154" font-size="11" text-anchor="end">200</text>
+                            <text x="60" y="104" font-size="11" text-anchor="end">250</text>
+                            <text x="60" y="54" font-size="11" text-anchor="end">300</text>
+                            <text x="25" y="200" font-size="12" font-weight="600" transform="rotate(-90 25,200)" text-anchor="middle">Volume of H₂ Gas Produced (mL)</text>
+                            
+                            <!-- X-Axis Labels (Time in Seconds) -->
+                            <text x="70" y="368" font-size="11" text-anchor="middle">0</text>
+                            <text x="144" y="368" font-size="11" text-anchor="middle">20</text>
+                            <text x="218" y="368" font-size="11" text-anchor="middle">40</text>
+                            <text x="292" y="368" font-size="11" text-anchor="middle">60</text>
+                            <text x="366" y="368" font-size="11" text-anchor="middle">80</text>
+                            <text x="440" y="368" font-size="11" text-anchor="middle">100</text>
+                            <text x="255" y="392" font-size="12" font-weight="600" text-anchor="middle">Time (seconds)</text>
+                            
+                            <!-- Intercept Tracker Line indicating final plateau at 310 mL -->
+                            <line x1="70" y1="40" x2="310" y2="40" stroke="#004085" stroke-width="1.5" stroke-dasharray="4,4" stroke-opacity="0.7" />
+                            
+                            <!-- Continuous Line of Best Fit joining the data points smoothly -->
+                            <path d="M 70,350 
+                                     C 105,330 115,250 144,194 
+                                     C 170,144 190,95 218,66 
+                                     C 240,44 260,40 292,40 
+                                     L 460,40" 
+                                  fill="none" stroke="#dc3545" stroke-width="2.5" />
+                            
+                            <!-- Data Points drawn explicitly using standard NESA exam style crosses (X markers) -->
+                            <!-- 0s: (70, 350) -->
+                            <path d="M 66,346 L 74,354 M 74,346 L 66,354" stroke="#000000" stroke-width="2" />
+                            <!-- 10s: (107, 310) -->
+                            <path d="M 103,306 L 111,314 M 111,306 L 103,314" stroke="#000000" stroke-width="2" />
+                            <!-- 20s: (144, 194) -->
+                            <path d="M 140,190 L 148,198 M 148,190 L 140,198" stroke="#000000" stroke-width="2" />
+                            <!-- 30s: (181, 114) -->
+                            <path d="M 177,110 L 185,118 M 185,110 L 177,118" stroke="#000000" stroke-width="2" />
+                            <!-- 40s: (218, 66) -->
+                            <path d="M 214,62 L 222,70 M 222,62 L 214,70" stroke="#000000" stroke-width="2" />
+                            <!-- 50s: (255, 48) -->
+                            <path d="M 251,44 L 259,52 M 259,44 L 251,52" stroke="#000000" stroke-width="2" />
+                            <!-- 60s: (292, 40) -->
+                            <path d="M 288,36 L 296,44 M 296,36 L 288,44" stroke="#000000" stroke-width="2" />
+                            <!-- 70s: (329, 40) -->
+                            <path d="M 325,36 L 333,44 M 333,36 L 325,44" stroke="#000000" stroke-width="2" />
+                            <!-- 80s: (366, 40) -->
+                            <path d="M 362,36 L 370,44 M 370,36 L 362,44" stroke="#000000" stroke-width="2" />
+                            <!-- 90s: (403, 40) -->
+                            <path d="M 399,36 L 407,44 M 407,36 L 399,44" stroke="#000000" stroke-width="2" />
+                            <!-- 100s: (440, 40) -->
+                            <path d="M 436,36 L 444,44 M 444,36 L 436,44" stroke="#000000" stroke-width="2" />
+                        </svg>
+                    </div>
+                
+                    <p><strong>Question Tasks:</strong></p>
+                    <ol style="margin-top: 0; padding-left: 20px;">
+                        <li>Write a fully balanced chemical equation for the reaction, explicitly including states of matter.</li>
+                        <li>Calculate the starting number of moles for both reactants, and identify the limiting reagent by showing all stoichiometric scaling math.</li>
+                        <li>Determine the theoretical maximum volume of hydrogen gas ($\text{H}_2$) that should be produced at SLC in milliliters ($\text{mL}$).</li>
+                        <li><strong>Graphical Validation Check:</strong> Read the final gas volume plateau value directly from the trend line matching the plotted data crosses. Calculate the final percentage yield of the gas reaction.</li>
+                    </ol>
+                    <p>Provide your final formatted string answer as: <strong>Limiting Reagent, Theoretical Volume, % Yield</strong> (e.g., if limiting reagent is Mg, volume is 250mL, and yield is 95.5%, enter "Mg, 250, 95.5").</p>
+                    
+                    <input type="text" id="ans-saq27" class="saq-textarea" style="height: 45px;" placeholder="Enter answer as: Limiting Reagent, Theoretical Volume, % Yield">
+                    <button onclick="processSAQ(27, ['HCl, 310, 100', 'HCl, 310mL, 100%', 'HCl,310,100'], 'saq27-sol')">Submit & Check Answer</button>
+                    <div id="saq27-sol" class="marking-criteria-block">
+                        <span class="criteria-badge">Full Worked Solution Matrix</span>
+                        <p><strong>Correct Answer:</strong> HCl, 310, 100</p>
+                        
+                        <p><strong>Step 1: Write the Balanced Chemical Equation with States</strong><br>
+                        A reactive metal combines with an acid to produce a soluble ionic salt and hydrogen gas:<br>
+                        $$\text{Mg}_{(s)} + 2\text{HCl}_{(aq)} \rightarrow \text{MgCl}_{2(aq)} + \text{H}_{2(g)}$$</p>
+                
+                        <p><strong>Step 2: Starting Mole Values & Limiting Reagent Evaluation</strong><br>
+                        • Find initial moles of Magnesium ($\text{MM}(\text{Mg}) = 24.31\text{ g/mol}$):<br>
+                        $$n(\text{Mg}) = \frac{m}{\text{MM}} = \frac{0.450\text{ g}}{24.31\text{ g/mol}} = 0.01851\text{ mol}$$
+                        • Find initial moles of Hydrochloric Acid ($V = 0.0500\text{ L}$, $C = 0.500\text{ M}$):<br>
+                        $$n(\text{HCl}) = C \times V = 0.500\text{ mol/L} \times 0.0500\text{ L} = 0.02500\text{ mol}$$
+                        • Apply the stoichiometric scaling check (divide moles by balance coefficients):<br>
+                        $$\text{Mg factor} = \frac{0.01851}{1} = 0.01851, \quad \text{HCl factor} = \frac{0.02500}{2} = 0.01250$$<br>
+                        Since $0.01250 &lt; 0.01851$, <strong>Hydrochloric Acid ($\text{HCl}$) is the limiting reagent</strong>. It will be fully consumed first.</p>
+                
+                        <p><strong>Step 3: Calculate the Theoretical Gas Yield Volume</strong><br>
+                        Using the molar ratio from the balanced equation ($\text{HCl} : \text{H}_2 = 2 : 1$):<br>
+                        $$n(\text{H}_2)_{\text{theoretical}} = \frac{n(\text{HCl})}{2} = \frac{0.02500\text{ mol}}{2} = 0.01250\text{ mol}$$<br>
+                        Convert the gas moles into a volume metric at SLC conditions ($V_m = 24.79\text{ L/mol}$):<br>
+                        $$V(\text{H}_2)_{\text{theoretical}} = n \times V_m = 0.01250\text{ mol} \times 24.79\text{ L/mol} = 0.309875\text{ L}$$<br>
+                        Convert from liters to milliliters ($\text{mL}$):<br>
+                        $$0.309875\text{ L} \times 1000 = 309.875\text{ mL} \approx \mathbf{310\text{ mL}}$$</p>
+                
+                        <p><strong>Step 4: Evaluate Experimental Data and Percentage Yield</strong><br>
+                        • Reading the absolute horizontal plateau line connecting the data markers shows that the gas volume flattens out perfectly at $310\text{ mL}$.<br>
+                        • Calculate Percentage Yield:<br>
+                        $$\text{Percentage Yield} = \left(\frac{\text{Experimental Volume}}{\text{Theoretical Volume}}\right) \times 100\% = \left(\frac{310\text{ mL}}{310\text{ mL}}\right) \times 100\% = \mathbf{100\%}$$</p>
+                    </div>
+                </div>
+                
+                <div class="saq-container" style="margin-bottom: 30px;">
+                    <div class="question-meta-row"><span>SAQ 28: SCIENTIFIC SKILLS & EXPERIMENTAL DESIGN ASSESSMENT</span><span class="difficulty-tag diff-hard">Hard (James Ruse / BHHS Style)</span></div>
+                    <p><strong>Context:</strong> A student wants to investigate how temperature affects the rate of a chemical reaction. They react a $2.00\text{ g}$ strip of magnesium ribbon with $50.0\text{ mL}$ of $1.00\text{ M}$ hydrochloric acid ($\text{HCl}$) inside a conical flask. The flask is connected to a gas syringe to measure the volume of hydrogen gas ($\text{H}_2$) produced. The student repeats the exact procedure across five different water baths set to temperatures of $20^\circ\text{C}$, $30^\circ\text{C}$, $40^\circ\text{C}$, $50^\circ\text{C}$, and $60^\circ\text{C}$. They use a stopwatch to record the total time taken for the gas syringe to collect exactly $50.0\text{ mL}$ of gas.</p>
+                    
+                    <p><strong>Experimental Variables Configuration Table:</strong></p>
+                    <table style="width:100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; text-align: center;">
+                        <thead>
+                            <tr style="background-color: #004085; border-bottom: 2px solid #002752;">
+                                <th style="padding: 10px; border: 1px solid #ddd; color: #ffffff;">Variable Category</th>
+                                <th style="padding: 10px; border: 1px solid #ddd; color: #ffffff;">Identified Parameter</th>
+                                <th style="padding: 10px; border: 1px solid #ddd; color: #ffffff;">Method of Control / Measurement</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 10px; border: 1px solid #ddd; text-align: left; font-weight: bold;">Independent</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">Temperature of the system</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">Submerging the reaction flask into a thermostatically controlled water bath.</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; border: 1px solid #ddd; text-align: left; font-weight: bold;">Dependent</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">Time taken to collect 50.0 mL of gas</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">Manually starting and stopping a digital stopwatch based on visual inspection.</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; border: 1px solid #ddd; text-align: left; font-weight: bold;">Controlled</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">Acid concentration and volume</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">Using the same stock bottle of 1.00 M HCl and measuring with a volumetric pipette.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                
+                    <p><strong>Question Tasks:</strong></p>
+                    <ol style="margin-top: 0; padding-left: 20px;">
+                        <li>Evaluate the <strong>validity</strong> of this experimental design. Identify a critical variable regarding the solid reactant that has been omitted from the controlled variables list, and justify how this oversight directly compromises validity.</li>
+                        <li><strong>Risk Assessment Matrix:</strong> Hydrochloric acid ($1.00\text{ M}$) is classified as a skin and eye irritant. State a specific safety risk associated with heating this volatile acid to $60^\circ\text{C}$ that is not present at $20^\circ\text{C}$, and outline an engineering control to mitigate this hazard.</li>
+                        <li>The student completes the trials once and claims their data is highly **reliable** because their trend line perfectly matches collision theory. Critique this statement based on NESA working scientifically guidelines.</li>
+                    </ol>
+                    <p>Provide your final short text answer by naming the missing controlled variable of the magnesium strip, followed by the mandatory step needed to establish reliability (e.g., enter "variable name, verification step").</p>
+                    
+                    <input type="text" id="ans-saq28" class="saq-textarea" style="height: 45px;" placeholder="Enter answer as: variable, verification">
+                    <button onclick="processSAQ(28, ['surface area, repetition', 'surface area, repeat trials', 'surface area, replicates'], 'saq28-sol')">Submit & Check Answer</button>
+                    <div id="saq28-sol" class="marking-criteria-block">
+                        <span class="criteria-badge">Full Worked Solution Matrix</span>
+                        <p><strong>Correct Answer:</strong> surface area, repetition</p>
+                        
+                        <p><strong>Part 1: Detailed Validity & Surface Area Evaluation Matrix</strong></p>
+                        <p><strong>Omitted Controlled Variable:</strong> The <strong>surface area (or state of subdivision)</strong> of the magnesium metal ribbon.</p>
+                        <p><strong>Theoretical Justification of Compromised Validity:</strong><br>
+                        Validity requires that an experiment strictly measures what it sets out to test, meaning changes observed in the dependent variable (reaction time) must be solely caused by changes made to the independent variable (temperature). All other variables capable of influencing the reaction rate must be strictly held constant.</p>
+                        <p>According to collision theory, the rate of a heterogeneous reaction depends on the number of exposed surface reactant particles available for collisions. A single long, coiled strip of magnesium ribbon has a completely different surface-area-to-volume ratio compared to a piece that has been scratched, cut into fragments, or partially oxidized by the air. </p>
+                        <p>If the surface area of the magnesium is not controlled across the five temperature trials, it introduces a confounding variable. For instance, if the magnesium used in the $40^\circ\text{C}$ trial happened to be highly fragmented with a high surface area, the reaction rate would speed up due to increased surface particle availability, not just the temperature. This makes it impossible to isolate the true effect of temperature alone, rendering the entire experimental design <strong>invalid</strong>.</p>
+                
+                        <p><strong>Part 2: High-Temperature Volatility Risk Assessment Matrix</strong></p>
+                        <p><strong>Elevated Thermal Hazard:</strong> At room temperature ($20^\circ\text{C}$), $1.00\text{ M}$ hydrochloric acid undergoes minimal vaporization. However, heating the aqueous acid to $60^\circ\text{C}$ drastically increases the kinetic energy of the particles, promoting the vaporization of dissolved hydrogen chloride ($\text{HCl}$) gas into the air. This produces highly corrosive acid fumes that can escape the flask during setup, causing severe respiratory irritation if inhaled, as well as acute eye irritation.</p>
+                        <p><strong>Mitigation Strategy (Engineering Control):</strong> To eliminate this volatile exposure path, all high-temperature trials must be executed inside a fully operational <strong>laboratory fume cupboard (fume hood)</strong>. The localized negative pressure airflow draws toxic gases and mists away from the user's breathing zone and filters them safely out of the room. <em>Note: Personal Protective Equipment (PPE) like safety goggles is a secondary control, not an engineering control.</em></p>
+                
+                        <p><strong>Part 3: NESA Working Scientifically Reliability Critique</strong></p>
+                        <p>The student's claim that a single trial sequence is "reliable" because it conforms to textbook collision theory reflects a fundamental misunderstanding of NESA criteria:</p>
+                        <ol>
+                            <li><strong>The Core Rule of Reliability:</strong> Reliability can never be proven within a single experimental run. It is a measure of the consistency and reproducibility of data. To establish it, the student must perform <strong>multiple repeat trials (replicates)</strong> under completely identical conditions for each temperature.</li>
+                            <li><strong>Random Error Concealment:</strong> A single sequence of measurements can easily be skewed by undetected random errors—such as reaction lag, stopwatch delays, or variations in gas syringe friction. </li>
+                            <li><strong>The Verification Protocol:</strong> True reliability is demonstrated only when the data from these multiple replicates are clustered tightly together with minimal scatter (concordant data). Averaging these repeated trials minimizes the impact of random errors, which a single line of best fit can easily disguise.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="saq-container" style="margin-bottom: 30px;">
+                    <div class="question-meta-row"><span>SAQ 29: EMPIRICAL INVESTIGATION DESIGN & ERROR ANALYSIS</span><span class="difficulty-tag diff-hard">Hard (James Ruse / BHHS Style)</span></div>
+                    <p><strong>Context:</strong> A student aims to experimentally determine the empirical formula of magnesium oxide ($\text{MgO}$) via a thermal synthesis pathway. The student places a clean $0.480\text{ g}$ strip of coiled magnesium ribbon into a porcelain crucible with a tightly fitting lid. The apparatus is heated intensely over a Bunsen burner for ten minutes. The student periodically lifts the crucible lid using crucible tongs to allow atmospheric oxygen to enter and sustain the oxidation reaction. After cooling, the final dry white ash product is weighed to determine the mass of chemically bound oxygen.</p>
+                    
+                    <p><strong>Procedural Action & Equipment Layout Matrix:</strong></p>
+                    <table style="width:100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; text-align: center;">
+                        <thead>
+                            <tr style="background-color: #004085; border-bottom: 2px solid #002752;">
+                                <th style="padding: 10px; border: 1px solid #ddd; color: #ffffff;">Procedural Step</th>
+                                <th style="padding: 10px; border: 1px solid #ddd; color: #ffffff;">Intended Scientific Purpose</th>
+                                <th style="padding: 10px; border: 1px solid #ddd; color: #ffffff;">Equipment Used</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 10px; border: 1px solid #ddd; text-align: left; font-weight: bold;">Step 1</td>
+                                <td style="padding: 10px; border: 1px solid #ddd; text-align: left;">Sandpapering the raw silver-colored magnesium ribbon before recording its initial mass.</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">Emery paper & digital analytical balance</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; border: 1px solid #ddd; text-align: left; font-weight: bold;">Step 2</td>
+                                <td style="padding: 10px; border: 1px solid #ddd; text-align: left;">Briefly cracking open the crucible lid every 60 seconds during intense heating.</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">Pipeclay triangle, tripod, & stainless tongs</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; border: 1px solid #ddd; text-align: left; font-weight: bold;">Step 3</td>
+                                <td style="padding: 10px; border: 1px solid #ddd; text-align: left;">Reheating the crucible, cooling it inside a desiccator, and reweighing until a constant mass is achieved.</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">Desiccator jar & electronic balance</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                
+                    <p><strong>Question Tasks:</strong></p>
+                    <ol style="margin-top: 0; padding-left: 20px;">
+                        <li>Justify how executing <strong>Step 1</strong> directly preserves the <strong>validity</strong> of the quantitative data, explaining what chemical contaminant is being physically removed.</li>
+                        <li>Explain why <strong>Step 3</strong> is a mandatory NESA protocol for establishing the <strong>accuracy</strong> of the final calculated mass of oxygen. What systematic error does it prevent?</li>
+                        <li><strong>Critical Error Analysis:</strong> During Step 2, a student lifts the lid too high, causing a small, visible plume of white magnesium oxide smoke to escape into the room. Predict the direct mathematical effect this handling error will have on the calculated ratio of oxygen atoms to magnesium atoms in the final empirical formula.</li>
+                    </ol>
+                    <p>Provide your final short text answer by naming the compound removed in Step 1, followed by the effect on the oxygen ratio in the final analysis (e.g., enter "compound name, decrease/increase").</p>
+                    
+                    <input type="text" id="ans-saq29" class="saq-textarea" style="height: 45px;" placeholder="Enter answer as: compound, effect">
+                    <button onclick="processSAQ(29, ['magnesium oxide, decrease', 'magnesium oxide passivation layer, decrease', 'magnesium oxide, lower'], 'saq29-sol')">Submit & Check Answer</button>
+                    <div id="saq29-sol" class="marking-criteria-block">
+                        <span class="criteria-badge">Full Worked Solution Matrix</span>
+                        <p><strong>Correct Answer:</strong> magnesium oxide, decrease</p>
+                        
+                        <p><strong>Part 1: Practical Validity & Passivation Layer Justification</strong></p>
+                        <p><strong>Chemical Contaminant Target:</strong> Magnesium oxide ($\text{MgO}$) passivation layer (and potentially magnesium carbonate, $\text{MgCO}_3$).</p>
+                        <p><strong>Theoretical Justification of Validity:</strong><br>
+                        Magnesium is a highly reactive alkaline earth metal that spontaneously undergoes atmospheric oxidation at room temperature. This process creates a dull, dark gray passivation layer on its exterior surface. </p>
+                        <p>If a student fails to scrape away this layer before weighing, the initial mass recorded will include pre-existing oxygen atoms from the environment. This directly compromises the <strong>validity</strong> of the experiment, which is specifically designed to measure *only* the mass of oxygen gas captured and bound during the active combustion phase. Including the pre-existing oxide layer leads to a falsely low mass reading for the oxygen added during the lab, skewing the overall experimental data matrix.</p>
+                
+                        <p><strong>Part 2: Accuracy Protocols & Constant Mass Tracking</strong></p>
+                        <p><strong>Systematic Error Prevented:</strong> Incomplete chemical conversion of reactants (under-oxidation).</p>
+                        <p><strong>Theoretical Justification of Accuracy:</strong><br>
+                        <strong>Step 3</strong> details the analytical technique known as **heating to constant mass**. In high-precision quantitative chemistry, this is a mandatory workflow to ensure a reaction has reached absolute completion ($100\%$ conversion). </p>
+                        <p>During the initial heating phase, a crust of white magnesium oxide ash forms over the metal strip. This crust physically blocks oxygen gas from reaching the remaining, unreacted magnesium trapped underneath. If a student heats the sample only once, a significant portion of unreacted elemental magnesium may remain inside the core. This results in a final mass reading that is lower than the true theoretical value. Repeating the heating-cooling-weighing cycle until the recorded mass stops fluctuating ensures all magnesium has reacted, maximizing the <strong>accuracy</strong> of the stoichiometry calculation.</p>
+                
+                        <p><strong>Part 3: Handling Error Propagation & Mathematical Cascades</strong></p>
+                        <p><strong>Direct Impact on Empirical Ratio:</strong> The calculated ratio of oxygen atoms to magnesium atoms will <strong>decrease</strong> (yielding an incorrect formula like $\text{Mg}_{1}\text{O}_{0.8}$ instead of the true $\text{Mg}_{1}\text{O}_{1}$).</p>
+                        <p><strong>Theoretical Mathematical Progression:</strong><br>
+                        The white smoke observed escaping from the crucible consists of airborne, solid particles of the newly formed magnesium oxide product ($\text{MgO}_{(s)}$). When this smoke escapes into the room, physical mass is permanently lost from the crucible setup.</p>
+                        <p>Consequently, the final mass of the crucible + ash recorded on the balance will be artificially low. When the student carries out the empirical formula math ($m(\text{Oxygen}) = m(\text{Final Crucible Contents}) - m(\text{Initial Clean Magnesium})$), the calculated mass of oxygen will appear lower than it actually was. This error propagates through the molar conversions, understating the calculated moles of oxygen while leaving the starting magnesium moles unaffected. As a result, the final calculated ratio of oxygen to magnesium drops systematically.</p>
+                    </div>
+                </div>
+
+                <div class="saq-container" style="margin-bottom: 30px;">
+                    <div class="question-meta-row"><span>SAQ 30: GRAPHICAL VOLUMETRIC ANALYSIS & SYSTEMATIC ERROR PROPAGATION</span><span class="difficulty-tag diff-hard">Hard (James Ruse / BHHS Style)</span></div>
+                    <p><strong>Context:</strong> A student sets up an investigation to determine the exact concentration of a stock solution of hydrochloric acid ($\text{HCl}$) by graphing the temperature changes during a neutralisation reaction. The student pipettes exactly $25.00\text{ mL}$ of the unknown stock acid into a well-insulated polystyrene cup. They then add a $1.00\text{ M}$ standard solution of sodium hydroxide ($\text{NaOH}$) in sequential $5.00\text{ mL}$ increments using a burette, recording the maximum stable temperature after each addition to generate the thermometric titration graph shown below.</p>
+                    
+                    <p><strong>Thermometric Neutralisation Response Profile:</strong></p>
+                    <div style="text-align: center; margin-bottom: 25px;">
+                        <svg width="500" height="400" viewBox="0 0 500 400" style="background-color: #ffffff; border: 1px solid #b0b0b0; font-family: 'Segoe UI', -apple-system, sans-serif;">
+                            <!-- Grid Lines -->
+                            <line x1="70" y1="50" x2="440" y2="50" stroke="#e5e5e5" stroke-width="1" />
+                            <line x1="70" y1="110" x2="440" y2="110" stroke="#e5e5e5" stroke-width="1" />
+                            <line x1="70" y1="170" x2="440" y2="170" stroke="#e5e5e5" stroke-width="1" />
+                            <line x1="70" y1="230" x2="440" y2="230" stroke="#e5e5e5" stroke-width="1" />
+                            <line x1="70" y1="290" x2="440" y2="290" stroke="#e5e5e5" stroke-width="1" />
+                            
+                            <line x1="131.6" y1="350" x2="131.6" y2="50" stroke="#e5e5e5" stroke-width="1" />
+                            <line x1="193.3" y1="350" x2="193.3" y2="50" stroke="#e5e5e5" stroke-width="1" />
+                            <line x1="255.0" y1="350" x2="255.0" y2="50" stroke="#e5e5e5" stroke-width="1" />
+                            <line x1="316.6" y1="350" x2="316.6" y2="50" stroke="#e5e5e5" stroke-width="1" />
+                            <line x1="378.3" y1="350" x2="378.3" y2="50" stroke="#e5e5e5" stroke-width="1" />
+                            <line x1="440" y1="350" x2="440" y2="50" stroke="#e5e5e5" stroke-width="1" />
+                            
+                            <!-- Axes -->
+                            <line x1="70" y1="350" x2="450" y2="350" stroke="#222222" stroke-width="2" />
+                            <line x1="70" y1="40" x2="70" y2="350" stroke="#222222" stroke-width="2" />
+                            
+                            <!-- Y-Axis Labels (Temperature) -->
+                            <text x="60" y="354" font-size="11" text-anchor="end">20.0</text>
+                            <text x="60" y="294" font-size="11" text-anchor="end">22.0</text>
+                            <text x="60" y="234" font-size="11" text-anchor="end">24.0</text>
+                            <text x="60" y="174" font-size="11" text-anchor="end">26.0</text>
+                            <text x="60" y="114" font-size="11" text-anchor="end">28.0</text>
+                            <text x="60" y="54" font-size="11" text-anchor="end">30.0</text>
+                            <text x="25" y="200" font-size="12" font-weight="600" transform="rotate(-90 25,200)" text-anchor="middle">Maximum Temperature (°C)</text>
+                            
+                            <!-- X-Axis Labels (Volume of NaOH) -->
+                            <text x="70" y="368" font-size="11" text-anchor="middle">0.0</text>
+                            <text x="131.6" y="368" font-size="11" text-anchor="middle">10.0</text>
+                            <text x="193.3" y="368" font-size="11" text-anchor="middle">20.0</text>
+                            <text x="255.0" y="368" font-size="11" text-anchor="middle">30.0</text>
+                            <text x="316.6" y="368" font-size="11" text-anchor="middle">40.0</text>
+                            <text x="378.3" y="368" font-size="11" text-anchor="middle">50.0</text>
+                            <text x="440" y="368" font-size="11" text-anchor="middle">60.0</text>
+                            <text x="255" y="392" font-size="12" font-weight="600" text-anchor="middle">Volume of 1.00 M NaOH Added (mL)</text>
+                            
+                            <!-- Trend Line 1: Exothermic Reaction Phase -->
+                            <line x1="70" y1="350" x2="255" y2="80" stroke="#dc3545" stroke-width="2" />
+                            <!-- Trend Line 2: Dilution / Cooling Phase -->
+                            <line x1="255" y1="80" x2="440" y2="170" stroke="#004085" stroke-width="2" />
+                            
+                            <!-- Data Point Crosses -->
+                            <path d="M 66,346 L 74,354 M 74,346 L 66,354" stroke="#000" stroke-width="1.5" />
+                            <path d="M 127.6,232 L 135.6,240 M 135.6,232 L 127.6,240" stroke="#000" stroke-width="1.5" />
+                            <path d="M 189.3,118 L 197.3,126 M 197.3,118 L 189.3,126" stroke="#000" stroke-width="1.5" />
+                            <path d="M 251,76 L 259,84 M 259,76 L 251,84" stroke="#000" stroke-width="1.5" />
+                            <path d="M 312.6,121 L 320.6,129 M 320.6,121 L 312.6,129" stroke="#000" stroke-width="1.5" />
+                            <path d="M 374.3,166 L 382.3,174 M 382.3,166 L 374.3,174" stroke="#000" stroke-width="1.5" />
+                            
+                            <!-- Equivalence Point Intercept Line -->
+                            <line x1="255" y1="80" x2="255" y2="350" stroke="#28a745" stroke-width="1.5" stroke-dasharray="4,4" />
+                            <circle cx="255" cy="80" r="4" fill="#28a745" />
+                        </svg>
+                    </div>
+                
+                    <p><strong>Question Tasks:</strong></p>
+                    <ol style="margin-top: 0; padding-left: 20px;">
+                        <li><strong>Graphical Interpretation:</strong> Explain the chemical significance of the intersection point between the two independent linear trends on the graph. State the volume of standard sodium hydroxide solution required to reach this point.</li>
+                        <li>Justify the opposite directions of the two gradients before and after the intersection point by referencing the chemical processes occurring inside the cup.</li>
+                        <li><strong>Systematic Error Analysis:</strong> Suppose the student rinsed the burette with distilled water but forgot to rinse it with the $1.00\text{ M}$ sodium hydroxide standard solution before filling it. Explain how this systematic procedural error alters the position of the graphical intersection point, and predict its final impact on the calculated concentration of the stock acid.</li>
+                    </ol>
+                    <p>Provide your final short text answer by writing the volume of base at the equivalence point, followed by the direction of the error on the final acid concentration calculation (e.g., enter "30.0 mL, increase").</p>
+                    
+                    <input type="text" id="ans-saq30" class="saq-textarea" style="height: 45px;" placeholder="Enter answer as: volume, effect">
+                    <!-- FIXED INTERACTION KEY BELOW (Changed saq30-sol to ans-saq30-sol) -->
+                    <button onclick="processSAQ(30, ['30.0 mL, increase', '30 mL, increase', '30.0mL, higher', '30.0 mL, higher'], 'ans-saq30-sol')">Submit & Check Answer</button>
+                    <div id="ans-saq30-sol" class="marking-criteria-block">
+                        <span class="criteria-badge">Full Worked Solution Matrix</span>
+                        <p><strong>Correct Answer:</strong> 30.0 mL, increase</p>
+                        
+                        <p><strong>Part 1: Graphical Interpretation & Equivalence Point Identification</strong><br>
+                        The intersection point of the two straight lines of best fit represents the **equivalence point** (or stoichiometric end-point) of the volumetric neutralisation reaction. At this exact coordinate, the moles of hydronium ions ($\text{H}_3\text{O}^+$) from the acid match the moles of hydroxide ions ($\text{OH}^-$) delivered by the burette according to the 1:1 molar ratio:<br>
+                        $$\text{HCl}_{(aq)} + \text{NaOH}_{(aq)} \rightarrow \text{NaCl}_{(aq)} + \text{H}_2\text{O}_{(l)}$$<br>
+                        Reading directly down from the intersection point to the horizontal axis reveals that exactly **$30.0\text{ mL}$** of $1.00\text{ M}$ $\text{NaOH}$ was required to completely neutralise the acid sample.</p>
+                
+                        <p><strong>Part 2: Thermochemical Gradient Justification</strong><br>
+                        • <strong>First Phase (Positive Gradient):</strong> Acid-base neutralisation is highly **exothermic**. As sodium hydroxide is incrementally added to the flask, it reacts with the excess acid, continuously releasing thermal energy into the aqueous system and increasing the solution temperature.<br>
+                        • <strong>Second Phase (Negative Gradient):</strong> Once the equivalence point is crossed, all the original hydrochloric acid has been spent. Adding more $\text{NaOH}$ produces no further chemical reaction or thermal release. Instead, adding cooler, room-temperature base from the burette dilutes the system, absorbing and dispersing the heat energy and causing the temperature graph to trend downward.</p>
+                
+                        <p><strong>Part 3: Systematic Volumetric Error Propagation Matrix</strong><br>
+                        • <strong>Impact on the Graph:</strong> Rinsing the burette with distilled water leaves a film of water droplets along the interior glass walls. When the standard $1.00\text{ M}$ $\text{NaOH}$ solution is poured inside, these droplets dilute the base, lowering its true concentration below $1.00\text{ M}$. Because the base is now weaker, the student will need to add a larger total volume of liquid from the burette to deliver the moles of solute required to neutralise the acid. This shifts the graphical intersection point horizontally to the right (to a volume higher than $30.0\text{ mL}$).<br>
+                        • <strong>Impact on Concentration Calculations:</strong> When performing the standard Module 2 volumetric equation sequence ($C_{\text{acid}} = \frac{C_{\text{base}} \times V_{\text{base}}}{V_{\text{acid}}}$), the student will plug in the larger, incorrect volume from their graph while assuming the base concentration is still its nominal value ($1.00\text{ M}$). This mathematical cascade artificially inflates the calculated moles of base used, leading to an incorrect result where the calculated concentration of the stock acid is systematically **increased (overestimated)**.</p>
+                    </div>
+                </div>
+                
             </section>
 
             <div style="display: flex; gap: 20px; justify-content: center; margin-top: 40px;">
