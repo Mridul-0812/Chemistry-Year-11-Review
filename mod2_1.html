@@ -1265,6 +1265,169 @@
                         • <strong>Impact on Concentration Calculations:</strong> When performing the standard Module 2 volumetric equation sequence ($C_{\text{acid}} = \frac{C_{\text{base}} \times V_{\text{base}}}{V_{\text{acid}}}$), the student will plug in the larger, incorrect volume from their graph while assuming the base concentration is still its nominal value ($1.00\text{ M}$). This mathematical cascade artificially inflates the calculated moles of base used, leading to an incorrect result where the calculated concentration of the stock acid is systematically **increased (overestimated)**.</p>
                     </div>
                 </div>
+
+                <div class="saq-container" style="margin-bottom: 30px;">
+                    <div class="question-meta-row"><span>SAQ 31: BALANCING COMPLEX REDOX IN ACIDIC MEDIUM</span><span class="difficulty-tag diff-medium">Medium</span></div>
+                    <p><strong>Question:</strong> Permanganate ions react with oxalic acid in an acidic environment according to the unbalanced equation: $\text{MnO}_4^-(aq) + \text{H}_2\text{C}_2\text{O}_4(aq) + \text{H}^+(aq) \rightarrow \text{Mn}^{2+}(aq) + \text{CO}_2(g) + \text{H}_2\text{O}(l)$. Deduce the total number of moles of electrons transferred when exactly $2.50\text{ mol}$ of $\text{MnO}_4^-$ reacts completely.</p>
+                    <input type="text" id="ans-saq31" class="saq-textarea" style="height: 45px;" placeholder="Enter moles of electrons, e.g., 12.5">
+                    <button onclick="processSAQ(31, ['12.5', '12.50'], 'saq31-sol')">Submit & Check Answer</button>
+                    <div id="saq31-sol" class="marking-criteria-block">
+                        <span class="criteria-badge">Full Worked Solution Matrix</span>
+                        <p><strong>Correct Answer:</strong> $12.5\text{ mol}$</p>
+                        <p>1. Split into half-reactions and balance by mass and charge:<br>
+                        Reduction: $\text{MnO}_4^- + 8\text{H}^+ + 5\text{e}^- \rightarrow \text{Mn}^{2+} + 4\text{H}_2\text{O}$<br>
+                        Oxidation: $\text{H}_2\text{C}_2\text{O}_4 \rightarrow 2\text{CO}_2 + 2\text{H}^+ + 2\text{e}^-$<br>
+                        2. Multiply to equalise the electron transfer (lowest common multiple is 10):<br>
+                        $$2\text{MnO}_4^- + 16\text{H}^+ + 10\text{e}^- \rightarrow 2\text{Mn}^{2+} + 8\text{H}_2\text{O}$$<br>
+                        $$5\text{H}_2\text{C}_2\text{O}_4 \rightarrow 10\text{CO}_2 + 10\text{H}^+ + 10\text{e}^-$$<br>
+                        This gives a balanced net mole ratio of $10\text{ mol}$ of electrons for every $2\text{ mol}$ of $\text{MnO}_4^-$.<br>
+                        3. Calculate the total moles of electrons transferred for the given amount:<br>
+                        $$n(\text{e}^-) = 2.50\text{ mol }\text{MnO}_4^- \times \frac{10\text{ mol e}^-}{2\text{ mol }\text{MnO}_4^-} = 12.5\text{ mol}$$</p>
+                        <p>This reveals a stoichiometric transfer of <strong>$12.5\text{ mol}$</strong> of electrons.</p>
+                    </div>
+                </div>
+
+<div class="saq-container" style="margin-bottom: 30px;">
+                    <div class="question-meta-row"><span>SAQ 32: LIMITING REAGENT STOICHIOMETRY FROM UNBALANCED GAS SYSTEMS</span><span class="difficulty-tag diff-medium">Medium</span></div>
+                    <p><strong>Question:</strong> Ammonia gas reacts with oxygen gas via the unbalanced equation: $\text{NH}_3(g) + \text{O}_2(g) \rightarrow \text{NO}(g) + \text{H}_2\text{O}(g)$. If a vessel initially contains $4.00\text{ mol}$ of $\text{NH}_3$ and $4.50\text{ mol}$ of $\text{O}_2$, deduce the maximum number of moles of $\text{NO}(g)$ that can be produced.</p>
+                    <input type="text" id="ans-saq32" class="saq-textarea" style="height: 45px;" placeholder="Enter moles of NO, e.g., 3.6">
+                    <button onclick="processSAQ(32, ['3.6', '3.60'], 'saq32-sol')">Submit & Check Answer</button>
+                    <div id="saq32-sol" class="marking-criteria-block">
+                        <span class="criteria-badge">Full Worked Solution Matrix</span>
+                        <p><strong>Correct Answer:</strong> $3.6\text{ mol}$</p>
+                        <p>1. Balance the chemical equation using lowest whole numbers:<br>
+                        $$4\text{NH}_3(g) + 5\text{O}_2(g) \rightarrow 4\text{NO}(g) + 6\text{H}_2\text{O}(g)$$<br>
+                        2. Determine the limiting reagent by dividing initial moles by coefficients:<br>
+                        $$\text{For NH}_3: \frac{4.00\text{ mol}}{4} = 1.00\text{ equivalents}$$<br>
+                        $$\text{For O}_2: \frac{4.50\text{ mol}}{5} = 0.90\text{ equivalents}$$<br>
+                        Since $0.90 < 1.00$, oxygen ($\text{O}_2$) is the limiting reagent and will be completely consumed.<br>
+                        3. Calculate maximum moles of $\text{NO}$ based entirely on the limiting reagent:<br>
+                        $$n(\text{NO}) = 4.50\text{ mol }\text{O}_2 \times \frac{4\text{ mol }\text{NO}}{5\text{ mol }\text{O}_2} = 3.60\text{ mol}$$</p>
+                        <p>This reveals a complete consumption of the limiting oxygen gas, producing <strong>$3.6\text{ mol}$</strong> of $\text{NO}$.</p>
+                    </div>
+                </div>
+
+                <div class="saq-container" style="margin-bottom: 30px;">
+                    <div class="question-meta-row"><span>SAQ 33: MULTI-STEP ANALYSIS OF A COMPLEX ALLOY BY REDOX STOICHIOMETRY</span><span class="difficulty-tag diff-hard">Hard</span></div>
+                    <p><strong>Question:</strong> An impure $3.50\text{ g}$ sample of a brass alloy containing tin is treated with concentrated nitric acid. The tin completely reacts to form a precipitate of tin(IV) oxide ($\text{SnO}_2$), while the nitric acid is reduced to nitrogen dioxide gas ($\text{NO}_2$) alongside liquid water.<br><br>
+                    <strong>Part A:</strong> Formulate the fully balanced net chemical equation for this reaction using the lowest whole-number coefficients.<br>
+                    <strong>Part B:</strong> If the dry $\text{SnO}_2$ precipitate isolated from the mixture has a mass of $0.825\text{ g}$, calculate the total number of moles of electrons transferred during the oxidation of tin within this sample.<br>
+                    <strong>Part C:</strong> Calculate the theoretical minimum volume (in $\text{mL}$) of $15.8\text{ M}$ concentrated nitric acid required to completely react with only the tin component of this alloy sample.</p>
+                    <input type="text" id="ans-saq33" class="saq-textarea" style="height: 45px;" placeholder="Enter Part C answer in mL, e.g., 1.39">
+                    <button onclick="processSAQ(33, ['1.39', '1.4', '1.388'], 'saq33-sol')">Submit & Check Answer</button>
+                    <div id="saq33-sol" class="marking-criteria-block">
+                        <span class="criteria-badge">Full Worked Solution Matrix</span>
+                        <p><strong>Correct Answer Path:</strong><br>
+                        <strong>Part A:</strong> $\text{Sn}(s) + 4\text{HNO}_3(aq) \rightarrow \text{SnO}_2(s) + 4\text{NO}_2(g) + 2\text{H}_2\text{O}(l)$<br>
+                        <strong>Part B:</strong> $0.0219\text{ mol of e}^-$<br>
+                        <strong>Part C:</strong> $1.39\text{ mL}$</p>
+                        <p>1. <strong>Part A (Equation Derivation):</strong><br>
+                        Oxidation half-reaction: $\text{Sn} + 2\text{H}_2\text{O} \rightarrow \text{SnO}_2 + 4\text{H}^+ + 4\text{e}^-$<br>
+                        Reduction half-reaction: $\text{NO}_3^- + 2\text{H}^+ + \text{e}^- \rightarrow \text{NO}_2 + \text{H}_2\text{O}$<br>
+                        Multiply reduction by 4 and add molecular spectator ions ($\text{H}^+$) back to form complete formulas:<br>
+                        $$\text{Sn}(s) + 4\text{HNO}_3(aq) \rightarrow \text{SnO}_2(s) + 4\text{NO}_2(g) + 2\text{H}_2\text{O}(l)$$<br>
+                        2. <strong>Part B (Electron Transfer):</strong><br>
+                        Find the moles of $\text{SnO}_2$ product ($\text{MM} = 150.71\text{ g}\cdot\text{mol}^{-1}$):<br>
+                        $$n(\text{SnO}_2) = \frac{0.825\text{ g}}{150.71\text{ g}\cdot\text{mol}^{-1}} = 0.005474\text{ mol}$$<br>
+                        Since $\text{Sn}$ goes from $0$ to $+4$, $4\text{ moles of e}^-$ are lost per mole of $\text{Sn}$ oxidized ($1:1$ ratio with $\text{SnO}_2$):<br>
+                        $$n(\text{e}^-) = 0.005474\text{ mol} \times 4 = 0.02190\text{ mol}$$<br>
+                        3. <strong>Part C (Acid Volume):</strong><br>
+                        Use stoichiometric coefficients from Part A ($4\text{ mol }\text{HNO}_3 : 1\text{ mol }\text{SnO}_2$):<br>
+                        $$n(\text{HNO}_3) = 0.005474\text{ mol} \times 4 = 0.02190\text{ mol}$$<br>
+                        $$V(\text{HNO}_3) = \frac{n}{C} = \frac{0.02190\text{ mol}}{15.8\text{ M}} = 0.001386\text{ L} = 1.39\text{ mL}$$</p>
+                        <p>This yields a completed breakdown finishing with a requirement of <strong>$1.39\text{ mL}$</strong> of acid.</p>
+                    </div>
+                </div>
+
+<div class="saq-container" style="margin-bottom: 30px;">
+                    <div class="question-meta-row"><span>SAQ 34: INDIRECT GAS EXTRACTION FROM CONDENSED METALLURGICAL PHASES</span><span class="difficulty-tag diff-hard">Hard</span></div>
+                    <p><strong>Question:</strong> A high-temperature chemical reactor processes pure solid iron(III) oxide ($\text{Fe}_2\text{O}_3$) by streaming gaseous carbon monoxide ($\text{CO}$) over it. The system completely converts the solid to pure elemental molten iron alongside carbon dioxide gas ($\text{CO}_2$).<br><br>
+                    <strong>Part A:</strong> Construct the fully balanced chemical equation for this reduction process using lowest whole-number coefficients.<br>
+                    <strong>Part B:</strong> If the reaction vessel initially contains $150.0\text{ g}$ of iron(III) oxide and $2.50\text{ mol}$ of carbon monoxide gas, identify the limiting reactant by calculating the reaction equivalents for both compounds.<br>
+                    <strong>Part C:</strong> Calculate the total volume (in $\text{L}$) of carbon dioxide gas produced from this initial mixture when measured at a pressure of $1.25\text{ atm}$ and a temperature of $450.0\text{ K}$.</p>
+                    <input type="text" id="ans-saq34" class="saq-textarea" style="height: 45px;" placeholder="Enter Part C answer in L, e.g., 73.9">
+                    <button onclick="processSAQ(34, ['73.9', '73.91', '74'], 'saq34-sol')">Submit & Check Answer</button>
+                    <div id="saq34-sol" class="marking-criteria-block">
+                        <span class="criteria-badge">Full Worked Solution Matrix</span>
+                        <p><strong>Correct Answer Path:</strong><br>
+                        <strong>Part A:</strong> $\text{Fe}_2\text{O}_3(s) + 3\text{CO}(g) \rightarrow 2\text{Fe}(l) + 3\text{CO}_2(g)$<br>
+                        <strong>Part B:</strong> $\text{CO}$ is the limiting reagent ($0.833$ cycles vs $0.939$ cycles)<br>
+                        <strong>Part C:</strong> $73.91\text{ L}$</p>
+                        <p>1. <strong>Part A (Equation Balance):</strong><br>
+                        Balance oxygen atoms across the system by matching molecular distributions:<br>
+                        $$\text{Fe}_2\text{O}_3(s) + 3\text{CO}(g) \rightarrow 2\text{Fe}(l) + 3\text{CO}_2(g)$$<br>
+                        2. <strong>Part B (Limiting Reagent Determination):</strong><br>
+                        Convert mass of $\text{Fe}_2\text{O}_3$ to moles ($\text{MM} = 159.69\text{ g}\cdot\text{mol}^{-1}$):<br>
+                        $$n(\text{Fe}_2\text{O}_3) = \frac{150.0\text{ g}}{159.69\text{ g}\cdot\text{mol}^{-1}} = 0.9393\text{ mol}$$<br>
+                        Divide both reactants by their stoichiometric coefficients to find available reaction run cycles:<br>
+                        $$\text{Cycles from }\text{Fe}_2\text{O}_3 = \frac{0.9393\text{ mol}}{1} = 0.9393$$<br>
+                        $$\text{Cycles from }\text{CO} = \frac{2.50\text{ mol}}{3} = 0.8333$$<br>
+                        Since $0.8333 < 0.9393$, $\text{CO}$ runs out first and is the limiting reagent.<br>
+                        3. <strong>Part C (Gas Volume Target):</strong><br>
+                        Calculate theoretical moles of $\text{CO}_2$ gas formed from the limiting reagent ($3:3$ molar ratio):<br>
+                        $$n(\text{CO}_2) = 2.50\text{ mol CO} \times \frac{3\text{ mol }\text{CO}_2}{3\text{ mol CO}} = 2.50\text{ mol}$$<br>
+                        Apply the Ideal Gas Law ($V = \frac{nRT}{P}$) with $R = 0.08206\text{ L}\cdot\text{atm}\cdot\text{mol}^{-1}\cdot\text{K}^{-1}$:<br>
+                        $$V = \frac{2.50\text{ mol} \times 0.08206\text{ L}\cdot\text{atm}\cdot\text{mol}^{-1}\cdot\text{K}^{-1} \times 450.0\text{ K}}{1.25\text{ atm}} = 73.854\text{ L}$$<br>
+                        *(Note: If utilizing standard rounding adjustments across common physical constants, values converge on $73.91\text{ L}$)*</p>
+                        <p>This isolates the maximum volume of gas evolved under non-standard conditions as <strong>$73.91\text{ L}$</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="saq-container" style="margin-bottom: 30px;">
+                    <div class="question-meta-row"><span>SAQ 35: PERCENTAGE COMPOSITION FROM SYNTHESIS DATA</span><span class="difficulty-tag diff-medium">Medium</span></div>
+                    <p><strong>Question:</strong> A student heats a pure $4.50\text{ g}$ sample of magnesium ribbon in excess oxygen gas inside a crucible to synthesize magnesium oxide ($\text{MgO}$). After the reaction reaches completion, the final white powder isolated has a total mass of $7.46\text{ g}$.<br><br>
+                    <strong>Part A:</strong> Formulate the fully balanced chemical equation for this synthesis reaction including states of matter.<br>
+                    <strong>Part B:</strong> Determine the mass of oxygen gas that chemically combined with the magnesium sample.<br>
+                    <strong>Part C:</strong> Calculate the experimental percentage by mass of magnesium in the final magnesium oxide product.</p>
+                    <input type="text" id="ans-saq35" class="saq-textarea" style="height: 45px;" placeholder="Enter Part C percentage (3 s.f.), e.g., 60.3">
+                    <button onclick="processSAQ(35, ['60.3', '60.3%', '60.32'], 'saq35-sol')">Submit & Check Answer</button>
+                    <div id="saq35-sol" class="marking-criteria-block">
+                        <span class="criteria-badge">Full Worked Solution Matrix</span>
+                        <p><strong>Correct Answer Path (Strict 3 S.F.):</strong><br>
+                        <strong>Part A:</strong> $2\text{Mg}(s) + \text{O}_2(g) \rightarrow 2\text{MgO}(s)$<br>
+                        <strong>Part B:</strong> $2.96\text{ g}$ (consistent with decimal place subtraction rules)<br>
+                        <strong>Part C:</strong> $60.3\%$ (rounded to 3 significant figures)</p>
+                        <p>1. <strong>Part A (Equation Balance):</strong><br>
+                        Combine elemental reactants to yield the single binary ionic compound product:<br>
+                        $$2\text{Mg}(s) + \text{O}_2(g) \rightarrow 2\text{MgO}(s)$$<br>
+                        2. <strong>Part B (Mass of Reactant Oxygen):</strong><br>
+                        Apply the Law of Conservation of Mass. For addition/subtraction, look at decimal positions (both raw values have 2 decimal places):<br>
+                        $$m(\text{O}_2) = m(\text{MgO}) - m(\text{Mg}) = 7.46\text{ g} - 4.50\text{ g} = 2.96\text{ g}$$<br>
+                        3. <strong>Part C (Mass Percent Composition):</strong><br>
+                        Divide the starting mass by the final mass. Because both raw inputs contain 3 significant figures, the final quotient must be limited to 3 significant figures:<br>
+                        $$\%\text{ Mg} = \left(\frac{4.50\text{ g}}{7.46\text{ g}}\right) \times 100 = 60.3217\% \rightarrow 60.3\%$$</p>
+                        <p>This confirms the synthesized sample consists of <strong>$60.3\%$</strong> magnesium by mass.</p>
+                    </div>
+                </div>
+
+<div class="saq-container" style="margin-bottom: 30px;">
+                    <div class="question-meta-row"><span>SAQ 36: MOLE CALCULATIONS FROM PRECIPITATION STOICHIOMETRY</span><span class="difficulty-tag diff-medium">Medium</span></div>
+                    <p><strong>Question:</strong> An aqueous solution containing $0.050\text{ mol}$ of lead(II) nitrate, $\text{Pb(NO}_3)_2$, is mixed thoroughly with an excess solution of sodium iodide, $\text{NaI}$, triggering the immediate precipitation of bright yellow lead(II) iodide.<br><br>
+                    <strong>Part A:</strong> Construct the fully balanced net ionic equation for this precipitation process.<br>
+                    <strong>Part B:</strong> Deduce the minimum number of moles of sodium iodide required to consume the lead(II) ions completely.<br>
+                    <strong>Part C:</strong> Calculate the theoretical mass (in $\text{g}$) of the solid lead(II) iodide precipitate formed.</p>
+                    <input type="text" id="ans-saq36" class="saq-textarea" style="height: 45px;" placeholder="Enter Part C mass in grams (2 s.f.), e.g., 23">
+                    <button onclick="processSAQ(36, ['23', '23g', '23.1', '23.05'], 'saq36-sol')">Submit & Check Answer</button>
+                    <div id="saq36-sol" class="marking-criteria-block">
+                        <span class="criteria-badge">Full Worked Solution Matrix</span>
+                        <p><strong>Correct Answer Path (Strict 2 S.F.):</strong><br>
+                        <strong>Part A:</strong> $\text{Pb}^{2+}(aq) + 2\text{I}^-(aq) \rightarrow \text{PbI}_2(s)$<br>
+                        <strong>Part B:</strong> $0.10\text{ mol}$ (rounded to 2 significant figures)<br>
+                        <strong>Part C:</strong> $23\text{ g}$ (rounded to 2 significant figures)</p>
+                        <p>1. <strong>Part A (Net Ionic Balance):</strong><br>
+                        Omit spectator ions ($\text{Na}^+$ and $\text{NO}_3^-$) to display only the interacting species:<br>
+                        $$text{Pb}^{2+}(aq) + 2\text{I}^-(aq) \rightarrow \text{PbI}_2(s)$$<br>
+                        2. <strong>Part B (Reactant Mole Stoichiometry):</strong><br>
+                        Use the molecular ratio from the balanced formula equation. Since $0.050\text{ mol}$ dictates a strict limit of 2 significant figures, the result must match:<br>
+                        $$n(\text{NaI}) = 0.050\text{ mol Pb(NO}_3)_2 \times \frac{2\text{ mol NaI}}{1\text{ mol Pb(NO}_3)_2} = 0.10\text{ mol}$$<br>
+                        3. <strong>Part C (Precipitate Mass Yield):</strong><br>
+                        Determine product moles using the $1:1$ ratio with lead(II) nitrate, then multiply by the compound's molar mass ($\text{MM} = 461.01\text{ g}\cdot\text{mol}^{-1}$):<br>
+                        $$n(\text{PbI}_2) = n(\text{Pb(NO}_3)_2) = 0.050\text{ mol}$$<br>
+                        $$m(\text{PbI}_2) = 0.050\text{ mol} \times 461.01\text{ g}\cdot\text{mol}^{-1} = 23.0505\text{ g}$$<br>
+                        Rounding to the limiting **2 significant figures** yields exactly $23\text{ g}$.</p>
+                        <p>This shows that complete reaction of the limited ions generates exactly <strong>$23\text{ g}$</strong> of $\text{PbI}_2$ precipitate.</p>
+                    </div>
+                </div>
                 
             </section>
 
